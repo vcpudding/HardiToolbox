@@ -1,0 +1,41 @@
+# depslib dependency file v1.0
+1336582986 source:/home/collab/xhzhu/Study/HARDI_Toolbox/main.cpp
+	<iostream>
+	<math.h>
+	<sys/time.h>
+	<stdio.h>
+	<unistd.h>
+	"HardiToolbox.h"
+
+1336499635 /home/collab/xhzhu/Study/HARDI_Toolbox/HardiToolbox.h
+	<armadillo>
+
+1336582910 source:/home/collab/xhzhu/Study/HARDI_Toolbox/HardiToolbox.cpp
+	"HardiToolbox.h"
+	<fstream>
+	<math.h>
+	"besselFunction.h"
+
+1333991681 /home/collab/xhzhu/Study/HARDI_Toolbox/besselFunction.h
+	<iostream>
+	<cmath>
+
+1336502393 /home/collab/xhzhu/Libraries/nifticlib-2.0.0/include/nifti1_io.h
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	<math.h>
+	<ctype.h>
+	"nifti1.h"
+	<znzlib.h>
+
+1336502393 /home/collab/xhzhu/Libraries/nifticlib-2.0.0/include/nifti1.h
+
+1336502321 /home/collab/xhzhu/Libraries/nifticlib-2.0.0/include/znzlib.h
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	<stdarg.h>
+	"itk_zlib.h"
+	"zlib.h"
+
