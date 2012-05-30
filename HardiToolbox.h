@@ -43,6 +43,8 @@ namespace HardiToolbox
 
   vec       simulateMultiTensor (int bVal, double s0, const mat &gradientOrientations, const vec &fibDirs,
   			                            const vec &weights=vec(), bool isAnisotropic=true);
+  vec       simulateMultiTensor (int bVal, double s0, const mat &gradientOrientations, const mat &fibDirs,
+			       const vec &weights=vec(), bool isAnisotropic=true);
   mat       simulateMultiTensorByComponent (int bVal, double s0, const mat &gradientOrientations, const mat &eulerAngles, const vec &diffusivities = vec());
 
   void      loadSphereVecs (mat &triangleVecs, rowvec &triangleAreas, bool isAccurate = false);
@@ -60,7 +62,7 @@ namespace HardiToolbox
 
   /**************************************************/
   /******finite mixture of Gaussian [Tuch2002]*******/
-  struct    FiniteGaussianOption
+  struct    MultiTensorOption
   {
     int     maxIt;
     double  step;
@@ -68,7 +70,7 @@ namespace HardiToolbox
   };
 
   mat       eulerAngleToMatrix (const vec &eulerAngle);
-  void      estimateFiniteGaussian (FiberComposition &fibComp, const vec &dwSignal, const mat &gradientOrientations, int bVal, double s0, int nFibers, const FiniteGaussianOption &options);
+  void      estimateMultiTensor (FiberComposition &fibComp, const vec &dwSignal, const mat &gradientOrientations, int bVal, double s0, int nFibers, const MultiTensorOption &options);
 
   /**************************************/
   /******ball and stick estimation*******/
@@ -95,6 +97,7 @@ namespace HardiToolbox
     double  step;
     double  kappaStep;
     double  kappa0Step;
+    double  weightStep;
     double  tolerance;
     double  innerTolerance;
     bool    isEstDiffusivities;

@@ -35,10 +35,10 @@ RM = /usr/bin/cmake -E remove -f
 CMAKE_EDIT_COMMAND = /usr/bin/ccmake
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/collab/xhzhu/Study/HARDI_Toolbox
+CMAKE_SOURCE_DIR = /home/collab/xhzhu/Study/HardiToolbox
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/collab/xhzhu/Study/HARDI_Toolbox
+CMAKE_BINARY_DIR = /home/collab/xhzhu/Study/HardiToolbox
 
 # Include any dependencies generated for this target.
 include CMakeFiles/HardiToolbox.dir/depend.make
@@ -51,17 +51,17 @@ include CMakeFiles/HardiToolbox.dir/flags.make
 
 CMakeFiles/HardiToolbox.dir/main.cpp.o: CMakeFiles/HardiToolbox.dir/flags.make
 CMakeFiles/HardiToolbox.dir/main.cpp.o: main.cpp
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/collab/xhzhu/Study/HARDI_Toolbox/CMakeFiles $(CMAKE_PROGRESS_1)
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/collab/xhzhu/Study/HardiToolbox/CMakeFiles $(CMAKE_PROGRESS_1)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/HardiToolbox.dir/main.cpp.o"
-	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/HardiToolbox.dir/main.cpp.o -c /home/collab/xhzhu/Study/HARDI_Toolbox/main.cpp
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/HardiToolbox.dir/main.cpp.o -c /home/collab/xhzhu/Study/HardiToolbox/main.cpp
 
 CMakeFiles/HardiToolbox.dir/main.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/HardiToolbox.dir/main.cpp.i"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/collab/xhzhu/Study/HARDI_Toolbox/main.cpp > CMakeFiles/HardiToolbox.dir/main.cpp.i
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/collab/xhzhu/Study/HardiToolbox/main.cpp > CMakeFiles/HardiToolbox.dir/main.cpp.i
 
 CMakeFiles/HardiToolbox.dir/main.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/HardiToolbox.dir/main.cpp.s"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/collab/xhzhu/Study/HARDI_Toolbox/main.cpp -o CMakeFiles/HardiToolbox.dir/main.cpp.s
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/collab/xhzhu/Study/HardiToolbox/main.cpp -o CMakeFiles/HardiToolbox.dir/main.cpp.s
 
 CMakeFiles/HardiToolbox.dir/main.cpp.o.requires:
 .PHONY : CMakeFiles/HardiToolbox.dir/main.cpp.o.requires
@@ -75,17 +75,17 @@ CMakeFiles/HardiToolbox.dir/main.cpp.o.provides.build: CMakeFiles/HardiToolbox.d
 
 CMakeFiles/HardiToolbox.dir/HardiToolbox.cpp.o: CMakeFiles/HardiToolbox.dir/flags.make
 CMakeFiles/HardiToolbox.dir/HardiToolbox.cpp.o: HardiToolbox.cpp
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/collab/xhzhu/Study/HARDI_Toolbox/CMakeFiles $(CMAKE_PROGRESS_2)
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/collab/xhzhu/Study/HardiToolbox/CMakeFiles $(CMAKE_PROGRESS_2)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/HardiToolbox.dir/HardiToolbox.cpp.o"
-	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/HardiToolbox.dir/HardiToolbox.cpp.o -c /home/collab/xhzhu/Study/HARDI_Toolbox/HardiToolbox.cpp
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/HardiToolbox.dir/HardiToolbox.cpp.o -c /home/collab/xhzhu/Study/HardiToolbox/HardiToolbox.cpp
 
 CMakeFiles/HardiToolbox.dir/HardiToolbox.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/HardiToolbox.dir/HardiToolbox.cpp.i"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/collab/xhzhu/Study/HARDI_Toolbox/HardiToolbox.cpp > CMakeFiles/HardiToolbox.dir/HardiToolbox.cpp.i
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/collab/xhzhu/Study/HardiToolbox/HardiToolbox.cpp > CMakeFiles/HardiToolbox.dir/HardiToolbox.cpp.i
 
 CMakeFiles/HardiToolbox.dir/HardiToolbox.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/HardiToolbox.dir/HardiToolbox.cpp.s"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/collab/xhzhu/Study/HARDI_Toolbox/HardiToolbox.cpp -o CMakeFiles/HardiToolbox.dir/HardiToolbox.cpp.s
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/collab/xhzhu/Study/HardiToolbox/HardiToolbox.cpp -o CMakeFiles/HardiToolbox.dir/HardiToolbox.cpp.s
 
 CMakeFiles/HardiToolbox.dir/HardiToolbox.cpp.o.requires:
 .PHONY : CMakeFiles/HardiToolbox.dir/HardiToolbox.cpp.o.requires
@@ -97,19 +97,43 @@ CMakeFiles/HardiToolbox.dir/HardiToolbox.cpp.o.provides: CMakeFiles/HardiToolbox
 CMakeFiles/HardiToolbox.dir/HardiToolbox.cpp.o.provides.build: CMakeFiles/HardiToolbox.dir/HardiToolbox.cpp.o
 .PHONY : CMakeFiles/HardiToolbox.dir/HardiToolbox.cpp.o.provides.build
 
+CMakeFiles/HardiToolbox.dir/testProc.cpp.o: CMakeFiles/HardiToolbox.dir/flags.make
+CMakeFiles/HardiToolbox.dir/testProc.cpp.o: testProc.cpp
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/collab/xhzhu/Study/HardiToolbox/CMakeFiles $(CMAKE_PROGRESS_3)
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/HardiToolbox.dir/testProc.cpp.o"
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/HardiToolbox.dir/testProc.cpp.o -c /home/collab/xhzhu/Study/HardiToolbox/testProc.cpp
+
+CMakeFiles/HardiToolbox.dir/testProc.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/HardiToolbox.dir/testProc.cpp.i"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/collab/xhzhu/Study/HardiToolbox/testProc.cpp > CMakeFiles/HardiToolbox.dir/testProc.cpp.i
+
+CMakeFiles/HardiToolbox.dir/testProc.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/HardiToolbox.dir/testProc.cpp.s"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/collab/xhzhu/Study/HardiToolbox/testProc.cpp -o CMakeFiles/HardiToolbox.dir/testProc.cpp.s
+
+CMakeFiles/HardiToolbox.dir/testProc.cpp.o.requires:
+.PHONY : CMakeFiles/HardiToolbox.dir/testProc.cpp.o.requires
+
+CMakeFiles/HardiToolbox.dir/testProc.cpp.o.provides: CMakeFiles/HardiToolbox.dir/testProc.cpp.o.requires
+	$(MAKE) -f CMakeFiles/HardiToolbox.dir/build.make CMakeFiles/HardiToolbox.dir/testProc.cpp.o.provides.build
+.PHONY : CMakeFiles/HardiToolbox.dir/testProc.cpp.o.provides
+
+CMakeFiles/HardiToolbox.dir/testProc.cpp.o.provides.build: CMakeFiles/HardiToolbox.dir/testProc.cpp.o
+.PHONY : CMakeFiles/HardiToolbox.dir/testProc.cpp.o.provides.build
+
 CMakeFiles/HardiToolbox.dir/utils.cpp.o: CMakeFiles/HardiToolbox.dir/flags.make
 CMakeFiles/HardiToolbox.dir/utils.cpp.o: utils.cpp
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/collab/xhzhu/Study/HARDI_Toolbox/CMakeFiles $(CMAKE_PROGRESS_3)
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/collab/xhzhu/Study/HardiToolbox/CMakeFiles $(CMAKE_PROGRESS_4)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/HardiToolbox.dir/utils.cpp.o"
-	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/HardiToolbox.dir/utils.cpp.o -c /home/collab/xhzhu/Study/HARDI_Toolbox/utils.cpp
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/HardiToolbox.dir/utils.cpp.o -c /home/collab/xhzhu/Study/HardiToolbox/utils.cpp
 
 CMakeFiles/HardiToolbox.dir/utils.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/HardiToolbox.dir/utils.cpp.i"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/collab/xhzhu/Study/HARDI_Toolbox/utils.cpp > CMakeFiles/HardiToolbox.dir/utils.cpp.i
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/collab/xhzhu/Study/HardiToolbox/utils.cpp > CMakeFiles/HardiToolbox.dir/utils.cpp.i
 
 CMakeFiles/HardiToolbox.dir/utils.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/HardiToolbox.dir/utils.cpp.s"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/collab/xhzhu/Study/HARDI_Toolbox/utils.cpp -o CMakeFiles/HardiToolbox.dir/utils.cpp.s
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/collab/xhzhu/Study/HardiToolbox/utils.cpp -o CMakeFiles/HardiToolbox.dir/utils.cpp.s
 
 CMakeFiles/HardiToolbox.dir/utils.cpp.o.requires:
 .PHONY : CMakeFiles/HardiToolbox.dir/utils.cpp.o.requires
@@ -125,6 +149,7 @@ CMakeFiles/HardiToolbox.dir/utils.cpp.o.provides.build: CMakeFiles/HardiToolbox.
 HardiToolbox_OBJECTS = \
 "CMakeFiles/HardiToolbox.dir/main.cpp.o" \
 "CMakeFiles/HardiToolbox.dir/HardiToolbox.cpp.o" \
+"CMakeFiles/HardiToolbox.dir/testProc.cpp.o" \
 "CMakeFiles/HardiToolbox.dir/utils.cpp.o"
 
 # External object files for target HardiToolbox
@@ -132,6 +157,7 @@ HardiToolbox_EXTERNAL_OBJECTS =
 
 HardiToolbox: CMakeFiles/HardiToolbox.dir/main.cpp.o
 HardiToolbox: CMakeFiles/HardiToolbox.dir/HardiToolbox.cpp.o
+HardiToolbox: CMakeFiles/HardiToolbox.dir/testProc.cpp.o
 HardiToolbox: CMakeFiles/HardiToolbox.dir/utils.cpp.o
 HardiToolbox: /home/collab/xhzhu/Libraries/ITK_bin/lib/libitksys-4.1.a
 HardiToolbox: /home/collab/xhzhu/Libraries/ITK_bin/lib/libitkvnl_algo-4.1.a
@@ -281,6 +307,7 @@ CMakeFiles/HardiToolbox.dir/build: HardiToolbox
 
 CMakeFiles/HardiToolbox.dir/requires: CMakeFiles/HardiToolbox.dir/main.cpp.o.requires
 CMakeFiles/HardiToolbox.dir/requires: CMakeFiles/HardiToolbox.dir/HardiToolbox.cpp.o.requires
+CMakeFiles/HardiToolbox.dir/requires: CMakeFiles/HardiToolbox.dir/testProc.cpp.o.requires
 CMakeFiles/HardiToolbox.dir/requires: CMakeFiles/HardiToolbox.dir/utils.cpp.o.requires
 .PHONY : CMakeFiles/HardiToolbox.dir/requires
 
@@ -289,6 +316,6 @@ CMakeFiles/HardiToolbox.dir/clean:
 .PHONY : CMakeFiles/HardiToolbox.dir/clean
 
 CMakeFiles/HardiToolbox.dir/depend:
-	cd /home/collab/xhzhu/Study/HARDI_Toolbox && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/collab/xhzhu/Study/HARDI_Toolbox /home/collab/xhzhu/Study/HARDI_Toolbox /home/collab/xhzhu/Study/HARDI_Toolbox /home/collab/xhzhu/Study/HARDI_Toolbox /home/collab/xhzhu/Study/HARDI_Toolbox/CMakeFiles/HardiToolbox.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/collab/xhzhu/Study/HardiToolbox && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/collab/xhzhu/Study/HardiToolbox /home/collab/xhzhu/Study/HardiToolbox /home/collab/xhzhu/Study/HardiToolbox /home/collab/xhzhu/Study/HardiToolbox /home/collab/xhzhu/Study/HardiToolbox/CMakeFiles/HardiToolbox.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/HardiToolbox.dir/depend
 

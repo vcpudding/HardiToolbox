@@ -1,0 +1,1 @@
+/usr/bin/c++     -g    CMakeFiles/RunMultiTensorTest.dir/testMultiTensor.cpp.o CMakeFiles/RunMultiTensorTest.dir/HardiToolbox.cpp.o  -o RunMultiTensorTest -rdynamic -L/home/collab/xhzhu/Libraries/arma-bin/usr/local/lib64 -larmadillo -Wl,-rpath,/home/collab/xhzhu/Libraries/arma-bin/usr/local/lib64 

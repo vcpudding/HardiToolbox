@@ -4,9 +4,10 @@ SET(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 SET(CMAKE_DEPENDS_CHECK_CXX
-  "/home/collab/xhzhu/Study/HARDI_Toolbox/HardiToolbox.cpp" "/home/collab/xhzhu/Study/HARDI_Toolbox/CMakeFiles/HardiToolbox.dir/HardiToolbox.cpp.o"
-  "/home/collab/xhzhu/Study/HARDI_Toolbox/main.cpp" "/home/collab/xhzhu/Study/HARDI_Toolbox/CMakeFiles/HardiToolbox.dir/main.cpp.o"
-  "/home/collab/xhzhu/Study/HARDI_Toolbox/utils.cpp" "/home/collab/xhzhu/Study/HARDI_Toolbox/CMakeFiles/HardiToolbox.dir/utils.cpp.o"
+  "/home/collab/xhzhu/Study/HardiToolbox/HardiToolbox.cpp" "/home/collab/xhzhu/Study/HardiToolbox/CMakeFiles/HardiToolbox.dir/HardiToolbox.cpp.o"
+  "/home/collab/xhzhu/Study/HardiToolbox/main.cpp" "/home/collab/xhzhu/Study/HardiToolbox/CMakeFiles/HardiToolbox.dir/main.cpp.o"
+  "/home/collab/xhzhu/Study/HardiToolbox/testProc.cpp" "/home/collab/xhzhu/Study/HardiToolbox/CMakeFiles/HardiToolbox.dir/testProc.cpp.o"
+  "/home/collab/xhzhu/Study/HardiToolbox/utils.cpp" "/home/collab/xhzhu/Study/HardiToolbox/CMakeFiles/HardiToolbox.dir/utils.cpp.o"
   )
 SET(CMAKE_CXX_COMPILER_ID "GNU")
 

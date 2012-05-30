@@ -1,6 +1,7 @@
 FILE(REMOVE_RECURSE
   "CMakeFiles/HardiToolbox.dir/main.cpp.o"
   "CMakeFiles/HardiToolbox.dir/HardiToolbox.cpp.o"
+  "CMakeFiles/HardiToolbox.dir/testProc.cpp.o"
   "CMakeFiles/HardiToolbox.dir/utils.cpp.o"
   "HardiToolbox.pdb"
   "HardiToolbox"

@@ -1,0 +1,61 @@
+close all;
+clear all;
+
+%load Snew
+
+UnitVectors;
+g81=g([1:81],:);
+g321=g([1:321],:);
+g642=BuildSphere(3);
+
+b=1500;
+order=6; delta=500;
+sigma=0.009;
+v1=[1/sqrt(2) 1/sqrt(2) 0];
+orientation1=atan2(v1(2),v1(1));
+
+s=SimulateData(b,g81,pi/6,orientation1);
+
+%S=ricernd(Snew,sigma)';
+
+S=DWI_to_SH(s,g81,g321,8,0.006,sigma,false,0.05)'; % regularize and over-sample 81->321
+
+C=constructMatrixOfIntegrals(g642,order,delta);
+
+c=S*C;
+
+G=constructMatrixOfMonomials(g321,order);
+
+m=zeros(size(g321,1),1);
+
+echo on
+n=28;
+
+cvx_begin
+   variable x1(n)
+   dual variables y
+   minimize(norm(C*x1-S',2))
+   subject to
+     y : G * x1 > m;
+     %x > 0;
+cvx_end
+
+echo off
+
+TensorODF=x1;
+
+%Snew=CreateSignal(x1,g81,order,delta);
+% 
+% figure,plotTensors(TensorODF,1,[321 1 0]);
+%W=convert_DT4(TensorODF([15 5 1 12 3 10 11 8 7 14 13 9 4 6 2]));
+% 
+% [a,b,c]=cp_als(tensor(W),2,'tol',1e-6,'init','nvecs');
+W=convertD2W_order6(TensorODF);
+
+
+
+
+
+
+
+

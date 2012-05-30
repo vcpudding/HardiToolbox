@@ -39,10 +39,10 @@ RM = /usr/bin/cmake -E remove -f
 CMAKE_EDIT_COMMAND = /usr/bin/ccmake
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/collab/xhzhu/Study/HARDI_Toolbox
+CMAKE_SOURCE_DIR = /home/collab/xhzhu/Study/HardiToolbox
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/collab/xhzhu/Study/HARDI_Toolbox
+CMAKE_BINARY_DIR = /home/collab/xhzhu/Study/HardiToolbox
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -69,9 +69,9 @@ rebuild_cache/fast: rebuild_cache
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/collab/xhzhu/Study/HARDI_Toolbox/CMakeFiles /home/collab/xhzhu/Study/HARDI_Toolbox/CMakeFiles/progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/collab/xhzhu/Study/HardiToolbox/CMakeFiles /home/collab/xhzhu/Study/HardiToolbox/CMakeFiles/progress.marks
 	$(MAKE) -f CMakeFiles/Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/collab/xhzhu/Study/HARDI_Toolbox/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/collab/xhzhu/Study/HardiToolbox/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
@@ -111,12 +111,26 @@ HardiToolbox/fast:
 	$(MAKE) -f CMakeFiles/HardiToolbox.dir/build.make CMakeFiles/HardiToolbox.dir/build
 .PHONY : HardiToolbox/fast
 
+#=============================================================================
+# Target rules for targets named RunMultiTensorTest
+
+# Build rule for target.
+RunMultiTensorTest: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 RunMultiTensorTest
+.PHONY : RunMultiTensorTest
+
+# fast build rule for target.
+RunMultiTensorTest/fast:
+	$(MAKE) -f CMakeFiles/RunMultiTensorTest.dir/build.make CMakeFiles/RunMultiTensorTest.dir/build
+.PHONY : RunMultiTensorTest/fast
+
 HardiToolbox.o: HardiToolbox.cpp.o
 .PHONY : HardiToolbox.o
 
 # target to build an object file
 HardiToolbox.cpp.o:
 	$(MAKE) -f CMakeFiles/HardiToolbox.dir/build.make CMakeFiles/HardiToolbox.dir/HardiToolbox.cpp.o
+	$(MAKE) -f CMakeFiles/RunMultiTensorTest.dir/build.make CMakeFiles/RunMultiTensorTest.dir/HardiToolbox.cpp.o
 .PHONY : HardiToolbox.cpp.o
 
 HardiToolbox.i: HardiToolbox.cpp.i
@@ -125,6 +139,7 @@ HardiToolbox.i: HardiToolbox.cpp.i
 # target to preprocess a source file
 HardiToolbox.cpp.i:
 	$(MAKE) -f CMakeFiles/HardiToolbox.dir/build.make CMakeFiles/HardiToolbox.dir/HardiToolbox.cpp.i
+	$(MAKE) -f CMakeFiles/RunMultiTensorTest.dir/build.make CMakeFiles/RunMultiTensorTest.dir/HardiToolbox.cpp.i
 .PHONY : HardiToolbox.cpp.i
 
 HardiToolbox.s: HardiToolbox.cpp.s
@@ -133,6 +148,7 @@ HardiToolbox.s: HardiToolbox.cpp.s
 # target to generate assembly for a file
 HardiToolbox.cpp.s:
 	$(MAKE) -f CMakeFiles/HardiToolbox.dir/build.make CMakeFiles/HardiToolbox.dir/HardiToolbox.cpp.s
+	$(MAKE) -f CMakeFiles/RunMultiTensorTest.dir/build.make CMakeFiles/RunMultiTensorTest.dir/HardiToolbox.cpp.s
 .PHONY : HardiToolbox.cpp.s
 
 main.o: main.cpp.o
@@ -158,6 +174,54 @@ main.s: main.cpp.s
 main.cpp.s:
 	$(MAKE) -f CMakeFiles/HardiToolbox.dir/build.make CMakeFiles/HardiToolbox.dir/main.cpp.s
 .PHONY : main.cpp.s
+
+testMultiTensor.o: testMultiTensor.cpp.o
+.PHONY : testMultiTensor.o
+
+# target to build an object file
+testMultiTensor.cpp.o:
+	$(MAKE) -f CMakeFiles/RunMultiTensorTest.dir/build.make CMakeFiles/RunMultiTensorTest.dir/testMultiTensor.cpp.o
+.PHONY : testMultiTensor.cpp.o
+
+testMultiTensor.i: testMultiTensor.cpp.i
+.PHONY : testMultiTensor.i
+
+# target to preprocess a source file
+testMultiTensor.cpp.i:
+	$(MAKE) -f CMakeFiles/RunMultiTensorTest.dir/build.make CMakeFiles/RunMultiTensorTest.dir/testMultiTensor.cpp.i
+.PHONY : testMultiTensor.cpp.i
+
+testMultiTensor.s: testMultiTensor.cpp.s
+.PHONY : testMultiTensor.s
+
+# target to generate assembly for a file
+testMultiTensor.cpp.s:
+	$(MAKE) -f CMakeFiles/RunMultiTensorTest.dir/build.make CMakeFiles/RunMultiTensorTest.dir/testMultiTensor.cpp.s
+.PHONY : testMultiTensor.cpp.s
+
+testProc.o: testProc.cpp.o
+.PHONY : testProc.o
+
+# target to build an object file
+testProc.cpp.o:
+	$(MAKE) -f CMakeFiles/HardiToolbox.dir/build.make CMakeFiles/HardiToolbox.dir/testProc.cpp.o
+.PHONY : testProc.cpp.o
+
+testProc.i: testProc.cpp.i
+.PHONY : testProc.i
+
+# target to preprocess a source file
+testProc.cpp.i:
+	$(MAKE) -f CMakeFiles/HardiToolbox.dir/build.make CMakeFiles/HardiToolbox.dir/testProc.cpp.i
+.PHONY : testProc.cpp.i
+
+testProc.s: testProc.cpp.s
+.PHONY : testProc.s
+
+# target to generate assembly for a file
+testProc.cpp.s:
+	$(MAKE) -f CMakeFiles/HardiToolbox.dir/build.make CMakeFiles/HardiToolbox.dir/testProc.cpp.s
+.PHONY : testProc.cpp.s
 
 utils.o: utils.cpp.o
 .PHONY : utils.o
@@ -190,6 +254,7 @@ help:
 	@echo "... clean"
 	@echo "... depend"
 	@echo "... HardiToolbox"
+	@echo "... RunMultiTensorTest"
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
 	@echo "... HardiToolbox.o"
@@ -198,6 +263,12 @@ help:
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"
+	@echo "... testMultiTensor.o"
+	@echo "... testMultiTensor.i"
+	@echo "... testMultiTensor.s"
+	@echo "... testProc.o"
+	@echo "... testProc.i"
+	@echo "... testProc.s"
 	@echo "... utils.o"
 	@echo "... utils.i"
 	@echo "... utils.s"
