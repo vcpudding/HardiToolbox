@@ -11,7 +11,7 @@ namespace HardiToolbox
 
   mat       loadGradientOrientations (const char * fileName);
   vec       addRicianNoise (const vec &cleanSignal, double sigma);
-  double    directionDeviation (const mat &dirs, const mat &trueDirs);
+  vec       directionDeviation (const mat &dirs, const mat &trueDirs);
 
   /**************************************/
   /******direct fiber deconvolution******/

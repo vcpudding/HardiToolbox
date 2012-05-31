@@ -1295,7 +1295,7 @@ void HardiToolbox::estimateMultiTensor (FiberComposition &fibComp, const vec &dw
 
     double lastE = e;
     e = accu(pow(estimatedSignalSum-dwSignal,2));
-    cout <<"it #" <<it <<":\t" <<e <<endl;
+    //cout <<"it #" <<it <<":\t" <<e <<endl;
     if (lastE - e<options.tolerance)
     {
       break;

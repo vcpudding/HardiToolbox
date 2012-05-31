@@ -1,11 +1,33 @@
 #include <iostream>
 #include <armadillo>
+#include <string>
 
 #include "HardiToolbox.h"
 
 using namespace std;
 using namespace arma;
 using namespace HardiToolbox;
+
+
+void parseArgs (int argc, char ** argv, int &nFibers, int &bVal, int &nRep, const char **gradFileName)
+{
+  for (int i = 1; i < argc; i++) {
+    if (i + 1 != argc) { // Check that we haven't finished parsing already
+      if (string(argv[i]) == "-n") {
+	nFibers = atoi(argv[++i]);
+      } else if (string(argv[i]) == "-b") {
+	bVal = atoi(argv[++i]);
+      } else if (string(argv[i]) == "-r") {
+	nRep = atoi(argv[++i]);
+      } else if (string(argv[i]) == "-g") {
+	*gradFileName = argv[++i];
+      } else {
+	std::cout << "Not enough or invalid arguments, please try again.\n";
+	exit(0);
+      }
+    }
+  }
+}
 
 int main (int argc, char **argv)
 {
@@ -23,16 +45,23 @@ int main (int argc, char **argv)
   weights <<0.5 <<endr;
 
   const char * gradFileName = "gradients.txt";
-  if (argc>1) {
-    gradFileName = argv[1];
+  
+  parseArgs(argc, argv, nFibers, bVal, nRep, &gradFileName);
+
+  cout <<"Number of fibers: " <<nFibers <<endl;
+  cout <<"b-value: " <<bVal <<endl;
+  cout <<"Number of repititions: " <<nRep <<endl;
+  cout <<"Gradient file: " <<gradFileName <<endl;
+
+  cout <<"continue? (y/n) ";
+  char c;
+  cin >>c;
+  if (c!='y') {
+    return 0;
   }
-  cout <<gradFileName <<endl;
 
   mat gradientOrientations = loadGradientOrientations (gradFileName);
   int nGrads = gradientOrientations.n_rows;
-
-  gradientOrientations.print("gradients");
-  return 0;
 
   MultiTensorOption options;
   options.maxIt = 5000;
@@ -49,8 +78,8 @@ int main (int argc, char **argv)
 
 	char dirFileName [1024];
 	char weightFileName [1024];
-	sprintf(dirFileName, "results/g=%d__a=%0.0f__s=%0.0f__w=%0.1f_d.txt", nGrads, sepAngles(iSepAngle), snr, weight);
-	sprintf(weightFileName, "results/g=%d__a=%0.0f__s=%0.0f__w=%0.1f_w.txt", nGrads, sepAngles(iSepAngle), snr, weight);
+	sprintf(dirFileName, "results/n=%d__b=%d__g=%d__a=%0.0f__s=%0.0f__w=%0.1f_d.txt", nFibers, bVal, nGrads, sepAngles(iSepAngle), snr, weight);
+	sprintf(weightFileName, "results/n=%d__b=%d__g=%d__a=%0.0f__s=%0.0f__w=%0.1f_w.txt", nFibers, bVal, nGrads, sepAngles(iSepAngle), snr, weight);
 	ofstream dirFile (dirFileName);
 	ofstream weightFile (weightFileName);
 	
@@ -62,15 +91,17 @@ int main (int argc, char **argv)
 	  if (nFibers==1) {
 	    trueDirs <<1 <<endr <<0 <<endr <<0 <<endr;
 	    trueWeights <<1 <<endr;
-	  } else {
+	  } else if (nFibers==2) {
 	    trueDirs <<1 <<cos(angle) <<endr <<0 <<sin(angle) <<endr <<0 <<0 <<endr;
 	    trueWeights <<weight <<endr <<1.0-weight <<endr;
+	  } else {
+	    initFixed(trueDirs, 3);
+	    trueWeights = 1.0/3.0*ones(3);
 	  }
+
 	  mat R (3,3);
 	  initRandom(R, 3);
 	  trueDirs = R*trueDirs;
-
-	  trueDirs.print("true dirs");
 
 	  vec S = simulateMultiTensor(bVal, s0, gradientOrientations, trueDirs, trueWeights, true);
 	  vec S1 = addRicianNoise (S, 1.0/snr);
@@ -97,6 +128,9 @@ int main (int argc, char **argv)
 
 	dirFile.close();
 	weightFile.close();
+
+	cout <<dirFileName <<" saved." <<endl;
+	cout <<weightFileName <<" saved." <<endl;
       }
     }
   }
