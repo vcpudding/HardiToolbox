@@ -102,6 +102,7 @@ namespace HardiToolbox
     double  innerTolerance;
     bool    isEstDiffusivities;
     bool    isEstWeights;
+    bool    useLineSearch;
   };
 
   void      estimateSticks (FiberComposition &fibComp, const vec &dwSignal, const mat &gradientOrientations,
@@ -114,6 +115,8 @@ namespace HardiToolbox
   void      estimateBallAndSticks (FiberComposition &fibComp, const vec &dwSignal, const mat &gradientOrientations,
                             int bVal, double s0, double snr, int nFibers, const StickEstimateOption &options);
   void      estimateModifiedBAS (FiberComposition &fibComp, const vec &dwSignal, const mat &gradientOrientations,
+                            int bVal, double s0, double snr, int nFibers, const StickEstimateOption &options);
+  void      estimateModifiedBASByStick (FiberComposition &fibComp, const vec &dwSignal, const mat &gradientOrientations,
                             int bVal, double s0, double snr, int nFibers, const StickEstimateOption &options);
 
   double    stickLogLikelihood (const mat &fibDirs, const mat &gradientOrientations, int bVal, double s0, double d, const vec &A, const vec &dwSignal);

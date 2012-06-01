@@ -272,21 +272,24 @@ void testTomsAlgorithmOneVoxel (int x, int y, int nFibers, const StickEstimateOp
       fibComp.nFibers = nFibers;
       fibComp.fibDirs = trueDirs;
       fibComp.fibDiffs = 2.0e-3*ones(nFibers+1);
-      fibComp.fibDiffs(nFibers) = 1.6e-3;
+      fibComp.fibDiffs(nFibers) = 1.0e-3;
       fibComp.fibWeights = 1.0/nFibers*ones(nFibers);
       bTrueDirsFound = true;
       break;      
     }
   }
 
+  // estimateModifiedBASByStick (fibComp, S, gradMat, bVal, s0, snr, nFibers, options);
   estimateModifiedBAS (fibComp, S, gradMat, bVal, s0, snr, nFibers, options);
-  // estimateBallAndSticks (fibComp, S, gradMat, bVal, s0, snr, nFibers, options);
   fibComp.fibDirs.print("estimated dirs");
+  fibComp.fibWeights.print("estimated weights");
+  fibComp.fibDiffs.print("estimated diffusivities");
 
   if (bTrueDirsFound) {
     trueDirs.print("true dirs");
-    double devAngle = mean(directionDeviation(fibComp.fibDirs, trueDirs));
-    cout <<"deviation to true dirs: " <<devAngle <<endl;
+    vec devAngle = directionDeviation(fibComp.fibDirs, trueDirs)*180/M_PI;
+
+    devAngle.print("deviation to true dirs");
   } else {
     cout <<"true dirs not found" <<endl;
   }
@@ -301,16 +304,17 @@ void testTomsAlgorithmParams (const StickEstimateOption &options)
 
   mat gradMat0 = loadGradientOrientations("diffusion_directions.txt");
   ImageType::Pointer img = readImage("dwi-b1500.nii");
-  double snr = 17.6;
+  //double snr = 17.6;
   int bVal = 1500;
 
   /******parameter settings*********/
-  mat diffus;
-  diffus <<2.0e-3 <<1.6e-3 <<endr
-	 <<2.0e-3 <<1.5e-3 <<endr
-	 <<1.9e-3 <<1.6e-3 <<endr
-	 <<2.0e-3 <<1.0e-3 <<endr
-	 <<2.0e-3 <<0.5e-3 <<endr;
+  mat diffus = 2.0*ones(15, 2);
+  for (int i=0; i<diffus.n_rows; ++i) {
+    diffus(i,1) = i*0.1e-3+0.4e-3;
+  }
+
+  vec snrs;
+  snrs <<17.6 <<endr;
 
   while (!inFile.eof()) {
     inFile.getline(line, 1280, '\n');
@@ -341,7 +345,8 @@ void testTomsAlgorithmParams (const StickEstimateOption &options)
     fibComp.nFibers = nFibers;
 
     for (int iDif = 0; iDif<diffus.n_rows; ++iDif) {
-      for (int iInit = 0; iInit<=1; ++iInit) {
+    for (int iSnr = 0; iSnr<snrs.n_elem; ++iSnr) {
+      for (int iInit = 0; iInit<=0; ++iInit) {
 
 	if (iInit==0) {
 	  initRandom(fibComp.fibDirs, nFibers);
@@ -352,17 +357,24 @@ void testTomsAlgorithmParams (const StickEstimateOption &options)
 	fibComp.fibDiffs(nFibers) = diffus(iDif,1);
 	fibComp.fibWeights = 1.0/nFibers*ones(nFibers);
   
+	double snr = snrs(iSnr);
+
 	vec devs = zeros(nTrials);
+    
+	char logStr [1280];
+	sprintf(logStr, "%0.4f\t%0.4f\t%0.0f\n", diffus(iDif,0), diffus(iDif,1), snr);
+	outFile <<logStr;
 	for (int iTrial=0; iTrial<nTrials; ++iTrial) {
 	  estimateModifiedBAS (fibComp, S, gradMat, bVal, s0, snr, nFibers, options);
+	  for (int i=0; i<3; ++i) {
+	    outFile <<"\t" <<fibComp.fibDirs(i,0) <<"\t" <<fibComp.fibDirs(i,1) <<endl;
+	  }
+	  outFile <<"\t---------------------" <<endl;
 	  devs(iTrial) = mean(directionDeviation(fibComp.fibDirs, trueDirs));
 	  cout <<"Trial #" <<iTrial <<": " <<devs(iTrial) <<endl;
 	}
-    
-	char logStr [1280];
-	sprintf(logStr, "\t%0.4f\t%0.4f\t%d\t%0.4f\t%0.4f\t%0.4f\n", diffus(iDif,0), diffus(iDif,1), iInit, mean(devs), stddev(devs), devs.min());
-	outFile <<logStr;
       }
+    }
     }
   }
 
