@@ -18,9 +18,9 @@ int main (int argc, char **argv)
   int bVal = 3000;
   double s0 = 220;
   double d = 1.7e-3;
-  double snr = 20;
-  double angle = 3*M_PI/4;
-  int nFibers = 2;
+  double snr = 40;
+  double angle = M_PI/6;
+  int nFibers = 1;
   int nTrials = 10;
   mat fibDirs;
   vec weights;
@@ -73,30 +73,32 @@ int main (int argc, char **argv)
 
   MultiTensorOption fgOptions;
   fgOptions.maxIt = 5000;
-  fgOptions.step = 1e-2;
+  fgOptions.init = 1;
+  fgOptions.step = 1e-6;
   fgOptions.tolerance = 1e-6;
 
-  if (argc<4) {
-    cout <<"input x, y, and nFibers" <<endl;
-    return 0;
-  } else {
-    int x = atoi(argv[1]);
-    int y = atoi(argv[2]);
-    int nFibers = atoi(argv[3]);
-    testTomsAlgorithmOneVoxel(x, y, nFibers, stickOptions);
-  }
+  // if (argc<4) {
+  //   cout <<"input x, y, and nFibers" <<endl;
+  //   return 0;
+  // } else {
+  //   int x = atoi(argv[1]);
+  //   int y = atoi(argv[2]);
+  //   int nFibers = atoi(argv[3]);
+  //   testTomsAlgorithmOneVoxel(x, y, nFibers, stickOptions);
+  // }
   // testTomsAlgorithmParams(stickOptions);
-  // mat gradientOrientations = loadGradientOrientations("gradients.txt");
-  // vec S = simulateMultiTensor(bVal, s0, gradientOrientations, fibDirs, weights);
-  // vec S1 = addRicianNoise(S, s0/snr);
-  // FiberComposition fibComp;
-  // UtilStopWatch::tic();
-  // estimateBallAndSticks(fibComp, S1, gradientOrientations, bVal, s0, snr, nFibers, stickOptions);
-  // cout <<"time: " <<UtilStopWatch::toc() <<"ms" <<endl;
-  // fibComp.fibDiffs.print("estimated diffusivities");
-  // fibComp.fibDirs.print("estimated directions");
-  // fibDirs.print("true directions");
-  // vec devAngle = directionDeviation(fibComp.fibDirs, fibDirs)*180/M_PI;
-  // devAngle.print("direction deviation");
+  mat gradientOrientations = loadGradientOrientations("gradients.txt");
+  vec S = simulateMultiTensor(bVal, s0, gradientOrientations, fibDirs, weights);
+  vec S1 = addRicianNoise(S, s0/snr);
+  FiberComposition fibComp;
+  UtilStopWatch::tic();
+  estimateMultiTensor(fibComp, S1, gradientOrientations, bVal, s0, nFibers, fgOptions);
+  cout <<"time: " <<UtilStopWatch::toc() <<"ms" <<endl;
+  fibComp.fibDiffs.print("estimated diffusivities");
+  fibComp.fibDirs.print("estimated directions");
+  fibComp.fibWeights.print("estimated weights");
+  fibDirs.print("true directions");
+  vec devAngle = directionDeviation(fibComp.fibDirs, fibDirs)*180/M_PI;
+  devAngle.print("direction deviation");
   return 0;
 }

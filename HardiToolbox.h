@@ -45,7 +45,7 @@ namespace HardiToolbox
   			                            const vec &weights=vec(), bool isAnisotropic=true);
   vec       simulateMultiTensor (int bVal, double s0, const mat &gradientOrientations, const mat &fibDirs,
 			       const vec &weights=vec(), bool isAnisotropic=true);
-  mat       simulateMultiTensorByComponent (int bVal, double s0, const mat &gradientOrientations, const mat &eulerAngles, const vec &diffusivities = vec());
+  mat       simulateMultiTensorByComponent (int bVal, double s0, const mat &gradientOrientations, const mat &eulerAngles, const mat &diffusivities = mat());
 
   void      loadSphereVecs (mat &triangleVecs, rowvec &triangleAreas, bool isAccurate = false);
   void      initRandom (mat &fibDirs, int nFibers);
