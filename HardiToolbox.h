@@ -65,6 +65,7 @@ namespace HardiToolbox
   struct    MultiTensorOption
   {
     int     maxIt;
+    int     init;
     double  step;
     double  tolerance;
   };

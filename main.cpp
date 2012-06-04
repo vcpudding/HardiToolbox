@@ -57,15 +57,15 @@ int main (int argc, char **argv)
   options.sparse = 0;
 
   StickEstimateOption stickOptions;
-  stickOptions.maxIt = 55000;
+  stickOptions.maxIt = 5500;
   stickOptions.maxInnerIt = 5;
   stickOptions.init = 0;
   stickOptions.useManifold = true;
   stickOptions.step = 1e-7;
   stickOptions.kappaStep = 1e-13;
   stickOptions.kappa0Step = 1e-12;
-  stickOptions.weightStep = 1e-12;
-  stickOptions.tolerance = 1e-6;
+  stickOptions.weightStep = 0;
+  stickOptions.tolerance = 1e-5;
   stickOptions.innerTolerance = 1e-5;
   stickOptions.isEstWeights = false;
   stickOptions.isEstDiffusivities = true;
@@ -91,7 +91,7 @@ int main (int argc, char **argv)
   // vec S1 = addRicianNoise(S, s0/snr);
   // FiberComposition fibComp;
   // UtilStopWatch::tic();
-  // estimateModifiedBAS(fibComp, S1, gradientOrientations, bVal, s0, snr, nFibers, stickOptions);
+  // estimateBallAndSticks(fibComp, S1, gradientOrientations, bVal, s0, snr, nFibers, stickOptions);
   // cout <<"time: " <<UtilStopWatch::toc() <<"ms" <<endl;
   // fibComp.fibDiffs.print("estimated diffusivities");
   // fibComp.fibDirs.print("estimated directions");
