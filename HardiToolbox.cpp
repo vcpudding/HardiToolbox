@@ -1449,13 +1449,11 @@ void HardiToolbox::estimateMultiTensor (FiberComposition &fibComp, const vec &dw
     FiberComposition fullTensor;
     estimateTensor (fullTensor, dwSignal, gradientOrientations, bVal, s0);
     mat fibDirs = fullTensor.fibDirs;
-    fibDirs.print("init dirs");
     for (int i=0; i<nFibers; ++i) {
-      eulerAngles(0,i) = 0;
-      eulerAngles(1,i) = asin(fibDirs(2,i));
-      eulerAngles(2,i) = atan2(-fibDirs(1,i), fibDirs(0,i));
-      mat R = eulerAngleToMatrix(eulerAngles.col(i));
-      R.print("rotation matrix");
+      fibDirs.swap_cols(0,i);
+      eulerAngles(1,i) = asin(fibDirs(2,0)) + M_PI/2;
+      eulerAngles(2,i) = atan2(-fibDirs(1,0), fibDirs(0,0)) + M_PI;
+      eulerAngles(0,i) = atan2(-fibDirs(2,1), fibDirs(2,2)) + M_PI;
     }
 
     for (int i=0; i<min(2,nFibers); ++i) {
@@ -1476,11 +1474,6 @@ void HardiToolbox::estimateMultiTensor (FiberComposition &fibComp, const vec &dw
 
   vec etas = ones(nFibers);
   vec weights = 1.0/nFibers*ones(nFibers);
-
-  // mat D = eye(3,3);
-  // D <<1.7e-3  <<0      <<0   <<endr
-  //   <<0       <<3e-4   <<0   <<endr
-  //   <<0       <<0      <<3e-4   <<endr;
 
   bool waitForInput = false;
   //optimize
@@ -1511,8 +1504,8 @@ void HardiToolbox::estimateMultiTensor (FiberComposition &fibComp, const vec &dw
 
     double lastE = e;
     e = norm(estimatedSignalSum-dwSignal,2);
-    //cout <<"it #" <<it <<":\t" <<e <<endl;
-    if (fabs(lastE - e)<options.tolerance)
+    // cout <<"it #" <<it <<":\t" <<e <<endl;
+    if (lastE - e<options.tolerance)
     {
       break;
     }

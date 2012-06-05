@@ -20,7 +20,7 @@ int main (int argc, char **argv)
   double d = 1.7e-3;
   double snr = 40;
   double angle = M_PI/6;
-  int nFibers = 1;
+  int nFibers = 2;
   int nTrials = 10;
   mat fibDirs;
   vec weights;
@@ -72,7 +72,7 @@ int main (int argc, char **argv)
   stickOptions.useLineSearch = false;
 
   MultiTensorOption fgOptions;
-  fgOptions.maxIt = 5000;
+  fgOptions.maxIt = 50000;
   fgOptions.init = 1;
   fgOptions.step = 1e-6;
   fgOptions.tolerance = 1e-6;
