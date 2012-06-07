@@ -18,7 +18,7 @@ int main (int argc, char **argv)
   int bVal = 3000;
   double s0 = 220;
   double d = 1.7e-3;
-  double snr = 40;
+  double snr = 20;
   double angle = M_PI/6;
   int nFibers = 2;
   int nTrials = 10;
@@ -57,18 +57,18 @@ int main (int argc, char **argv)
   options.sparse = 0;
 
   StickEstimateOption stickOptions;
-  stickOptions.maxIt = 5500;
+  stickOptions.maxIt = 15000;
   stickOptions.maxInnerIt = 5;
-  stickOptions.init = 0;
+  stickOptions.init = 1;
   stickOptions.useManifold = true;
   stickOptions.step = 1e-7;
-  stickOptions.kappaStep = 1e-13;
-  stickOptions.kappa0Step = 1e-12;
-  stickOptions.weightStep = 0;
-  stickOptions.tolerance = 1e-5;
+  stickOptions.kappaStep = 1e-12;
+  stickOptions.kappa0Step = 1e-11;
+  stickOptions.weightStep = 1e-11;
+  stickOptions.tolerance = 1e-6;
   stickOptions.innerTolerance = 1e-5;
-  stickOptions.isEstWeights = false;
-  stickOptions.isEstDiffusivities = true;
+  stickOptions.isEstWeights = true;
+  stickOptions.isEstDiffusivities = false;
   stickOptions.useLineSearch = false;
 
   MultiTensorOption fgOptions;
@@ -86,19 +86,20 @@ int main (int argc, char **argv)
   //   int nFibers = atoi(argv[3]);
   //   testTomsAlgorithmOneVoxel(x, y, nFibers, stickOptions);
   // }
-  // testTomsAlgorithmParams(stickOptions);
-  mat gradientOrientations = loadGradientOrientations("gradients.txt");
-  vec S = simulateMultiTensor(bVal, s0, gradientOrientations, fibDirs, weights);
-  vec S1 = addRicianNoise(S, s0/snr);
-  FiberComposition fibComp;
-  UtilStopWatch::tic();
-  estimateMultiTensor(fibComp, S1, gradientOrientations, bVal, s0, nFibers, fgOptions);
-  cout <<"time: " <<UtilStopWatch::toc() <<"ms" <<endl;
-  fibComp.fibDiffs.print("estimated diffusivities");
-  fibComp.fibDirs.print("estimated directions");
-  fibComp.fibWeights.print("estimated weights");
-  fibDirs.print("true directions");
-  vec devAngle = directionDeviation(fibComp.fibDirs, fibDirs)*180/M_PI;
-  devAngle.print("direction deviation");
+  // testTomsAlgorithmOnPhantom(stickOptions, "results/phantom/weights");
+  testWeightEstimation(stickOptions);
+  // mat gradientOrientations = loadGradientOrientations("gradients.txt");
+  // vec S = simulateMultiTensor(bVal, s0, gradientOrientations, fibDirs, weights);
+  // vec S1 = addRicianNoise(S, s0/snr);
+  // FiberComposition fibComp;
+  // UtilStopWatch::tic();
+  // estimateMultiTensor(fibComp, S1, gradientOrientations, bVal, s0, nFibers, fgOptions);
+  // cout <<"time: " <<UtilStopWatch::toc() <<"ms" <<endl;
+  // fibComp.fibDiffs.print("estimated diffusivities");
+  // fibComp.fibDirs.print("estimated directions");
+  // fibComp.fibWeights.print("estimated weights");
+  // fibDirs.print("true directions");
+  // vec devAngle = directionDeviation(fibComp.fibDirs, fibDirs)*180/M_PI;
+  // devAngle.print("direction deviation");
   return 0;
 }

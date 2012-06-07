@@ -44,7 +44,7 @@ namespace HardiToolbox
   vec       simulateMultiTensor (int bVal, double s0, const mat &gradientOrientations, const vec &fibDirs,
   			                            const vec &weights=vec(), bool isAnisotropic=true);
   vec       simulateMultiTensor (int bVal, double s0, const mat &gradientOrientations, const mat &fibDirs,
-			       const vec &weights=vec(), bool isAnisotropic=true);
+				 const vec &weights=vec(), const mat &diffus=mat());
   mat       simulateMultiTensorByComponent (int bVal, double s0, const mat &gradientOrientations, const mat &eulerAngles, const mat &diffusivities = mat());
 
   void      loadSphereVecs (mat &triangleVecs, rowvec &triangleAreas, bool isAccurate = false);
@@ -115,7 +115,7 @@ namespace HardiToolbox
 
   void      estimateBallAndSticks (FiberComposition &fibComp, const vec &dwSignal, const mat &gradientOrientations,
                             int bVal, double s0, double snr, int nFibers, const StickEstimateOption &options);
-  void      estimateModifiedBAS (FiberComposition &fibComp, const vec &dwSignal, const mat &gradientOrientations,
+  double    estimateModifiedBAS (FiberComposition &fibComp, const vec &dwSignal, const mat &gradientOrientations,
                             int bVal, double s0, double snr, int nFibers, const StickEstimateOption &options);
   void      estimateModifiedBASByStick (FiberComposition &fibComp, const vec &dwSignal, const mat &gradientOrientations,
                             int bVal, double s0, double snr, int nFibers, const StickEstimateOption &options);
@@ -123,6 +123,8 @@ namespace HardiToolbox
   double    stickLogLikelihood (const mat &fibDirs, const mat &gradientOrientations, int bVal, double s0, double d, const vec &A, const vec &dwSignal);
 
   double    stickLogLikelihood (const mat &estimatedSignal, const mat &oldSignal, const vec &dwSignal, double sigma);
+
+  double    ricianLikelihood (const vec &estimatedSignal, const vec &realSignal, double sigma);
 
   vec       sphereLog (const vec &p, const vec &q);
   vec       sphereExp (const vec &p, const vec &v);

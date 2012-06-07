@@ -27,5 +27,7 @@ void testSparsityTerm ();
 void testTomsAlgorithm (const StickEstimateOption &options);
 void testTomsAlgorithmOneVoxel (int x, int y, int nFibers, const StickEstimateOption &options);
 void testTomsAlgorithmParams (const StickEstimateOption &options);
+void testTomsAlgorithmOnPhantom (const StickEstimateOption &options, const char *folderName);
+void testWeightEstimation (const StickEstimateOption &options);
   
 #endif
