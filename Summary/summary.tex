@@ -9,7 +9,7 @@
 \maketitle
 
 \begin{abstract}
-This is a summary of the modified ball-and sticks model estimation experiments.
+  This is a summary of the modified ball-and sticks model estimation experiments.
 \end{abstract}
 
 \section{Introduction}
@@ -18,8 +18,11 @@ Here is the text of your introduction.
 \section{Experiments}
 
 \subsection{Which to estimate: diffusivities or weights?}
+\subsubsection{Estimating weights}
 
+In order to test the performance of estimating weights with fixed diffusivities, the following experiment is designed. Series of DW signal is simulated with one or two fiber compartments. Each compartment has equal minor diffusivities, thus features two diffusivities, the stick diffusivity and the ball diffusivity. For simulation, the stick diffusivity ranges from $1.3e-3$ to $2.1e-3$, while the ball diffusivity from $2e-4$ to $5e-4$. When two-fiber signals are simulated, the two fiber compartments have the same diffusivities.\\
 
+When estimating the modified ball-and-sticks model, the diffusivites are fixed at $(1.7e-3, 3e-4, 3e-4)$, while the weights are to be estimated, initialized as equal weights.
 
 \section{Conclusion}
 Write your conclusion here.

@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-1.40.11 (TeX Live 2010) (format=pdflatex 2011.10.18)  7 JUN 2012 16:42
+This is pdfTeX, Version 3.1415926-1.40.11 (TeX Live 2010) (format=pdflatex 2011.10.18)  7 JUN 2012 17:10
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -112,27 +112,33 @@ LaTeX Font Info:    External font `cmex10' loaded for size
 (Font)              <8> on input line 9.
 LaTeX Font Info:    External font `cmex10' loaded for size
 (Font)              <6> on input line 9.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <7> on input line 23.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <5> on input line 23.
  [1
 
 {/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}] (./summary.aux) ) 
 Here is how much of TeX's memory you used:
- 1003 strings out of 493747
- 13758 string characters out of 3151241
- 65997 words of memory out of 3500000
- 4314 multiletter control sequences out of 15000+200000
- 7887 words of font info for 28 fonts, out of 3000000 for 9000
+ 1006 strings out of 493747
+ 13787 string characters out of 3151241
+ 66981 words of memory out of 3500000
+ 4316 multiletter control sequences out of 15000+200000
+ 8502 words of font info for 30 fonts, out of 3000000 for 9000
  714 hyphenation exceptions out of 8191
- 37i,6n,23p,240b,189s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 37i,6n,23p,675b,189s stack positions out of 5000i,500n,10000p,200000b,50000s
 </usr/sha
-re/texmf/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/share/texmf/fonts/type
-1/public/amsfonts/cm/cmbx9.pfb></usr/share/texmf/fonts/type1/public/amsfonts/cm
-/cmr10.pfb></usr/share/texmf/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/sha
-re/texmf/fonts/type1/public/amsfonts/cm/cmr17.pfb></usr/share/texmf/fonts/type1
-/public/amsfonts/cm/cmr9.pfb>
-Output written on summary.pdf (1 page, 64531 bytes).
+re/texmf/fonts/type1/public/amsfonts/cm/cmbx10.pfb></usr/share/texmf/fonts/type
+1/public/amsfonts/cm/cmbx12.pfb></usr/share/texmf/fonts/type1/public/amsfonts/c
+m/cmbx9.pfb></usr/share/texmf/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/s
+hare/texmf/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texmf/fonts/typ
+e1/public/amsfonts/cm/cmr12.pfb></usr/share/texmf/fonts/type1/public/amsfonts/c
+m/cmr17.pfb></usr/share/texmf/fonts/type1/public/amsfonts/cm/cmr9.pfb></usr/sha
+re/texmf/fonts/type1/public/amsfonts/cm/cmsy10.pfb>
+Output written on summary.pdf (1 page, 103166 bytes).
 PDF statistics:
- 32 PDF objects out of 1000 (max. 8388607)
- 22 compressed objects within 1 object stream
+ 44 PDF objects out of 1000 (max. 8388607)
+ 31 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
  1 words of extra memory for PDF output out of 10000 (max. 10000000)
 
