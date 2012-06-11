@@ -11,7 +11,7 @@ using namespace HardiToolbox;
 
 #define _USE_MATH_DEFINES
 
-void parseArgs (int argc, char ** argv, int &nSimFibers, int &maxEstFibers, int &bVal, int &nRep, int &init, const char **gradFileName)
+void parseArgs (int argc, char ** argv, int &nSimFibers, int &maxEstFibers, int &bVal, int &nRep, int &init, double &s0, double &step, const char **gradFileName)
 {
   for (int i = 1; i < argc; i++) {
     if (string(argv[i]) == "-help") {
@@ -21,6 +21,8 @@ void parseArgs (int argc, char ** argv, int &nSimFibers, int &maxEstFibers, int 
       cout <<"-bval:\tb-value" <<endl;
       cout <<"-numrep:\tnumber of repetitions per set of parameters" <<endl;
       cout <<"-init:\tinitialization method. 0: random init; 1: init with full tensor" <<endl;
+      cout <<"-s0:\tbaseline signal level" <<endl;
+      cout <<"-step:\tstepsize" <<endl;
       cout <<"-gradfile:\tpath to gradient direction file" <<endl;
       exit(0);
     }
@@ -41,6 +43,10 @@ void parseArgs (int argc, char ** argv, int &nSimFibers, int &maxEstFibers, int 
 	*gradFileName = argv[++i];
       } else if (string(argv[i]) == "-init") {
 	init = atoi(argv[++i]);
+      } else if (string(argv[i]) == "-s0") {
+	s0 = atof(argv[++i]);
+      } else if (string(argv[i]) == "-step") {
+	step = atof(argv[++i]);
       }
     }
   }
@@ -53,25 +59,28 @@ int main (int argc, char **argv)
   int nSimFibers = 2;
   int nMaxEst = 2;
   int init = 1;
-  double s0 = 1.0;
+  double s0 = 200;
+  double step = 1e-6;
 
   rowvec sepAngles;
   rowvec snrs;
   rowvec weights;
 
-  sepAngles <<30 <<45 <<60 <<75 <<90 <<endr;
+  sepAngles <<30 /*<<45 <<60 <<75 <<90*/ <<endr;
   snrs <<20 <<40 <<endr;
   weights <<0.5 <<endr;
 
   const char * gradFileName = "gradients.txt";
   
-  parseArgs(argc, argv, nSimFibers, nMaxEst, bVal, nRep, init, &gradFileName);
+  parseArgs(argc, argv, nSimFibers, nMaxEst, bVal, nRep, init, s0, step, &gradFileName);
 
   cout <<"Number of simulated fibers: " <<nSimFibers <<endl;
   cout <<"Maximum number of estimated fibers: " <<nMaxEst <<endl;
   cout <<"b-value: " <<bVal <<endl;
   cout <<"Number of repetitions: " <<nRep <<endl;
   cout <<"Initialization: " <<(init==0?"random": "full tensor") <<endl;
+  cout <<"Baseline signal: " <<s0 <<endl;
+  cout <<"Step size: " <<step <<endl;
   cout <<"Gradient file: " <<gradFileName <<endl;
 
   cout <<"continue? (y/n) ";
@@ -84,10 +93,12 @@ int main (int argc, char **argv)
   mat gradientOrientations = loadGradientOrientations (gradFileName);
   int nGrads = gradientOrientations.n_rows;
 
+
+
   MultiTensorOption options;
   options.maxIt = 50000;
   options.init = init;
-  options.step = 1e-3;
+  options.step = step;
   options.tolerance = 1e-6;
 
   for (int iSepAngle = 0; iSepAngle<sepAngles.n_elem; ++iSepAngle) {
@@ -100,10 +111,10 @@ int main (int argc, char **argv)
 
 	char dirFileName [1024];
 	char weightFileName [1024];
-	sprintf(dirFileName, "results/n=%d__est=%d__b=%d__g=%d__a=%0.0f__s=%0.0f__w=%0.1f__init=%d_d.txt", 
-		nSimFibers, nMaxEst, bVal, nGrads, sepAngles(iSepAngle), snr, weight, init);
-	sprintf(weightFileName, "results/n=%d__est=%d__b=%d__g=%d__a=%0.0f__s=%0.0f__w=%0.1f__init=%d_w.txt", 
-		nSimFibers, nMaxEst, bVal, nGrads, sepAngles(iSepAngle), snr, weight, init);
+	sprintf(dirFileName, "results/n=%d__est=%d__b=%d__g=%d__a=%0.0f__s=%0.0f__w=%0.1f__init=%d__s0=%d_d.txt", 
+		nSimFibers, nMaxEst, bVal, nGrads, sepAngles(iSepAngle), snr, weight, init, (int)s0);
+	sprintf(weightFileName, "results/n=%d__est=%d__b=%d__g=%d__a=%0.0f__s=%0.0f__w=%0.1f__init=%d__s0=%d_w.txt", 
+		nSimFibers, nMaxEst, bVal, nGrads, sepAngles(iSepAngle), snr, weight, init, (int)s0);
 	ofstream dirFile (dirFileName);
 	ofstream weightFile (weightFileName);
 

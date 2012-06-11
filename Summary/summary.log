@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-1.40.11 (TeX Live 2010) (format=pdflatex 2011.10.18)  7 JUN 2012 17:10
+This is pdfTeX, Version 3.1415926-1.40.11 (TeX Live 2010) (format=pdflatex 2011.10.18)  11 JUN 2012 16:27
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -44,21 +44,40 @@ File: pdftex.def 2010/02/14 v0.04n Graphics/color for pdfTeX
 ))
 \Gin@req@height=\dimen103
 \Gin@req@width=\dimen104
+)
+(/usr/share/texmf/tex/latex/caption/caption.sty
+Package: caption 2010/01/09 v3.1m Customizing captions (AR)
+
+(/usr/share/texmf/tex/latex/caption/caption3.sty
+Package: caption3 2010/01/14 v3.1m caption3 kernel (AR)
+\captionmargin=\dimen105
+\captionmargin@=\dimen106
+\captionwidth=\dimen107
+\caption@indent=\dimen108
+\caption@parindent=\dimen109
+\caption@hangindent=\dimen110
+)
+\c@ContinuedFloat=\count88
+)
+(/usr/share/texmf/tex/latex/caption/subcaption.sty
+Package: subcaption 2008/08/31 v1.0b Adding subcaptions (AR)
+\c@subfigure=\count89
+\c@subtable=\count90
 ) (./summary.aux)
 \openout1 = `summary.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 4.
-LaTeX Font Info:    ... okay on input line 4.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 4.
-LaTeX Font Info:    ... okay on input line 4.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 4.
-LaTeX Font Info:    ... okay on input line 4.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 4.
-LaTeX Font Info:    ... okay on input line 4.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 4.
-LaTeX Font Info:    ... okay on input line 4.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 4.
-LaTeX Font Info:    ... okay on input line 4.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 6.
+LaTeX Font Info:    ... okay on input line 6.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 6.
+LaTeX Font Info:    ... okay on input line 6.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 6.
+LaTeX Font Info:    ... okay on input line 6.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 6.
+LaTeX Font Info:    ... okay on input line 6.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 6.
+LaTeX Font Info:    ... okay on input line 6.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 6.
+LaTeX Font Info:    ... okay on input line 6.
 
 (/usr/share/texmf/tex/generic/oberdiek/pdftexcmds.sty
 Package: pdftexcmds 2010/04/01 v0.9 Utility functions of pdfTeX for LuaTeX (HO)
@@ -106,39 +125,78 @@ G,.JBIG2,.JB2,.eps]
 File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
 e
 ))
+Package caption Info: Begin \AtBeginDocument code.
+Package caption Info: End \AtBeginDocument code.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <12> on input line 9.
+(Font)              <12> on input line 11.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <8> on input line 9.
+(Font)              <8> on input line 11.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <6> on input line 9.
+(Font)              <6> on input line 11.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <7> on input line 23.
+(Font)              <7> on input line 29.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <5> on input line 23.
- [1
+(Font)              <5> on input line 29.
+Package epstopdf Info: Source file: <figures/one_fiber__snr=20.eps>
+(epstopdf)                    date: 2012-06-11 16:04:44
+(epstopdf)                    size: 14022 bytes
+(epstopdf)             Output file: <figures/one_fiber__snr=20-eps-converted-to
+.pdf>
+(epstopdf)                    date: 2012-06-11 16:14:44
+(epstopdf)                    size: 10757 bytes
+(epstopdf)             Command: <repstopdf --outfile=figures/one_fiber__snr=20-
+eps-converted-to.pdf figures/one_fiber__snr=20.eps>
+(epstopdf)             \includegraphics on input line 37.
+Package epstopdf Info: Output file is already uptodate.
 
-{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}] (./summary.aux) ) 
+<figures/one_fiber__snr=20-eps-converted-to.pdf, id=1, 959.585pt x 417.56pt>
+File: figures/one_fiber__snr=20-eps-converted-to.pdf Graphic file (type pdf)
+
+<use figures/one_fiber__snr=20-eps-converted-to.pdf>
+Overfull \hbox (68.99895pt too wide) in paragraph at lines 37--38
+ [][] 
+ []
+
+Package epstopdf Info: Source file: <figures/one_fiber__snr=40.eps>
+(epstopdf)                    date: 2012-06-11 16:03:57
+(epstopdf)                    size: 14125 bytes
+(epstopdf)             Output file: <figures/one_fiber__snr=40-eps-converted-to
+.pdf>
+(epstopdf)                    date: 2012-06-11 16:21:20
+(epstopdf)                    size: 10756 bytes
+(epstopdf)             Command: <repstopdf --outfile=figures/one_fiber__snr=40-
+eps-converted-to.pdf figures/one_fiber__snr=40.eps>
+(epstopdf)             \includegraphics on input line 42.
+Package epstopdf Info: Output file is already uptodate.
+<figures/one_fiber__snr=40-eps-converted-to.pdf, id=2, 959.585pt x 413.545pt>
+File: figures/one_fiber__snr=40-eps-converted-to.pdf Graphic file (type pdf)
+
+<use figures/one_fiber__snr=40-eps-converted-to.pdf> [1
+
+{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}] [2 <./figures/one_fiber__s
+nr=20-eps-converted-to.pdf> <./figures/one_fiber__snr=40-eps-converted-to.pdf>]
+ (./summary.aux) ) 
 Here is how much of TeX's memory you used:
- 1006 strings out of 493747
- 13787 string characters out of 3151241
- 66981 words of memory out of 3500000
- 4316 multiletter control sequences out of 15000+200000
+ 2035 strings out of 493747
+ 32189 string characters out of 3151241
+ 94188 words of memory out of 3500000
+ 5333 multiletter control sequences out of 15000+200000
  8502 words of font info for 30 fonts, out of 3000000 for 9000
  714 hyphenation exceptions out of 8191
- 37i,6n,23p,675b,189s stack positions out of 5000i,500n,10000p,200000b,50000s
-</usr/sha
-re/texmf/fonts/type1/public/amsfonts/cm/cmbx10.pfb></usr/share/texmf/fonts/type
-1/public/amsfonts/cm/cmbx12.pfb></usr/share/texmf/fonts/type1/public/amsfonts/c
-m/cmbx9.pfb></usr/share/texmf/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/s
-hare/texmf/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texmf/fonts/typ
-e1/public/amsfonts/cm/cmr12.pfb></usr/share/texmf/fonts/type1/public/amsfonts/c
-m/cmr17.pfb></usr/share/texmf/fonts/type1/public/amsfonts/cm/cmr9.pfb></usr/sha
-re/texmf/fonts/type1/public/amsfonts/cm/cmsy10.pfb>
-Output written on summary.pdf (1 page, 103166 bytes).
+ 38i,7n,38p,550b,472s stack positions out of 5000i,500n,10000p,200000b,50000s
+</usr/share/texmf/fonts/type1/public/amsfonts/cm/cmbx10.pfb><
+/usr/share/texmf/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/share/texmf/fo
+nts/type1/public/amsfonts/cm/cmbx9.pfb></usr/share/texmf/fonts/type1/public/ams
+fonts/cm/cmmi10.pfb></usr/share/texmf/fonts/type1/public/amsfonts/cm/cmr10.pfb>
+</usr/share/texmf/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/share/texmf/fo
+nts/type1/public/amsfonts/cm/cmr17.pfb></usr/share/texmf/fonts/type1/public/ams
+fonts/cm/cmr7.pfb></usr/share/texmf/fonts/type1/public/amsfonts/cm/cmr9.pfb></u
+sr/share/texmf/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texmf/font
+s/type1/public/amsfonts/cm/cmsy7.pfb>
+Output written on summary.pdf (2 pages, 135691 bytes).
 PDF statistics:
- 44 PDF objects out of 1000 (max. 8388607)
- 31 compressed objects within 1 object stream
+ 69 PDF objects out of 1000 (max. 8388607)
+ 49 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
- 1 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 11 words of extra memory for PDF output out of 10000 (max. 10000000)
 

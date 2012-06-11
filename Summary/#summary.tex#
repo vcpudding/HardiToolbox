@@ -46,7 +46,7 @@ Figure \ref{figOneFiber} are results of single compartment estimation.
 
 
 
-When estimating the modified ball-and-sticks model, the diffusivites are fixed at $(1.7e-3, 3e-4, 3e-4)$, while the weights are to be estimated, initialized as equal weights.
+
 \end{enumerate}
 
 \subsubsection{Phantom data}
