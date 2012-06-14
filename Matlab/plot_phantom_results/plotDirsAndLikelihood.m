@@ -9,7 +9,7 @@ path = '~/Study/Backup/RunningExp/test_rician_em_weight/results/phantom/weights/
 resFiles = dir([path, 'res*']);
 posBuf = [];
 dirBuf = [];
-hDir = figure;
+hDir = figure('Position', [200 200 400 400]);
 axis([1 64 1 64]);
 axis square;
 view(2);
@@ -46,6 +46,6 @@ for i=1:size(likeDat,1)
     stdLike(65-dat(2), dat(1)) = dat(5);
 end
 
-hLike = figure;
+hLike = figure('Position', [100 100 1200 400]);
 subplot(1,2,1); imagesc(meanLike); colorbar; axis square;
 subplot(1,2,2); imagesc(stdLike); colorbar; axis square;

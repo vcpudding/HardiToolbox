@@ -39,10 +39,10 @@ namespace HardiToolbox
     int     nFibers;
   };
 
+  void      initFiberComp (FiberComposition &fibComp, int initCode=0);
+
   vec       fiberDeviation (const FiberComposition &fibComp, const FiberComposition &trueFibComp);
 
-  vec       simulateMultiTensor (int bVal, double s0, const mat &gradientOrientations, const vec &fibDirs,
-  			                            const vec &weights=vec(), bool isAnisotropic=true);
   vec       simulateMultiTensor (int bVal, double s0, const mat &gradientOrientations, const mat &fibDirs,
 				 const vec &weights=vec(), const mat &diffus=mat());
   mat       simulateMultiTensorByComponent (int bVal, double s0, const mat &gradientOrientations, const mat &eulerAngles, const mat &diffusivities = mat());
@@ -82,7 +82,7 @@ namespace HardiToolbox
   vec       simulateStick (int bVal, double s0, const vec &diffusivities, const mat &gradientOrientations, const vec &fibDirs);
   mat       simulateStickByComponent (int bVal, double s0, const vec &diffusivities, const mat &gradientOrientations, const mat &fibDirs);
 
-  vec       simulateBallAndStick (int bVal, double s0, const vec &diffusivities, const vec &weights, const mat &gradientOrientations, const vec &fibDirs);
+  vec       simulateBallAndStick (int bVal, double s0, const mat &gradientOrientations, const mat &fibDirs, const vec &weights=vec(), const vec &diffusivities=vec());
   mat       simulateBallAndStickByComponent (int bVal, double s0, const vec &diffusivities, const vec &weights, const mat &gradientOrientations, const mat &fibDirs);
 
   vec       simulateModBAS (int bVal, double s0, const vec &diffusivities, const vec &weights, const mat &gradientOrientations, const vec &fibDirs);

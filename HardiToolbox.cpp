@@ -31,45 +31,17 @@ mat HardiToolbox::loadGradientOrientations (const char *fileName)
   return gradMat.t();    
 }
 
-vec HardiToolbox::simulateMultiTensor (int bVal, double s0, const mat &gradientOrientations, const vec &fibDirs,
-				  const vec &weights, bool isAnisotropic)
-{
-  int nGrads = gradientOrientations.n_rows;
-  int nFibers = fibDirs.n_elem;
-
-  vec dwSignal (nGrads);
-  dwSignal.fill(0);
-  vec dwSignal1 (nGrads);
-  dwSignal1.fill(0);
-
-  mat D (3,3);
-  D.eye();
-  if (isAnisotropic) {
-    D(0,0) = 1.7e-3;
-    D(1,1) = 0.3e-3;
-    D(2,2) = 0.3e-3;
-  } else {
-    D(0,0) = 7e-4;
-    D(1,1) = 7e-4;
-    D(2,2) = 7e-4;
-  }
-
-  for (int i=0; i<nGrads; ++i) {
-    for (int j=0; j<nFibers; ++j) {
-      double angle = fibDirs(j);
-      mat R (3,3);
-      R <<cos(angle) <<-sin(angle) <<0 <<endr
-	<<sin(angle) <<cos(angle) <<0 <<endr
-	<<0 <<0 <<1 <<endr;
-
-      rowvec g = gradientOrientations.row(i);
-      double w = weights.empty()?1.0:weights(j);
-      dwSignal(i) += s0*w*exp(-bVal*dot(g*R*D*R.t(),g));
-    }
-
-  }
-  return dwSignal;
-}
+// void HardiToolbox::initFiberComp (FiberComposition &fibComp, int nFibers, int initCode)
+// {
+//   if (initCode==0) {
+//     /**random initialization**/
+//     fibComp.nFibers = nFibers;
+//     initRandom(fibComp.fibDirs, nFibers);
+//     fibComp.fibDiffs = 1.7e-3*ones(nFibers+1);
+//     fibComp.fibDiffs(nFibers) = 0.3e-3;
+//     fibComp.fibWeights = 1.0/nFibers*ones(nFibers);
+//   }
+// }
 
 vec HardiToolbox::simulateMultiTensor (int bVal, double s0, const mat &gradientOrientations, const mat &fibDirs,
 				       const vec &weights, const mat &diffus)
@@ -448,28 +420,34 @@ vec HardiToolbox::simulateStick(int bVal, double s0, const vec &d, const mat &gr
   return dwSignal;
 }
 
-vec HardiToolbox::simulateBallAndStick(int bVal, double s0, const vec &d, const vec &w, const mat &gradientOrientations, const vec &fibDirs)
+vec HardiToolbox::simulateBallAndStick(int bVal, double s0, const mat &gradientOrientations, const mat &fibDirs, const vec &weights, const vec &diffusivities)
 {
-  int nFibers = fibDirs.n_elem;
+  int nFibers = fibDirs.n_cols;
   int nGrads = gradientOrientations.n_rows;
   vec dwSignal (nGrads);
   dwSignal.fill(0);
 
+  vec d;
+  if (diffusivities.is_empty()){
+    d = 1.7e-3*ones(nFibers+1);
+    d(nFibers) = 3e-4;
+  } else {
+    d = diffusivities;
+  }
+
   for (int j=0; j<nFibers; ++j)
   {
-    vec dir (3);
-    dir <<cos(fibDirs(j)) <<endr <<sin(fibDirs(j)) <<endr <<0 <<endr;
 
-    double w1 = w.is_empty()?1.0/(nFibers+1):w(j);
+    double w1 = weights.is_empty()?1.0/(nFibers+1):weights(j);
     for (int i=0; i<nGrads; ++i)
     {
-      dwSignal(i) += w1*s0*exp(-bVal*d(j)*pow(dot(gradientOrientations.row(i), dir),2));
+      dwSignal(i) += w1*s0*exp(-bVal*d(j)*pow(dot(gradientOrientations.row(i), fibDirs.col(j)),2));
     }
   }
 
   for (int i=0; i<nGrads;++i)
   {
-    dwSignal(i) += (w.is_empty()?1.0:w(nFibers))*s0*exp(-bVal*d(nFibers));
+    dwSignal(i) += (weights.is_empty()?1.0/(nFibers+1):weights(nFibers))*s0*exp(-bVal*d(nFibers));
   }
 
   return dwSignal;
@@ -765,7 +743,7 @@ void HardiToolbox::estimateSticksDiffs(FiberComposition &fibComp, const vec &dwS
 
 
 void HardiToolbox::estimateBallAndSticks(FiberComposition &fibComp, const vec &dwSignal, const mat &gradientOrientations,
-                                  int bVal, double s0, double snr, int nFibers, const StickEstimateOption &options)
+					 int bVal, double s0, double snr, int nFibers, const StickEstimateOption &options)
 {
   //initialize
   int nGrads = gradientOrientations.n_rows;
@@ -778,8 +756,8 @@ void HardiToolbox::estimateBallAndSticks(FiberComposition &fibComp, const vec &d
 
   double sigma = s0/snr;
 
-  vec kappas = 2.3e-3*ones(nFibers+1);
-  kappas(nFibers) = 1.6e-3;
+  vec kappas = 1.7e-3*ones(nFibers+1);
+  kappas(nFibers) = 0.3e-3;
 
   vec weights = 1.0/(nFibers+1)*ones(nFibers+1);
 
@@ -787,7 +765,10 @@ void HardiToolbox::estimateBallAndSticks(FiberComposition &fibComp, const vec &d
   mat estimatedSignal = simulateBallAndStickByComponent(bVal, s0, kappas, weights, gradientOrientations, fibDirs);
   vec A (nGrads);
   bool waitForInput = false;
-  double e = stickLogLikelihood(estimatedSignal, estimatedSignal, dwSignal, sigma);
+  
+  vec estimatedSignalSum = sum(estimatedSignal, 1);
+  double e = ricianLikelihood(estimatedSignalSum, dwSignal, sigma);
+
   for (int it=0; it<options.maxIt; ++it)
   {
     mat oldDirs = fibDirs;
@@ -844,7 +825,7 @@ void HardiToolbox::estimateBallAndSticks(FiberComposition &fibComp, const vec &d
       }
 
       if (options.isEstWeights) {
-	cout <<dWeights <<endl;
+	//cout <<dWeights <<endl;
 	weights += options.weightStep*dWeights;
 	weights -= (sum(weights)-1)/(nFibers+1)*ones(nFibers+1);
 	for (int i=0; i<nFibers+1; ++i) {
@@ -860,7 +841,10 @@ void HardiToolbox::estimateBallAndSticks(FiberComposition &fibComp, const vec &d
     }
 
     double lastE = e;
-    e = stickLogLikelihood(estimatedSignal, oldSignal, dwSignal, sigma);
+    
+    estimatedSignal = simulateBallAndStickByComponent(bVal, s0, kappas, weights, gradientOrientations, fibDirs);
+    estimatedSignalSum = sum(estimatedSignal, 1);
+    e = ricianLikelihood (estimatedSignalSum, dwSignal, sigma);
     cout <<"it #" <<it <<": e=" <<e <<endl;
     if (fabs(e-lastE)<options.tolerance)
     {
@@ -1144,7 +1128,7 @@ void HardiToolbox::estimateModifiedBASByStick(FiberComposition &fibComp, const v
 	}
 
 	kappas(nFibers) += options.kappa0Step*dKappa0;
-	cout <<dKappa0 <<endl;
+	//cout <<dKappa0 <<endl;
 	if (fabs(dKappa0)<options.innerTolerance) {
 	  break;
 	}

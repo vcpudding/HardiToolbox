@@ -59,14 +59,14 @@ int main (int argc, char **argv)
   int nSimFibers = 2;
   int nMaxEst = 2;
   int init = 1;
-  double s0 = 200;
+  double s0 = 100;
   double step = 1e-6;
 
   rowvec sepAngles;
   rowvec snrs;
   rowvec weights;
 
-  sepAngles <<30 /*<<45 <<60 <<75 <<90*/ <<endr;
+  sepAngles <<30 <<45 <<60 <<75 <<90 <<endr;
   snrs <<20 <<40 <<endr;
   weights <<0.5 <<endr;
 
@@ -92,8 +92,6 @@ int main (int argc, char **argv)
 
   mat gradientOrientations = loadGradientOrientations (gradFileName);
   int nGrads = gradientOrientations.n_rows;
-
-
 
   MultiTensorOption options;
   options.maxIt = 50000;
@@ -145,10 +143,10 @@ int main (int argc, char **argv)
 	  mat weightMat = trueWeights.t();
 
 	  for (int n=nSimFibers; n<=nMaxEst; ++n) {
-		FiberComposition fibComp;
-		estimateMultiTensor(fibComp, S1, gradientOrientations, bVal, s0, n, options);
-		dirMat = join_rows(dirMat, fibComp.fibDirs);
-		weightMat = join_rows(weightMat, fibComp.fibWeights.t());
+	    FiberComposition fibComp;
+	    estimateMultiTensor(fibComp, S1, gradientOrientations, bVal, s0, n, options);
+	    dirMat = join_rows(dirMat, fibComp.fibDirs);
+	    weightMat = join_rows(weightMat, fibComp.fibWeights.t());
 	  }
 	  
 	  for (int k=0; k<3; ++k) {

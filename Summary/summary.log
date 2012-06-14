@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-1.40.11 (TeX Live 2010) (format=pdflatex 2011.10.18)  11 JUN 2012 16:27
+This is pdfTeX, Version 3.1415926-1.40.11 (TeX Live 2010) (format=pdflatex 2011.10.18)  12 JUN 2012 10:24
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -63,21 +63,29 @@ Package: caption3 2010/01/14 v3.1m caption3 kernel (AR)
 Package: subcaption 2008/08/31 v1.0b Adding subcaptions (AR)
 \c@subfigure=\count89
 \c@subtable=\count90
+)
+(/usr/share/texmf/tex/latex/float/float.sty
+Package: float 2001/11/08 v1.3d Float enhancements (AL)
+\c@float@type=\count91
+\float@exts=\toks15
+\float@box=\box26
+\@float@everytoks=\toks16
+\@floatcapt=\box27
 ) (./summary.aux)
 \openout1 = `summary.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 6.
-LaTeX Font Info:    ... okay on input line 6.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 6.
-LaTeX Font Info:    ... okay on input line 6.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 6.
-LaTeX Font Info:    ... okay on input line 6.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 6.
-LaTeX Font Info:    ... okay on input line 6.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 6.
-LaTeX Font Info:    ... okay on input line 6.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 6.
-LaTeX Font Info:    ... okay on input line 6.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 7.
+LaTeX Font Info:    ... okay on input line 7.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 7.
+LaTeX Font Info:    ... okay on input line 7.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 7.
+LaTeX Font Info:    ... okay on input line 7.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 7.
+LaTeX Font Info:    ... okay on input line 7.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 7.
+LaTeX Font Info:    ... okay on input line 7.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 7.
+LaTeX Font Info:    ... okay on input line 7.
 
 (/usr/share/texmf/tex/generic/oberdiek/pdftexcmds.sty
 Package: pdftexcmds 2010/04/01 v0.9 Utility functions of pdfTeX for LuaTeX (HO)
@@ -126,13 +134,14 @@ File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
 e
 ))
 Package caption Info: Begin \AtBeginDocument code.
+Package caption Info: float package is loaded.
 Package caption Info: End \AtBeginDocument code.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <12> on input line 11.
+(Font)              <12> on input line 12.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <8> on input line 11.
+(Font)              <8> on input line 12.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <6> on input line 11.
+(Font)              <6> on input line 12.
 LaTeX Font Info:    External font `cmex10' loaded for size
 (Font)              <7> on input line 29.
 LaTeX Font Info:    External font `cmex10' loaded for size
@@ -153,10 +162,6 @@ Package epstopdf Info: Output file is already uptodate.
 File: figures/one_fiber__snr=20-eps-converted-to.pdf Graphic file (type pdf)
 
 <use figures/one_fiber__snr=20-eps-converted-to.pdf>
-Overfull \hbox (68.99895pt too wide) in paragraph at lines 37--38
- [][] 
- []
-
 Package epstopdf Info: Source file: <figures/one_fiber__snr=40.eps>
 (epstopdf)                    date: 2012-06-11 16:03:57
 (epstopdf)                    size: 14125 bytes
@@ -168,35 +173,254 @@ Package epstopdf Info: Source file: <figures/one_fiber__snr=40.eps>
 eps-converted-to.pdf figures/one_fiber__snr=40.eps>
 (epstopdf)             \includegraphics on input line 42.
 Package epstopdf Info: Output file is already uptodate.
+
 <figures/one_fiber__snr=40-eps-converted-to.pdf, id=2, 959.585pt x 413.545pt>
 File: figures/one_fiber__snr=40-eps-converted-to.pdf Graphic file (type pdf)
 
 <use figures/one_fiber__snr=40-eps-converted-to.pdf> [1
 
-{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}] [2 <./figures/one_fiber__s
-nr=20-eps-converted-to.pdf> <./figures/one_fiber__snr=40-eps-converted-to.pdf>]
- (./summary.aux) ) 
+{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}]
+Package epstopdf Info: Source file: <figures/two_fiber__snr=20__angle=30.eps>
+(epstopdf)                    date: 2012-06-07 16:12:52
+(epstopdf)                    size: 15386 bytes
+(epstopdf)             Output file: <figures/two_fiber__snr=20__angle=30-eps-co
+nverted-to.pdf>
+(epstopdf)                    date: 2012-06-11 21:37:08
+(epstopdf)                    size: 11738 bytes
+(epstopdf)             Command: <repstopdf --outfile=figures/two_fiber__snr=20_
+_angle=30-eps-converted-to.pdf figures/two_fiber__snr=20__angle=30.eps>
+(epstopdf)             \includegraphics on input line 54.
+Package epstopdf Info: Output file is already uptodate.
+
+<figures/two_fiber__snr=20__angle=30-eps-converted-to.pdf, id=19, 962.59625pt x
+ 402.50375pt>
+File: figures/two_fiber__snr=20__angle=30-eps-converted-to.pdf Graphic file (ty
+pe pdf)
+ <use figures/two_fiber__snr=20__angle=30-eps-converted-to.pdf>
+Package epstopdf Info: Source file: <figures/two_fiber__snr=20__angle=45.eps>
+(epstopdf)                    date: 2012-06-07 16:13:40
+(epstopdf)                    size: 15783 bytes
+(epstopdf)             Output file: <figures/two_fiber__snr=20__angle=45-eps-co
+nverted-to.pdf>
+(epstopdf)                    date: 2012-06-11 21:37:08
+(epstopdf)                    size: 11568 bytes
+(epstopdf)             Command: <repstopdf --outfile=figures/two_fiber__snr=20_
+_angle=45-eps-converted-to.pdf figures/two_fiber__snr=20__angle=45.eps>
+(epstopdf)             \includegraphics on input line 55.
+Package epstopdf Info: Output file is already uptodate.
+
+<figures/two_fiber__snr=20__angle=45-eps-converted-to.pdf, id=20, 959.585pt x 3
+95.4775pt>
+File: figures/two_fiber__snr=20__angle=45-eps-converted-to.pdf Graphic file (ty
+pe pdf)
+ <use figures/two_fiber__snr=20__angle=45-eps-converted-to.pdf>
+Package epstopdf Info: Source file: <figures/two_fiber__snr=20__angle=60.eps>
+(epstopdf)                    date: 2012-06-07 16:15:49
+(epstopdf)                    size: 15653 bytes
+(epstopdf)             Output file: <figures/two_fiber__snr=20__angle=60-eps-co
+nverted-to.pdf>
+(epstopdf)                    date: 2012-06-11 21:37:09
+(epstopdf)                    size: 11823 bytes
+(epstopdf)             Command: <repstopdf --outfile=figures/two_fiber__snr=20_
+_angle=60-eps-converted-to.pdf figures/two_fiber__snr=20__angle=60.eps>
+(epstopdf)             \includegraphics on input line 56.
+Package epstopdf Info: Output file is already uptodate.
+
+<figures/two_fiber__snr=20__angle=60-eps-converted-to.pdf, id=21, 962.59625pt x
+ 402.50375pt>
+File: figures/two_fiber__snr=20__angle=60-eps-converted-to.pdf Graphic file (ty
+pe pdf)
+ <use figures/two_fiber__snr=20__angle=60-eps-converted-to.pdf>
+Package epstopdf Info: Source file: <figures/two_fiber__snr=20__angle=90.eps>
+(epstopdf)                    date: 2012-06-07 16:16:49
+(epstopdf)                    size: 15475 bytes
+(epstopdf)             Output file: <figures/two_fiber__snr=20__angle=90-eps-co
+nverted-to.pdf>
+(epstopdf)                    date: 2012-06-11 21:37:09
+(epstopdf)                    size: 11762 bytes
+(epstopdf)             Command: <repstopdf --outfile=figures/two_fiber__snr=20_
+_angle=90-eps-converted-to.pdf figures/two_fiber__snr=20__angle=90.eps>
+(epstopdf)             \includegraphics on input line 57.
+Package epstopdf Info: Output file is already uptodate.
+
+<figures/two_fiber__snr=20__angle=90-eps-converted-to.pdf, id=22, 959.585pt x 3
+98.48875pt>
+File: figures/two_fiber__snr=20__angle=90-eps-converted-to.pdf Graphic file (ty
+pe pdf)
+ <use figures/two_fiber__snr=20__angle=90-eps-converted-to.pdf>
+[2 <./figures/one_fiber__snr=20-eps-converted-to.pdf> <./figures/one_fiber__snr
+=40-eps-converted-to.pdf>]
+Overfull \vbox (60.96477pt too high) has occurred while \output is active []
+
+
+[3 <./figures/two_fiber__snr=20__angle=30-eps-converted-to.pdf> <./figures/two_
+fiber__snr=20__angle=45-eps-converted-to.pdf> <./figures/two_fiber__snr=20__ang
+le=60-eps-converted-to.pdf> <./figures/two_fiber__snr=20__angle=90-eps-converte
+d-to.pdf>]
+Package epstopdf Info: Source file: <figures/two_fiber__snr=40__angle=30.eps>
+(epstopdf)                    date: 2012-06-07 16:24:30
+(epstopdf)                    size: 16012 bytes
+(epstopdf)             Output file: <figures/two_fiber__snr=40__angle=30-eps-co
+nverted-to.pdf>
+(epstopdf)                    date: 2012-06-11 21:39:49
+(epstopdf)                    size: 11678 bytes
+(epstopdf)             Command: <repstopdf --outfile=figures/two_fiber__snr=40_
+_angle=30-eps-converted-to.pdf figures/two_fiber__snr=40__angle=30.eps>
+(epstopdf)             \includegraphics on input line 65.
+Package epstopdf Info: Output file is already uptodate.
+
+<figures/two_fiber__snr=40__angle=30-eps-converted-to.pdf, id=65, 959.585pt x 4
+02.50375pt>
+File: figures/two_fiber__snr=40__angle=30-eps-converted-to.pdf Graphic file (ty
+pe pdf)
+ <use figures/two_fiber__snr=40__angle=30-eps-converted-to.pdf>
+Package epstopdf Info: Source file: <figures/two_fiber__snr=40__angle=45.eps>
+(epstopdf)                    date: 2012-06-07 16:47:37
+(epstopdf)                    size: 15812 bytes
+(epstopdf)             Output file: <figures/two_fiber__snr=40__angle=45-eps-co
+nverted-to.pdf>
+(epstopdf)                    date: 2012-06-11 21:39:50
+(epstopdf)                    size: 11825 bytes
+(epstopdf)             Command: <repstopdf --outfile=figures/two_fiber__snr=40_
+_angle=45-eps-converted-to.pdf figures/two_fiber__snr=40__angle=45.eps>
+(epstopdf)             \includegraphics on input line 66.
+Package epstopdf Info: Output file is already uptodate.
+
+<figures/two_fiber__snr=40__angle=45-eps-converted-to.pdf, id=66, 959.585pt x 4
+04.51125pt>
+File: figures/two_fiber__snr=40__angle=45-eps-converted-to.pdf Graphic file (ty
+pe pdf)
+ <use figures/two_fiber__snr=40__angle=45-eps-converted-to.pdf>
+Package epstopdf Info: Source file: <figures/two_fiber__snr=40__angle=60.eps>
+(epstopdf)                    date: 2012-06-07 16:48:35
+(epstopdf)                    size: 15927 bytes
+(epstopdf)             Output file: <figures/two_fiber__snr=40__angle=60-eps-co
+nverted-to.pdf>
+(epstopdf)                    date: 2012-06-11 21:39:50
+(epstopdf)                    size: 11442 bytes
+(epstopdf)             Command: <repstopdf --outfile=figures/two_fiber__snr=40_
+_angle=60-eps-converted-to.pdf figures/two_fiber__snr=40__angle=60.eps>
+(epstopdf)             \includegraphics on input line 67.
+Package epstopdf Info: Output file is already uptodate.
+
+<figures/two_fiber__snr=40__angle=60-eps-converted-to.pdf, id=67, 962.59625pt x
+ 402.50375pt>
+File: figures/two_fiber__snr=40__angle=60-eps-converted-to.pdf Graphic file (ty
+pe pdf)
+ <use figures/two_fiber__snr=40__angle=60-eps-converted-to.pdf>
+Package epstopdf Info: Source file: <figures/two_fiber__snr=40__angle=90.eps>
+(epstopdf)                    date: 2012-06-07 16:49:16
+(epstopdf)                    size: 15632 bytes
+(epstopdf)             Output file: <figures/two_fiber__snr=40__angle=90-eps-co
+nverted-to.pdf>
+(epstopdf)                    date: 2012-06-11 21:39:50
+(epstopdf)                    size: 11855 bytes
+(epstopdf)             Command: <repstopdf --outfile=figures/two_fiber__snr=40_
+_angle=90-eps-converted-to.pdf figures/two_fiber__snr=40__angle=90.eps>
+(epstopdf)             \includegraphics on input line 68.
+Package epstopdf Info: Output file is already uptodate.
+
+<figures/two_fiber__snr=40__angle=90-eps-converted-to.pdf, id=68, 959.585pt x 4
+07.5225pt>
+File: figures/two_fiber__snr=40__angle=90-eps-converted-to.pdf Graphic file (ty
+pe pdf)
+ <use figures/two_fiber__snr=40__angle=90-eps-converted-to.pdf>
+Overfull \vbox (67.915pt too high) has occurred while \output is active []
+
+
+[4 <./figures/two_fiber__snr=40__angle=30-eps-converted-to.pdf> <./figures/two_
+fiber__snr=40__angle=45-eps-converted-to.pdf> <./figures/two_fiber__snr=40__ang
+le=60-eps-converted-to.pdf> <./figures/two_fiber__snr=40__angle=90-eps-converte
+d-to.pdf>]
+Package epstopdf Info: Source file: <figures/phantom_diffus.eps>
+(epstopdf)                    date: 2012-06-11 21:58:13
+(epstopdf)                    size: 77897 bytes
+(epstopdf)             Output file: <figures/phantom_diffus-eps-converted-to.pd
+f>
+(epstopdf)                    date: 2012-06-11 21:59:03
+(epstopdf)                    size: 23047 bytes
+(epstopdf)             Command: <repstopdf --outfile=figures/phantom_diffus-eps
+-converted-to.pdf figures/phantom_diffus.eps>
+(epstopdf)             \includegraphics on input line 84.
+Package epstopdf Info: Output file is already uptodate.
+
+<figures/phantom_diffus-eps-converted-to.pdf, id=96, 321.2pt x 321.2pt>
+File: figures/phantom_diffus-eps-converted-to.pdf Graphic file (type pdf)
+
+<use figures/phantom_diffus-eps-converted-to.pdf>
+Package epstopdf Info: Source file: <figures/phantom_diffus_like.eps>
+(epstopdf)                    date: 2012-06-11 21:51:47
+(epstopdf)                    size: 17192 bytes
+(epstopdf)             Output file: <figures/phantom_diffus_like-eps-converted-
+to.pdf>
+(epstopdf)                    date: 2012-06-11 21:52:20
+(epstopdf)                    size: 8876 bytes
+(epstopdf)             Command: <repstopdf --outfile=figures/phantom_diffus_lik
+e-eps-converted-to.pdf figures/phantom_diffus_like.eps>
+(epstopdf)             \includegraphics on input line 85.
+Package epstopdf Info: Output file is already uptodate.
+
+<figures/phantom_diffus_like-eps-converted-to.pdf, id=97, 962.59625pt x 321.2pt
+>
+File: figures/phantom_diffus_like-eps-converted-to.pdf Graphic file (type pdf)
+ <use figures/phantom_diffus_like-eps-converted-to.pdf>
+Package epstopdf Info: Source file: <figures/phantom_weights.eps>
+(epstopdf)                    date: 2012-06-11 21:59:02
+(epstopdf)                    size: 77898 bytes
+(epstopdf)             Output file: <figures/phantom_weights-eps-converted-to.p
+df>
+(epstopdf)                    date: 2012-06-11 21:59:04
+(epstopdf)                    size: 23072 bytes
+(epstopdf)             Command: <repstopdf --outfile=figures/phantom_weights-ep
+s-converted-to.pdf figures/phantom_weights.eps>
+(epstopdf)             \includegraphics on input line 93.
+Package epstopdf Info: Output file is already uptodate.
+
+<figures/phantom_weights-eps-converted-to.pdf, id=98, 321.2pt x 321.2pt>
+File: figures/phantom_weights-eps-converted-to.pdf Graphic file (type pdf)
+
+<use figures/phantom_weights-eps-converted-to.pdf>
+Package epstopdf Info: Source file: <figures/phantom_weights_like.eps>
+(epstopdf)                    date: 2012-06-11 21:51:23
+(epstopdf)                    size: 17062 bytes
+(epstopdf)             Output file: <figures/phantom_weights_like-eps-converted
+-to.pdf>
+(epstopdf)                    date: 2012-06-11 21:53:51
+(epstopdf)                    size: 8797 bytes
+(epstopdf)             Command: <repstopdf --outfile=figures/phantom_weights_li
+ke-eps-converted-to.pdf figures/phantom_weights_like.eps>
+(epstopdf)             \includegraphics on input line 94.
+Package epstopdf Info: Output file is already uptodate.
+
+<figures/phantom_weights_like-eps-converted-to.pdf, id=99, 962.59625pt x 321.2p
+t>
+File: figures/phantom_weights_like-eps-converted-to.pdf Graphic file (type pdf)
+
+ <use figures/phantom_weights_like-eps-converted-to.pdf> [5 <./figures/phantom_
+diffus-eps-converted-to.pdf> <./figures/phantom_diffus_like-eps-converted-to.pd
+f>] [6 <./figures/phantom_weights-eps-converted-to.pdf> <./figures/phantom_weig
+hts_like-eps-converted-to.pdf>] (./summary.aux) ) 
 Here is how much of TeX's memory you used:
- 2035 strings out of 493747
- 32189 string characters out of 3151241
- 94188 words of memory out of 3500000
- 5333 multiletter control sequences out of 15000+200000
+ 2145 strings out of 493747
+ 35909 string characters out of 3151241
+ 93188 words of memory out of 3500000
+ 5427 multiletter control sequences out of 15000+200000
  8502 words of font info for 30 fonts, out of 3000000 for 9000
  714 hyphenation exceptions out of 8191
  38i,7n,38p,550b,472s stack positions out of 5000i,500n,10000p,200000b,50000s
-</usr/share/texmf/fonts/type1/public/amsfonts/cm/cmbx10.pfb><
-/usr/share/texmf/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/share/texmf/fo
-nts/type1/public/amsfonts/cm/cmbx9.pfb></usr/share/texmf/fonts/type1/public/ams
-fonts/cm/cmmi10.pfb></usr/share/texmf/fonts/type1/public/amsfonts/cm/cmr10.pfb>
-</usr/share/texmf/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/share/texmf/fo
-nts/type1/public/amsfonts/cm/cmr17.pfb></usr/share/texmf/fonts/type1/public/ams
-fonts/cm/cmr7.pfb></usr/share/texmf/fonts/type1/public/amsfonts/cm/cmr9.pfb></u
-sr/share/texmf/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texmf/font
-s/type1/public/amsfonts/cm/cmsy7.pfb>
-Output written on summary.pdf (2 pages, 135691 bytes).
+</usr/share/texmf/fonts/type1/
+public/amsfonts/cm/cmbx10.pfb></usr/share/texmf/fonts/type1/public/amsfonts/cm/
+cmbx12.pfb></usr/share/texmf/fonts/type1/public/amsfonts/cm/cmbx9.pfb></usr/sha
+re/texmf/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texmf/fonts/type
+1/public/amsfonts/cm/cmr10.pfb></usr/share/texmf/fonts/type1/public/amsfonts/cm
+/cmr12.pfb></usr/share/texmf/fonts/type1/public/amsfonts/cm/cmr17.pfb></usr/sha
+re/texmf/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/share/texmf/fonts/type1/
+public/amsfonts/cm/cmr9.pfb></usr/share/texmf/fonts/type1/public/amsfonts/cm/cm
+sy10.pfb></usr/share/texmf/fonts/type1/public/amsfonts/cm/cmsy7.pfb>
+Output written on summary.pdf (6 pages, 256292 bytes).
 PDF statistics:
- 69 PDF objects out of 1000 (max. 8388607)
- 49 compressed objects within 1 object stream
+ 170 PDF objects out of 1000 (max. 8388607)
+ 117 compressed objects within 2 object streams
  0 named destinations out of 1000 (max. 500000)
- 11 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 71 words of extra memory for PDF output out of 10000 (max. 10000000)
 
