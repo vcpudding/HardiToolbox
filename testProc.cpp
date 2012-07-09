@@ -1,9 +1,180 @@
 #include "testProc.h"
+#include "erf.h"
 
 #include <fstream>
 
 using namespace std;
 using namespace HardiToolbox;
+
+void testBASRicianEM()
+{
+
+  struct timeval tStart, tEnd;
+
+  int bVal = 2000;
+  double s0 = 1500;
+  double snr = 2000;
+  double angle = M_PI/6;
+  int nFibers = 2;
+  int nEstFibers = 2;
+  int nTrials = 10;
+  mat fibDirs;
+  vec weights;
+  mat diffMat;
+  vec diffVec;
+  double d1 = 1.7e-3;
+  double d0 = 3e-4;
+
+  if (nFibers == 1)
+  {
+    double w = 0.2;
+    fibDirs <<1 <<endr <<0 <<endr <<0 <<endr;
+    weights <<w  <<endr <<1-w <<endr;
+    diffMat <<d1 <<endr <<d0 <<endr <<d0 <<endr;
+    diffVec <<d1 <<endr <<d0 <<endr;
+  } else
+  {
+    double w1 = 1.0/3.0, w2 = 1.0/3.0;
+    fibDirs <<1 <<cos(angle) <<endr <<0 <<sin(angle) <<endr <<0 <<0 <<endr;
+    weights <<w1 <<endr <<w2  <<endr <<1-w1-w2 <<endr;
+    diffMat <<d1 <<d1 <<endr <<d0 <<d0 <<endr <<d0 <<d0 <<endr;
+    diffVec <<d1 <<endr <<d1 <<endr <<d0 <<endr;
+  }
+
+  for (int i=0; i<nFibers; ++i) {
+  }
+
+  mat R(3,3);
+  initRandom(R, 3);
+  //fibDirs = R*fibDirs;
+
+  StickEstimateOption stickOptions;
+  stickOptions.maxIt = 25000;
+  stickOptions.maxInnerIt = 5;
+  stickOptions.init = 1;
+  stickOptions.useManifold = true;
+  stickOptions.step = 1e-9;
+  stickOptions.kappaStep = 1e-12;
+  stickOptions.kappa0Step = 1e-10;
+  stickOptions.weightStep = 1e-10;
+  stickOptions.tolerance = 1e-6;
+  stickOptions.innerTolerance = 1e-6;
+  stickOptions.isEstWeights = false;
+  stickOptions.isEstDiffusivities = true;
+  stickOptions.useLineSearch = false;
+  stickOptions.sparseFactor = 1e5;
+  stickOptions.isPrintDebugInfo = true;
+
+  mat gradientOrientations = loadGradientOrientations("gradients.txt");
+  vec S = simulateBallAndStick(bVal, s0, gradientOrientations, fibDirs, weights, diffVec);
+  vec S1 = addRicianNoise(S, s0/snr);
+  FiberComposition fibComp;
+  UtilStopWatch::tic();
+  fibComp.nFibers = nEstFibers;
+  initRandom(fibComp.fibDirs, nEstFibers);
+  fibComp.fibDiffs = 2.0e-3*ones(nEstFibers+1);
+  fibComp.fibDiffs(nEstFibers) = 0.3e-4;
+  fibComp.fibWeights = 1.0/(nEstFibers+1)*ones(nEstFibers+1);
+  estimateBallAndSticks(fibComp, S1, gradientOrientations, bVal, s0, snr, nEstFibers, stickOptions);
+  cout <<"time: " <<UtilStopWatch::toc() <<"ms" <<endl;
+  fibComp.fibDiffs.print("estimated diffusivities");
+  fibComp.fibDirs.print("estimated directions");
+  fibComp.fibWeights.print("estimated weights");
+  FiberComposition trueFibComp;
+  trueFibComp.nFibers = nFibers;
+  trueFibComp.fibDirs = fibDirs;
+  trueFibComp.fibDiffs = diffVec;
+  trueFibComp.fibWeights = weights;
+  
+  fibDirs.print("true directions");
+  vec dirDev, weightDev, diffusDev;
+  double meanErr = fiberDeviation(fibComp, trueFibComp, dirDev, weightDev, diffusDev);
+  dirDev.print("direction error");
+  weightDev.print("weight error");
+  diffusDev.print("diffusion error");
+}
+
+void testModBASRicianEM()
+{
+  struct timeval tStart, tEnd;
+
+  int bVal = 3000;
+  double s0 = 1500;
+  double snr = 20;
+  double angle = M_PI/4;
+  int nFibers = 2;
+  int nEst = 3;
+  int nTrials = 10;
+  mat fibDirs;
+  vec weights;
+  mat diffMat;
+  vec diffVec;
+  double d1 = 2.0e-3;
+  double d0 = 3e-4;
+
+  if (nFibers == 1)
+  {
+    fibDirs <<1 <<endr <<0 <<endr <<0 <<endr;
+    weights <<1  <<endr;
+    diffMat <<d1 <<endr <<d0 <<endr <<d0 <<endr;
+    diffVec <<d1-d0 <<endr <<d0 <<endr;
+  } else
+  {
+    fibDirs <<1 <<cos(angle) <<endr <<0 <<sin(angle) <<endr <<0 <<0 <<endr;
+    weights <<0.3 <<endr <<0.7 <<endr;
+    diffMat <<d1 <<d1 <<endr <<d0 <<d0 <<endr <<d0 <<d0 <<endr;
+    diffVec <<d1-d0 <<endr <<d1-d0 <<endr <<d0 <<endr;
+  }
+
+  mat R(3,3);
+  initRandom(R, 3);
+  //fibDirs = R*fibDirs;
+
+  StickEstimateOption stickOptions;
+  stickOptions.maxIt = 25000;
+  stickOptions.maxInnerIt = 5;
+  stickOptions.init = 1;
+  stickOptions.useManifold = true;
+  stickOptions.step = 1e-9;
+  stickOptions.kappaStep = 1e-12;
+  stickOptions.kappa0Step = 1e-10;
+  stickOptions.weightStep = 1e-10;
+  stickOptions.tolerance = 1e-5;
+  stickOptions.innerTolerance = 1e-6;
+  stickOptions.isEstWeights = true;
+  stickOptions.isEstDiffusivities = false;
+  stickOptions.useLineSearch = false;
+  stickOptions.sparseFactor = 1e5;
+
+  mat gradientOrientations = loadGradientOrientations("gradients.txt");
+  vec S = simulateMultiTensor(bVal, s0, gradientOrientations, fibDirs, weights, diffMat);
+  vec S1 = addRicianNoise(S, s0/snr);
+  FiberComposition fibComp;
+  fibComp.nFibers = nEst;
+  initRandom(fibComp.fibDirs, nEst);
+  fibComp.fibDiffs = 1.7e-3*ones(nEst+1);
+  fibComp.fibDiffs(nEst) = 3e-4;
+  fibComp.fibWeights = 1.0/nEst*ones(nEst);
+
+  UtilStopWatch::tic();
+  estimateModifiedBAS(fibComp, S1, gradientOrientations, bVal, s0, snr, nEst, stickOptions);
+  cout <<"time: " <<UtilStopWatch::toc() <<"ms" <<endl;
+  fibComp.fibDiffs.print("estimated diffusivities");
+  fibComp.fibDirs.print("estimated directions");
+  fibComp.fibWeights.print("estimated weights");
+  FiberComposition trueFibComp;
+  trueFibComp.nFibers = nFibers;
+  trueFibComp.fibDirs = fibDirs;
+  trueFibComp.fibDiffs = diffVec;
+  trueFibComp.fibWeights = weights;
+  
+  fibDirs.print("true directions");
+  vec dirDev, weightDev, diffusDev;
+  double meanErr = fiberDeviation(fibComp, trueFibComp, dirDev, weightDev, diffusDev);
+  dirDev.print("direction error");
+  weightDev.print("weight error");
+  diffusDev.print("diffusion error");
+}
 
 ImageType::Pointer readImage (const char *fileName)
 {
@@ -255,6 +426,7 @@ void testTomsAlgorithmOneVoxel (int x, int y, int nFibers, const StickEstimateOp
   mat trueDirs;
   bool bTrueDirsFound = false;
   char line [1280];
+
   while (!inFile.eof()) {
     inFile.getline(line, 1280, '\n');
     if (inFile.gcount()<1) {
@@ -274,14 +446,21 @@ void testTomsAlgorithmOneVoxel (int x, int y, int nFibers, const StickEstimateOp
     }
   }
 
+  FiberComposition fullTensor;
+  estimateTensor(fullTensor, S, gradMat, bVal, s0);
+
   fibComp.nFibers = nFibers;
   initRandom(fibComp.fibDirs, nFibers);
-  fibComp.fibDiffs = 2.5e-3*ones(nFibers+1);
+  fibComp.fibDiffs = 2.7e-3*ones(nFibers+1);
   fibComp.fibDiffs(nFibers) = 1.2e-3;
+  
+  // fibComp.fibDirs = fullTensor.fibDirs.cols(0, nFibers-1);
+  // fibComp.fibDiffs = fullTensor.fibDiffs(0)*ones(nFibers+1);
+  // fibComp.fibDiffs(nFibers) = (fullTensor.fibDiffs(1)+fullTensor.fibDiffs(2))/2;
   fibComp.fibWeights = 1.0/nFibers*ones(nFibers);
 
   estimateModifiedBAS (fibComp, S, gradMat, bVal, s0, snr, nFibers, options);
-  // estimateBallAndSticks (fibComp, S, gradMat, bVal, s0, snr, nFibers, options);
+  //estimateBallAndSticks (fibComp, S, gradMat, bVal, s0, snr, nFibers, options);
   fibComp.fibDirs.print("estimated dirs");
   fibComp.fibDiffs.print("estimated diffusivities");
   fibComp.fibWeights.print("estimated weights");
@@ -436,11 +615,32 @@ void testTomsAlgorithmOnPhantom (const StickEstimateOption &options, const char 
   likeFile.close();
 }
 
-void testWeightEstimation (const StickEstimateOption &options)
+void testWeightEstimation (int argc, char **argv)
 {
-  int nRep = 10;
+
+  if (argc<3) {
+    cout <<"insufficient input" <<endl;
+    exit (1);
+  }
+
+  StickEstimateOption options;
+  options.maxIt = 50000;
+  options.maxInnerIt = 5;
+  options.init = 1;
+  options.useManifold = true;
+  options.step = 1e-8;
+  options.kappaStep = 1e-10;
+  options.kappa0Step = 1e-11;
+  options.weightStep = 1e-8;
+  options.tolerance = 1e-6;
+  options.innerTolerance = 1e-5;
+  options.isEstWeights = atoi(argv[1]);
+  options.isEstDiffusivities = atoi(argv[2]);
+  options.useLineSearch = false;
+
+  int nRep = 20;
   int bVal = 2000;
-  double s0 = 1000;
+  double s0 = 200;
 
   mat gradMat = loadGradientOrientations("gradients.txt");
 
@@ -451,25 +651,39 @@ void testWeightEstimation (const StickEstimateOption &options)
   rowvec ballDiffus;
   ballDiffus <<0.2e-3 <<0.3e-3 <<0.4e-3 <<0.5e-3 <<endr;
 
-  for (int nFibers=1; nFibers<=2; ++nFibers) {
+  for (int nFibers=2; nFibers<=2; ++nFibers) {
     rowvec sepAngles;
-    if (nFibers == 1)
+    rowvec weights;
+    if (nFibers == 1) {
       sepAngles <<0 <<endr;
-    else
+      weights <<1.0 <<endr;
+    } else {
       sepAngles <<30 <<45 <<60 <<90 <<endr;
+      weights <<0.3 <<0.4 <<0.5 <<endr;
+    }
 
     for (int iSnr=0; iSnr<snrs.n_elem; ++iSnr) {
     for (int iSepAngle = 0; iSepAngle<sepAngles.n_elem; ++iSepAngle) {     
     for (int iStickDiffus=0; iStickDiffus<stickDiffus.n_elem; ++iStickDiffus) {
     for (int iBallDiffus=0; iBallDiffus<ballDiffus.n_elem; ++iBallDiffus) {
+    for (int iWeight=0; iWeight<weights.n_elem; ++iWeight) {
       char str [1024];
-      sprintf(str, "results/synthetic/weights/weight_est__n=%d__s=%d__a=%d_d1=%0.1e_d0=%0.1e.txt", 
-	      nFibers, (int)snrs(iSnr), (int)sepAngles(iSepAngle), stickDiffus(iStickDiffus), ballDiffus(iBallDiffus));
+
+      if (options.isEstWeights && options.isEstDiffusivities)
+	sprintf(str, "results/synthetic/weights_diffus/weight_est__n=%d__s=%d__a=%d__d1=%0.1e__d0=%0.1e__w=%0.1f.txt", 
+		nFibers, (int)snrs(iSnr), (int)sepAngles(iSepAngle), stickDiffus(iStickDiffus), ballDiffus(iBallDiffus), weights(iWeight));
+      else if (options.isEstWeights)
+	sprintf(str, "results/synthetic/weights/weight_est__n=%d__s=%d__a=%d__d1=%0.1e__d0=%0.1e__w=%0.1f.txt", 
+	      nFibers, (int)snrs(iSnr), (int)sepAngles(iSepAngle), stickDiffus(iStickDiffus), ballDiffus(iBallDiffus), weights(iWeight));
+      else
+	sprintf(str, "results/synthetic/diffus/weight_est__n=%d__s=%d__a=%d__d1=%0.1e__d0=%0.1e__w=%0.1f.txt", 
+	      nFibers, (int)snrs(iSnr), (int)sepAngles(iSepAngle), stickDiffus(iStickDiffus), ballDiffus(iBallDiffus), weights(iWeight));
+
       ofstream outFile (str);
 
       srand(time(0));
       double angle = sepAngles(iSepAngle)*M_PI/180;
-      mat trueDirs (3, nFibers);	
+      mat trueDirs (3, nFibers);
       if (nFibers==1) {
 	trueDirs <<1 <<endr <<0 <<endr <<0 <<endr;
       } else {
@@ -480,12 +694,9 @@ void testWeightEstimation (const StickEstimateOption &options)
       initRandom(R, 3);
       trueDirs = R*trueDirs;
 
-      vec trueWeights = 1.0/nFibers*ones(nFibers);
-      if (nFibers>1) {
-	vec r = randu(nFibers)-0.5;
-	r -= mean(r);
-	trueWeights += 0.2*r;
-      }
+      vec trueWeights = ones(nFibers);
+      if (nFibers>1)
+	trueWeights <<weights(iWeight) <<endr <<1-weights(iWeight) <<endr;
 
       mat trueDiffus (3, nFibers);
       for (int i=0; i<nFibers; ++i) {
@@ -493,6 +704,12 @@ void testWeightEstimation (const StickEstimateOption &options)
 	trueDiffus(1,i) = ballDiffus(iBallDiffus);
 	trueDiffus(2,i) = ballDiffus(iBallDiffus);
       }
+      FiberComposition trueFibComp;
+      trueFibComp.nFibers = nFibers;
+      trueFibComp.fibDirs = trueDirs;
+      trueFibComp.fibWeights = trueWeights;
+      trueFibComp.fibDiffs = stickDiffus(iStickDiffus)*ones(nFibers+1);
+      trueFibComp.fibDiffs(nFibers) = ballDiffus(iBallDiffus);
 
       vec S = simulateMultiTensor(bVal, s0, gradMat, trueDirs, trueWeights, trueDiffus);
       vec S1 = addRicianNoise(S, s0/snrs(iSnr));
@@ -506,14 +723,285 @@ void testWeightEstimation (const StickEstimateOption &options)
 	fibComp.fibWeights = 1.0/nFibers*ones(nFibers);
 
 	double l = estimateModifiedBAS (fibComp, S, gradMat, bVal, s0, snrs(iSnr), nFibers, options);
-	vec dev = directionDeviation(fibComp.fibDirs, trueDirs)*180/M_PI;
-	vec resVec = join_cols(trueWeights, join_cols(fibComp.fibWeights, dev));
+	vec dirDev, weightDev, diffusDev;
+	double err = fiberDeviation(fibComp, trueFibComp, dirDev, weightDev, diffusDev);
+	cout <<"mean error: " <<err <<endl;
+	vec resVec = join_cols(dirDev, join_cols(weightDev, diffusDev));
 	for (int i=0; i<resVec.n_elem; ++i) {
 	  outFile <<resVec(i) <<"\t";
 	}
 	outFile <<l <<endl;
       }
       outFile.close();
-    }}}}
+    }}}}}
+  }
+}
+
+vec readVoxelFromBrainData (int x, int y, int z, double &s0)
+{
+  ifstream brainFile ("assets/brain/im_b2000.raw");
+  int sx = 106, sy = 106, sz = 76;
+  int sVol = sx*sy*sz;
+
+  vec S = zeros(64);
+
+  for (int i=0; i<65; ++i) {
+    brainFile.seekg((sVol*i+sx*sy*z+sx*y+x)*sizeof(float), ios::beg);
+    float val;
+    brainFile.read((char*)&val, sizeof(float));
+    if (i==0)
+      s0 = val;
+    else
+      S(i-1) = val;
+  }
+  return S;
+}
+
+
+void testTomsAlgorithmOnBrainOneVoxel (int argc, char **argv)
+{
+  int iArg = 1;
+  int x= atoi(argv[iArg++]);
+  int y = 40; //atoi(argv[iArg++]);
+  int z = atoi(argv[iArg++]);
+  int nFibers = atoi(argv[iArg++]);
+  double sparse = atof(argv[iArg++]);
+  testTomsAlgorithmOnBrainOneVoxel(x,y,z,nFibers,sparse);
+}
+
+void testTomsAlgorithmOnBrainOneVoxel (int x, int y, int z, int nFibers, double sparse)
+{
+  StickEstimateOption stickOptions;
+  stickOptions.maxIt = 50000;
+  stickOptions.maxInnerIt = 5;
+  stickOptions.init = 1;
+  stickOptions.useManifold = true;
+  stickOptions.step = 1e-9;
+  stickOptions.kappaStep = 1e-12;
+  stickOptions.kappa0Step = 1e-10;
+  stickOptions.weightStep = 5e-10;
+  stickOptions.tolerance = 1e-5;
+  stickOptions.innerTolerance = 1e-6;
+  stickOptions.isEstWeights = true;
+  stickOptions.isEstDiffusivities = false;
+  stickOptions.useLineSearch = false;
+  stickOptions.sparseFactor = sparse;
+  stickOptions.isPrintDebugInfo = true;
+
+  double snr = 9.4377;
+  int bVal = 2000;
+
+  double s0;
+  vec S = readVoxelFromBrainData(x-1, y-1, z-1, s0);
+  vec diffusis = -log(S/s0)/bVal;
+  mat gradMat = loadGradientOrientations("assets/brain/gradients.txt");
+
+  FiberComposition fibComp;
+  
+  FiberComposition fullTensor;
+  estimateTensor(fullTensor, S, gradMat, bVal, s0);
+  fullTensor.fibDirs.print("full tensor dirs");
+  fullTensor.fibDiffs.print("full tensor diffus");
+
+  fibComp.nFibers = nFibers;
+  //initRandom(fibComp.fibDirs, nFibers);
+  fibComp.fibDirs = fullTensor.fibDirs.cols(0,nFibers-1);
+  double d1 = 2.0e-3;
+  double d0 = 1.3e-3;
+  fibComp.fibDiffs = d1*ones(nFibers+1);
+  fibComp.fibDiffs(nFibers) = d0;
+
+  d0 = diffusis.max();
+  double smax = sqrt(M_PI/(4*bVal*d0))*erf(sqrt(bVal*d0));
+  double smin = exp(-bVal*d0);
+  double smean = mean(S)/s0;
+  double w0 = 1-(smean-smin)/(smax-smin);
+  cout <<"ball weight: " <<w0 <<endl;
+  fibComp.fibWeights = (1.0-w0)/nFibers*ones(nFibers+1);
+  fibComp.fibWeights(nFibers) = w0;
+
+  fibComp.fibWeights = 1.0/(nFibers+1)*ones(nFibers+1);
+
+  //estimateModifiedBAS (fibComp, S, gradMat, bVal, s0, snr, nFibers, options);
+  estimateBallAndSticks (fibComp, S, gradMat, bVal, s0, snr, nFibers, stickOptions);
+  fibComp.fibDirs.print("estimated dirs");
+  fibComp.fibDiffs.print("estimated diffusivities");
+  fibComp.fibWeights.print("estimated weights");
+
+  vec angDev = directionDeviation(fibComp.fibDirs, fullTensor.fibDirs.col(0))*180/M_PI;
+  angDev.print("direction deviation");
+}
+
+
+
+void testTomsAlgorithmOnBrain (int argc, char **argv)
+{
+  if (argc<3) {
+    cout <<"insufficient input" <<endl;
+    exit (1);
+  }
+
+  StickEstimateOption options;
+  options.maxIt = 50000;
+  options.maxInnerIt = 5;
+  options.init = 1;
+  options.useManifold = true;
+  options.step = 1e-8;
+  options.kappaStep = 1e-10;
+  options.kappa0Step = 1e-11;
+  options.weightStep = 1e-8;
+  options.tolerance = 1e-6;
+  options.innerTolerance = 1e-5;
+  options.isEstWeights = atoi(argv[1]);
+  options.isEstDiffusivities = atoi(argv[2]);
+  options.useLineSearch = false;
+
+  // cout <<options.isEstWeights <<endl;
+  // cout <<options.isEstDiffusivities <<endl;
+  // return;
+
+  mat gradMat = loadGradientOrientations("assets/brain/gradients.txt");
+  double snr = 20;
+  int bVal = 2000;
+  int nRep = 20;
+  char str [1024];
+  char line [1024];
+  
+  double baselineMask = 100;
+  const char *folderName;
+  if (options.isEstWeights && options.isEstDiffusivities)
+    folderName = "results/brain/weights_diffus";
+  else if (options.isEstWeights)
+    folderName = "results/brain/weights";
+  else if (options.isEstDiffusivities)
+    folderName = "results/brain/diffus";
+
+  ifstream inFile ("assets/brain/mask.txt");
+  sprintf(str, "%s/likelihood.txt\0", folderName);
+  ofstream likeFile (str);
+
+  while (!inFile.eof()) {
+    inFile.getline(line, 1024, '\n');
+    if (inFile.gcount()<1) {
+      break;
+    }
+
+    stringstream ss (line);
+    int x, y, z, nFibers;
+    ss >>x >>y >>z >>nFibers;
+
+    cout <<"(" <<x <<"," <<y <<"," <<z <<"): " <<nFibers <<endl;
+
+    double s0;
+    vec S = readVoxelFromBrainData(x,y,z, s0);
+
+    if (s0<baselineMask)
+      continue;
+    
+    FiberComposition fibComp;
+
+    vec likeBuf (nRep);
+    sprintf(str, "%s/res_%d_%d_%d_%d.txt", folderName, x, y, z, nFibers);
+    ofstream resFile (str);
+
+    for (int i=0; i<nRep; ++i) {
+      fibComp.nFibers = nFibers;
+      initRandom(fibComp.fibDirs, nFibers);
+      fibComp.fibDiffs = 1.7e-3*ones(nFibers+1);
+      fibComp.fibDiffs(nFibers) = 0.3e-3;
+      fibComp.fibWeights = 1.0/(nFibers+1)*ones(nFibers+1);
+    
+      likeBuf(i) = estimateModifiedBAS (fibComp, S, gradMat, bVal, s0, snr, nFibers, options);
+      mat resMat = join_cols(fibComp.fibDirs, fibComp.fibWeights.t());
+      for (int j=0; j<resMat.n_rows; ++j) {
+	for (int k=0; k<resMat.n_cols; ++k)
+	  resFile <<resMat(j,k) <<"\t";
+	resFile <<endl;
+      }
+      for (int j=0; j<nFibers+1; ++j)
+	resFile <<fibComp.fibDiffs(j) <<"\t";
+      resFile <<endl;
+    }
+    resFile.close();
+    sprintf(str, "%d\t%d\t%d\t%d\t%0.2f\t%0.2f\n", x, y, z, nFibers, mean(likeBuf), stddev(likeBuf));
+    likeFile <<str;
+  }
+
+  inFile.close();
+  likeFile.close();
+}
+
+void estimateCCDiffusivities ()
+{
+  StickEstimateOption stickOptions;
+  stickOptions.maxIt = 50000;
+  stickOptions.maxInnerIt = 5;
+  stickOptions.init = 1;
+  stickOptions.useManifold = true;
+  stickOptions.step = 1e-9;
+  stickOptions.kappaStep = 1e-13;
+  stickOptions.kappa0Step = 1e-10;
+  stickOptions.weightStep = 3e-10;
+  stickOptions.tolerance = 1e-5;
+  stickOptions.innerTolerance = 1e-6;
+  stickOptions.isEstWeights = false;
+  stickOptions.isEstDiffusivities = true;
+  stickOptions.useLineSearch = false;
+  stickOptions.sparseFactor = 0;
+  stickOptions.isPrintDebugInfo = false;
+
+  double snr = 9.4377;
+  int bVal = 2000;
+  mat gradMat = loadGradientOrientations("assets/brain/gradients.txt");
+
+  ifstream posFile ("assets/brain/cc_b2000.txt");
+  char line [1024];
+  int x, y, z;
+  int nFibers = 1;
+
+  while(!posFile.eof()) {
+    posFile.getline(line, 1024, '\n');
+    if (posFile.gcount()<3)
+      break;
+
+    stringstream ss (line);
+    ss >>x >>y >>z;
+    //cout <<x <<"\t" <<y <<"\t" <<z <<endl;
+
+    double s0;
+    vec S = readVoxelFromBrainData(x-1, y-1, z-1, s0);
+    vec diffusis = -log(S/s0)/bVal;
+     
+    FiberComposition fibComp;
+    
+    FiberComposition fullTensor;
+    estimateTensor(fullTensor, S, gradMat, bVal, s0);
+    
+    fibComp.nFibers = nFibers;
+    //initRandom(fibComp.fibDirs, nFibers);
+    fibComp.fibDirs = fullTensor.fibDirs.cols(0,nFibers-1);
+    double d1 = 2.0e-3;
+    double d0 = 1.3e-3;
+    fibComp.fibDiffs = d1*ones(nFibers+1);
+    fibComp.fibDiffs(nFibers) = d0;
+    
+    d0 = diffusis.max();
+    double smax = sqrt(M_PI/(4*bVal*d0))*erf(sqrt(bVal*d0));
+    double smin = exp(-bVal*d0);
+    double smean = mean(S)/s0;
+    double w0 = 1-(smean-smin)/(smax-smin);
+    
+    // fibComp.fibWeights = (1.0-w0)/nFibers*ones(nFibers+1);
+    // fibComp.fibWeights(nFibers) = w0;
+    fibComp.fibWeights = 1.0/(nFibers+1)*ones(nFibers+1);
+
+    estimateBallAndSticks (fibComp, S, gradMat, bVal, s0, snr, nFibers, stickOptions);
+    for (int i=0; i<nFibers+1; ++i) {
+      cout <<fibComp.fibWeights(i) <<"\t";
+    }
+    for (int i=0; i<nFibers+1; ++i) {
+      cout <<fibComp.fibDiffs(i) <<"\t";
+    }
+    cout <<endl;
   }
 }

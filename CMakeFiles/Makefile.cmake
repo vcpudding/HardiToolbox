@@ -165,4 +165,7 @@ SET(CMAKE_MAKEFILE_PRODUCTS
 SET(CMAKE_DEPEND_INFO_FILES
   "CMakeFiles/HardiToolbox.dir/DependInfo.cmake"
   "CMakeFiles/RunMultiTensorTest.dir/DependInfo.cmake"
+  "CMakeFiles/TestBrainData.dir/DependInfo.cmake"
+  "CMakeFiles/TestPhantomData.dir/DependInfo.cmake"
+  "CMakeFiles/TestWeightEst.dir/DependInfo.cmake"
   )

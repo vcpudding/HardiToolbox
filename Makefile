@@ -124,6 +124,45 @@ RunMultiTensorTest/fast:
 	$(MAKE) -f CMakeFiles/RunMultiTensorTest.dir/build.make CMakeFiles/RunMultiTensorTest.dir/build
 .PHONY : RunMultiTensorTest/fast
 
+#=============================================================================
+# Target rules for targets named TestBrainData
+
+# Build rule for target.
+TestBrainData: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 TestBrainData
+.PHONY : TestBrainData
+
+# fast build rule for target.
+TestBrainData/fast:
+	$(MAKE) -f CMakeFiles/TestBrainData.dir/build.make CMakeFiles/TestBrainData.dir/build
+.PHONY : TestBrainData/fast
+
+#=============================================================================
+# Target rules for targets named TestPhantomData
+
+# Build rule for target.
+TestPhantomData: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 TestPhantomData
+.PHONY : TestPhantomData
+
+# fast build rule for target.
+TestPhantomData/fast:
+	$(MAKE) -f CMakeFiles/TestPhantomData.dir/build.make CMakeFiles/TestPhantomData.dir/build
+.PHONY : TestPhantomData/fast
+
+#=============================================================================
+# Target rules for targets named TestWeightEst
+
+# Build rule for target.
+TestWeightEst: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 TestWeightEst
+.PHONY : TestWeightEst
+
+# fast build rule for target.
+TestWeightEst/fast:
+	$(MAKE) -f CMakeFiles/TestWeightEst.dir/build.make CMakeFiles/TestWeightEst.dir/build
+.PHONY : TestWeightEst/fast
+
 HardiToolbox.o: HardiToolbox.cpp.o
 .PHONY : HardiToolbox.o
 
@@ -131,6 +170,9 @@ HardiToolbox.o: HardiToolbox.cpp.o
 HardiToolbox.cpp.o:
 	$(MAKE) -f CMakeFiles/HardiToolbox.dir/build.make CMakeFiles/HardiToolbox.dir/HardiToolbox.cpp.o
 	$(MAKE) -f CMakeFiles/RunMultiTensorTest.dir/build.make CMakeFiles/RunMultiTensorTest.dir/HardiToolbox.cpp.o
+	$(MAKE) -f CMakeFiles/TestBrainData.dir/build.make CMakeFiles/TestBrainData.dir/HardiToolbox.cpp.o
+	$(MAKE) -f CMakeFiles/TestPhantomData.dir/build.make CMakeFiles/TestPhantomData.dir/HardiToolbox.cpp.o
+	$(MAKE) -f CMakeFiles/TestWeightEst.dir/build.make CMakeFiles/TestWeightEst.dir/HardiToolbox.cpp.o
 .PHONY : HardiToolbox.cpp.o
 
 HardiToolbox.i: HardiToolbox.cpp.i
@@ -140,6 +182,9 @@ HardiToolbox.i: HardiToolbox.cpp.i
 HardiToolbox.cpp.i:
 	$(MAKE) -f CMakeFiles/HardiToolbox.dir/build.make CMakeFiles/HardiToolbox.dir/HardiToolbox.cpp.i
 	$(MAKE) -f CMakeFiles/RunMultiTensorTest.dir/build.make CMakeFiles/RunMultiTensorTest.dir/HardiToolbox.cpp.i
+	$(MAKE) -f CMakeFiles/TestBrainData.dir/build.make CMakeFiles/TestBrainData.dir/HardiToolbox.cpp.i
+	$(MAKE) -f CMakeFiles/TestPhantomData.dir/build.make CMakeFiles/TestPhantomData.dir/HardiToolbox.cpp.i
+	$(MAKE) -f CMakeFiles/TestWeightEst.dir/build.make CMakeFiles/TestWeightEst.dir/HardiToolbox.cpp.i
 .PHONY : HardiToolbox.cpp.i
 
 HardiToolbox.s: HardiToolbox.cpp.s
@@ -149,6 +194,9 @@ HardiToolbox.s: HardiToolbox.cpp.s
 HardiToolbox.cpp.s:
 	$(MAKE) -f CMakeFiles/HardiToolbox.dir/build.make CMakeFiles/HardiToolbox.dir/HardiToolbox.cpp.s
 	$(MAKE) -f CMakeFiles/RunMultiTensorTest.dir/build.make CMakeFiles/RunMultiTensorTest.dir/HardiToolbox.cpp.s
+	$(MAKE) -f CMakeFiles/TestBrainData.dir/build.make CMakeFiles/TestBrainData.dir/HardiToolbox.cpp.s
+	$(MAKE) -f CMakeFiles/TestPhantomData.dir/build.make CMakeFiles/TestPhantomData.dir/HardiToolbox.cpp.s
+	$(MAKE) -f CMakeFiles/TestWeightEst.dir/build.make CMakeFiles/TestWeightEst.dir/HardiToolbox.cpp.s
 .PHONY : HardiToolbox.cpp.s
 
 main.o: main.cpp.o
@@ -205,6 +253,7 @@ testProc.o: testProc.cpp.o
 # target to build an object file
 testProc.cpp.o:
 	$(MAKE) -f CMakeFiles/HardiToolbox.dir/build.make CMakeFiles/HardiToolbox.dir/testProc.cpp.o
+	$(MAKE) -f CMakeFiles/TestBrainData.dir/build.make CMakeFiles/TestBrainData.dir/testProc.cpp.o
 .PHONY : testProc.cpp.o
 
 testProc.i: testProc.cpp.i
@@ -213,6 +262,7 @@ testProc.i: testProc.cpp.i
 # target to preprocess a source file
 testProc.cpp.i:
 	$(MAKE) -f CMakeFiles/HardiToolbox.dir/build.make CMakeFiles/HardiToolbox.dir/testProc.cpp.i
+	$(MAKE) -f CMakeFiles/TestBrainData.dir/build.make CMakeFiles/TestBrainData.dir/testProc.cpp.i
 .PHONY : testProc.cpp.i
 
 testProc.s: testProc.cpp.s
@@ -221,7 +271,80 @@ testProc.s: testProc.cpp.s
 # target to generate assembly for a file
 testProc.cpp.s:
 	$(MAKE) -f CMakeFiles/HardiToolbox.dir/build.make CMakeFiles/HardiToolbox.dir/testProc.cpp.s
+	$(MAKE) -f CMakeFiles/TestBrainData.dir/build.make CMakeFiles/TestBrainData.dir/testProc.cpp.s
 .PHONY : testProc.cpp.s
+
+tests/testBrainData.o: tests/testBrainData.cpp.o
+.PHONY : tests/testBrainData.o
+
+# target to build an object file
+tests/testBrainData.cpp.o:
+	$(MAKE) -f CMakeFiles/TestBrainData.dir/build.make CMakeFiles/TestBrainData.dir/tests/testBrainData.cpp.o
+.PHONY : tests/testBrainData.cpp.o
+
+tests/testBrainData.i: tests/testBrainData.cpp.i
+.PHONY : tests/testBrainData.i
+
+# target to preprocess a source file
+tests/testBrainData.cpp.i:
+	$(MAKE) -f CMakeFiles/TestBrainData.dir/build.make CMakeFiles/TestBrainData.dir/tests/testBrainData.cpp.i
+.PHONY : tests/testBrainData.cpp.i
+
+tests/testBrainData.s: tests/testBrainData.cpp.s
+.PHONY : tests/testBrainData.s
+
+# target to generate assembly for a file
+tests/testBrainData.cpp.s:
+	$(MAKE) -f CMakeFiles/TestBrainData.dir/build.make CMakeFiles/TestBrainData.dir/tests/testBrainData.cpp.s
+.PHONY : tests/testBrainData.cpp.s
+
+tests/testPhantomData.o: tests/testPhantomData.cpp.o
+.PHONY : tests/testPhantomData.o
+
+# target to build an object file
+tests/testPhantomData.cpp.o:
+	$(MAKE) -f CMakeFiles/TestPhantomData.dir/build.make CMakeFiles/TestPhantomData.dir/tests/testPhantomData.cpp.o
+.PHONY : tests/testPhantomData.cpp.o
+
+tests/testPhantomData.i: tests/testPhantomData.cpp.i
+.PHONY : tests/testPhantomData.i
+
+# target to preprocess a source file
+tests/testPhantomData.cpp.i:
+	$(MAKE) -f CMakeFiles/TestPhantomData.dir/build.make CMakeFiles/TestPhantomData.dir/tests/testPhantomData.cpp.i
+.PHONY : tests/testPhantomData.cpp.i
+
+tests/testPhantomData.s: tests/testPhantomData.cpp.s
+.PHONY : tests/testPhantomData.s
+
+# target to generate assembly for a file
+tests/testPhantomData.cpp.s:
+	$(MAKE) -f CMakeFiles/TestPhantomData.dir/build.make CMakeFiles/TestPhantomData.dir/tests/testPhantomData.cpp.s
+.PHONY : tests/testPhantomData.cpp.s
+
+tests/testWeightEst.o: tests/testWeightEst.cpp.o
+.PHONY : tests/testWeightEst.o
+
+# target to build an object file
+tests/testWeightEst.cpp.o:
+	$(MAKE) -f CMakeFiles/TestWeightEst.dir/build.make CMakeFiles/TestWeightEst.dir/tests/testWeightEst.cpp.o
+.PHONY : tests/testWeightEst.cpp.o
+
+tests/testWeightEst.i: tests/testWeightEst.cpp.i
+.PHONY : tests/testWeightEst.i
+
+# target to preprocess a source file
+tests/testWeightEst.cpp.i:
+	$(MAKE) -f CMakeFiles/TestWeightEst.dir/build.make CMakeFiles/TestWeightEst.dir/tests/testWeightEst.cpp.i
+.PHONY : tests/testWeightEst.cpp.i
+
+tests/testWeightEst.s: tests/testWeightEst.cpp.s
+.PHONY : tests/testWeightEst.s
+
+# target to generate assembly for a file
+tests/testWeightEst.cpp.s:
+	$(MAKE) -f CMakeFiles/TestWeightEst.dir/build.make CMakeFiles/TestWeightEst.dir/tests/testWeightEst.cpp.s
+.PHONY : tests/testWeightEst.cpp.s
 
 utils.o: utils.cpp.o
 .PHONY : utils.o
@@ -229,6 +352,9 @@ utils.o: utils.cpp.o
 # target to build an object file
 utils.cpp.o:
 	$(MAKE) -f CMakeFiles/HardiToolbox.dir/build.make CMakeFiles/HardiToolbox.dir/utils.cpp.o
+	$(MAKE) -f CMakeFiles/TestBrainData.dir/build.make CMakeFiles/TestBrainData.dir/utils.cpp.o
+	$(MAKE) -f CMakeFiles/TestPhantomData.dir/build.make CMakeFiles/TestPhantomData.dir/utils.cpp.o
+	$(MAKE) -f CMakeFiles/TestWeightEst.dir/build.make CMakeFiles/TestWeightEst.dir/utils.cpp.o
 .PHONY : utils.cpp.o
 
 utils.i: utils.cpp.i
@@ -237,6 +363,9 @@ utils.i: utils.cpp.i
 # target to preprocess a source file
 utils.cpp.i:
 	$(MAKE) -f CMakeFiles/HardiToolbox.dir/build.make CMakeFiles/HardiToolbox.dir/utils.cpp.i
+	$(MAKE) -f CMakeFiles/TestBrainData.dir/build.make CMakeFiles/TestBrainData.dir/utils.cpp.i
+	$(MAKE) -f CMakeFiles/TestPhantomData.dir/build.make CMakeFiles/TestPhantomData.dir/utils.cpp.i
+	$(MAKE) -f CMakeFiles/TestWeightEst.dir/build.make CMakeFiles/TestWeightEst.dir/utils.cpp.i
 .PHONY : utils.cpp.i
 
 utils.s: utils.cpp.s
@@ -245,6 +374,9 @@ utils.s: utils.cpp.s
 # target to generate assembly for a file
 utils.cpp.s:
 	$(MAKE) -f CMakeFiles/HardiToolbox.dir/build.make CMakeFiles/HardiToolbox.dir/utils.cpp.s
+	$(MAKE) -f CMakeFiles/TestBrainData.dir/build.make CMakeFiles/TestBrainData.dir/utils.cpp.s
+	$(MAKE) -f CMakeFiles/TestPhantomData.dir/build.make CMakeFiles/TestPhantomData.dir/utils.cpp.s
+	$(MAKE) -f CMakeFiles/TestWeightEst.dir/build.make CMakeFiles/TestWeightEst.dir/utils.cpp.s
 .PHONY : utils.cpp.s
 
 # Help Target
@@ -255,6 +387,9 @@ help:
 	@echo "... depend"
 	@echo "... HardiToolbox"
 	@echo "... RunMultiTensorTest"
+	@echo "... TestBrainData"
+	@echo "... TestPhantomData"
+	@echo "... TestWeightEst"
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
 	@echo "... HardiToolbox.o"
@@ -269,6 +404,15 @@ help:
 	@echo "... testProc.o"
 	@echo "... testProc.i"
 	@echo "... testProc.s"
+	@echo "... tests/testBrainData.o"
+	@echo "... tests/testBrainData.i"
+	@echo "... tests/testBrainData.s"
+	@echo "... tests/testPhantomData.o"
+	@echo "... tests/testPhantomData.i"
+	@echo "... tests/testPhantomData.s"
+	@echo "... tests/testWeightEst.o"
+	@echo "... tests/testWeightEst.i"
+	@echo "... tests/testWeightEst.s"
 	@echo "... utils.o"
 	@echo "... utils.i"
 	@echo "... utils.s"

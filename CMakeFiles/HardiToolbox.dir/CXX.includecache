@@ -3052,41 +3052,17 @@ itpp/base/vec.h
 
 /home/collab/xhzhu/Libraries/arma-bin/usr/local/include/armadillo_bits/wall_clock_meat.hpp
 
-/home/collab/xhzhu/Study/HardiToolbox/HardiToolbox.cpp
-HardiToolbox.h
-/home/collab/xhzhu/Study/HardiToolbox/HardiToolbox.h
-fstream
--
-math.h
--
-besselFunction.h
-/home/collab/xhzhu/Study/HardiToolbox/besselFunction.h
-
 /home/collab/xhzhu/Study/HardiToolbox/HardiToolbox.h
 armadillo
 -
 
-/home/collab/xhzhu/Study/HardiToolbox/besselFunction.h
-iostream
--
-cmath
--
-
-/home/collab/xhzhu/Study/HardiToolbox/main.cpp
-iostream
--
-math.h
--
-stdio.h
--
-HardiToolbox.h
-/home/collab/xhzhu/Study/HardiToolbox/HardiToolbox.h
-testProc.h
-/home/collab/xhzhu/Study/HardiToolbox/testProc.h
+/home/collab/xhzhu/Study/HardiToolbox/erf.h
 
 /home/collab/xhzhu/Study/HardiToolbox/testProc.cpp
 testProc.h
 /home/collab/xhzhu/Study/HardiToolbox/testProc.h
+erf.h
+/home/collab/xhzhu/Study/HardiToolbox/erf.h
 fstream
 -
 

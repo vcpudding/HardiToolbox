@@ -2,6 +2,7 @@
 #include <fstream>
 #include <math.h>
 #include "besselFunction.h"
+#include "utils.h"
 
 using namespace std;
 
@@ -19,6 +20,8 @@ mat HardiToolbox::loadGradientOrientations (const char *fileName)
   int i=0;
   while (!gradFile.eof()) {
     gradFile.getline(line, 1280, '\n');
+    if (gradFile.gcount()<3)
+      break;
     stringstream ss (line);
     for (int j=0; j<3; ++j) {
       double dat;
@@ -27,7 +30,7 @@ mat HardiToolbox::loadGradientOrientations (const char *fileName)
     }
     ++i;
   }
-  mat gradMat (tmpGradBuf, 3, i-1);
+  mat gradMat (tmpGradBuf, 3, i);
   return gradMat.t();    
 }
 
@@ -51,23 +54,24 @@ vec HardiToolbox::simulateMultiTensor (int bVal, double s0, const mat &gradientO
 
   vec dwSignal = zeros(nGrads);
 
-  for (int i=0; i<nGrads; ++i) {
-    for (int j=0; j<nFibers; ++j) {
-      vec eulerAngle (3);
-      eulerAngle <<0 <<endr <<asin(fibDirs(2,j)) <<endr <<atan2(-fibDirs(1,j), fibDirs(0,j)) <<endr;
-      mat R = eulerAngleToMatrix(eulerAngle);
+  
+  for (int j=0; j<nFibers; ++j) {
+    vec eulerAngle (3);
+    eulerAngle <<0 <<endr <<asin(fibDirs(2,j)) <<endr <<atan2(-fibDirs(1,j), fibDirs(0,j)) <<endr;
+    mat R = eulerAngleToMatrix(eulerAngle);
 
-      mat D (3,3);
-      if (diffus.is_empty()) {
-	D <<1.7e-3  <<0      <<0   <<endr
-	  <<0       <<3e-4   <<0   <<endr
-	  <<0       <<0      <<3e-4   <<endr;
-      } else {
-	D = diagmat(diffus.col(j));
-      }
+    mat D (3,3);
+    if (diffus.is_empty()) {
+      D <<1.7e-3  <<0      <<0   <<endr
+	<<0       <<3e-4   <<0   <<endr
+	<<0       <<0      <<3e-4   <<endr;
+    } else {
+      D = diagmat(diffus.col(j));
+    }
+    double w = weights.empty()?1.0/nFibers:weights(j);
 
+    for (int i=0; i<nGrads; ++i) {
       rowvec g = gradientOrientations.row(i);
-      double w = weights.empty()?1.0/nFibers:weights(j);
       dwSignal(i) += s0*w*exp(-bVal*dot(g*R*D*R.t(),g));
     }
 
@@ -380,6 +384,48 @@ vec HardiToolbox::fiberDeviation(const FiberComposition &fibComp, const FiberCom
   return retDev;
 }
 
+double HardiToolbox::fiberDeviation (const FiberComposition &fibComp, const FiberComposition &trueFibComp, vec &dirDev, vec &weightDev, vec &diffusDev)
+{
+  mat trueDirs = trueFibComp.fibDirs;
+  mat dirs = fibComp.fibDirs;
+  int nFibers = trueFibComp.nFibers;
+  int nEstFibers = fibComp.nFibers;
+  dirDev = zeros(nFibers);
+
+  vec matchIdx = zeros(nFibers);
+  for (int i=0; i<nFibers; ++i) {
+    double minDev = M_PI/2;
+    for (int j=0; j<nEstFibers; ++j) {
+      double c = fabs(dot(dirs.col(j), trueDirs.col(i)));
+      c = c<0?0:(c>1?1:c);
+      double dev = std::acos(c);
+      if (dev<minDev) {
+	minDev = dev;
+	matchIdx(i) = j;
+      }
+    }
+    dirDev(i) = minDev*180/M_PI;
+  }
+  
+  weightDev = zeros(trueFibComp.fibWeights.n_elem);
+  for (int i=0; i<weightDev.n_elem; ++i) {
+    if (i<nFibers)
+      weightDev(i) = fibComp.fibWeights(matchIdx(i))-trueFibComp.fibWeights(i);
+    else
+      weightDev(i) = fibComp.fibWeights(nEstFibers) - trueFibComp.fibWeights(nFibers);
+  }
+  
+  diffusDev = zeros(trueFibComp.fibDiffs.n_elem);
+  for (int i=0; i<diffusDev.n_elem; ++i) {
+    if (i<nFibers)
+      diffusDev(i) = fibComp.fibDiffs(matchIdx(i))-trueFibComp.fibDiffs(i);
+    else
+      diffusDev(i) = fibComp.fibDiffs(nEstFibers) - trueFibComp.fibDiffs(nFibers);
+  }
+
+  return mean(dirDev);
+}
+
 vec HardiToolbox::simulateStick(int bVal, double s0, double d, const mat &gradientOrientations, const vec &fibDirs, const vec &weights)
 {
   int nFibers = fibDirs.n_elem;
@@ -435,27 +481,24 @@ vec HardiToolbox::simulateBallAndStick(int bVal, double s0, const mat &gradientO
     d = diffusivities;
   }
 
-  for (int j=0; j<nFibers; ++j)
+  for (int i=0; i<nGrads; ++i) 
   {
-
-    double w1 = weights.is_empty()?1.0/(nFibers+1):weights(j);
-    for (int i=0; i<nGrads; ++i)
+    for (int j=0; j<=nFibers; ++j)
     {
-      dwSignal(i) += w1*s0*exp(-bVal*d(j)*pow(dot(gradientOrientations.row(i), fibDirs.col(j)),2));
+      double w = weights.is_empty()?1.0/(nFibers+1):weights(j);
+      if (j<nFibers)
+	dwSignal(i) += w*s0*exp(-bVal*d(j)*pow(dot(gradientOrientations.row(i), fibDirs.col(j)),2));
+      else
+	dwSignal(i) += w*s0*exp(-bVal*d(j));
     }
-  }
-
-  for (int i=0; i<nGrads;++i)
-  {
-    dwSignal(i) += (weights.is_empty()?1.0/(nFibers+1):weights(nFibers))*s0*exp(-bVal*d(nFibers));
   }
 
   return dwSignal;
 }
 
-vec HardiToolbox::simulateModBAS(int bVal, double s0, const vec &d, const vec &w, const mat &gradientOrientations, const vec &fibDirs)
+vec HardiToolbox::simulateModBAS(int bVal, double s0, const vec &d, const vec &w, const mat &gradientOrientations, const mat &fibDirs)
 {
-  int nFibers = fibDirs.n_elem;
+  int nFibers = fibDirs.n_cols;
   int nGrads = gradientOrientations.n_rows;
   vec dwSignal (nGrads);
   dwSignal.fill(0);
@@ -465,8 +508,7 @@ vec HardiToolbox::simulateModBAS(int bVal, double s0, const vec &d, const vec &w
   {
     for (int j=0; j<nFibers; ++j)
     {
-      vec dir (3);
-      dir <<cos(fibDirs(j)) <<endr <<sin(fibDirs(j)) <<endr <<0 <<endr;
+      vec dir = fibDirs.col(j);
       double weight = w.is_empty()?1.0/nFibers:w(j);
       dwSignal(i) += weight*s0*exp(-bVal*d(nFibers))*exp(-bVal*d(j)*pow(dot(gradientOrientations.row(i), dir),2));
     }
@@ -509,25 +551,24 @@ mat HardiToolbox::simulateStickByComponent(int bVal, double s0, const vec &d, co
   return dwSignal;
 }
 
-mat HardiToolbox::simulateBallAndStickByComponent(int bVal, double s0, const vec &d, const vec &w, const mat &gradientOrientations, const mat &fibDirs)
+mat HardiToolbox::simulateBallAndStickByComponent (int bVal, double s0, const mat &gradientOrientations, const mat &fibDirs, const vec &weights, const vec &diffusivities)
 {
   int nFibers = fibDirs.n_cols;
   int nGrads = gradientOrientations.n_rows;
 
   mat dwSignal (nGrads, nFibers+1);
   dwSignal.fill(0);
-  for (int i=0; i<nGrads; ++i)
+  vec w = weights.is_empty()?1.0/(nFibers+1)*ones(nFibers+1):weights;
+  
+  for (int j=0; j<=nFibers; ++j)
   {
-    for (int j=0; j<nFibers; ++j)
+    for (int i=0; i<nGrads; ++i)  
     {
-      double w1 = w.is_empty()?1.0/(nFibers+1):w(j);
-      dwSignal(i,j) = w1*s0*exp(-bVal*d(j)*pow(dot(gradientOrientations.row(i), fibDirs.col(j)),2));
+      if (j<nFibers)
+	dwSignal(i,j) = w(j)*s0*exp(-bVal*diffusivities(j)*pow(dot(gradientOrientations.row(i), fibDirs.col(j)),2));
+      else
+	dwSignal(i,j) = w(j)*s0*exp(-bVal*diffusivities(j));
     }
-  }
-
-  for (int i=0; i<nGrads;++i)
-  {
-    dwSignal(i, nFibers) = (w.is_empty()?1.0/(nFibers+1):w(nFibers))*s0*exp(-bVal*d(nFibers));
   }
 
   return dwSignal;
@@ -742,18 +783,13 @@ void HardiToolbox::estimateSticksDiffs(FiberComposition &fibComp, const vec &dwS
 }
 
 
-void HardiToolbox::estimateBallAndSticks(FiberComposition &fibComp, const vec &dwSignal, const mat &gradientOrientations,
+double HardiToolbox::estimateBallAndSticks(FiberComposition &fibComp, const vec &dwSignal, const mat &gradientOrientations,
 					 int bVal, double s0, double snr, int nFibers, const StickEstimateOption &options)
 {
   //initialize
   int nGrads = gradientOrientations.n_rows;
   mat fibDirs(3, nFibers);
-  if (options.init ==0 ) {
-    initRandom(fibDirs, nFibers);
-  } else {
-    fibDirs = fibComp.fibDirs;
-  }
-
+  initRandom(fibDirs, nFibers);
   double sigma = s0/snr;
 
   vec kappas = 1.7e-3*ones(nFibers+1);
@@ -761,16 +797,37 @@ void HardiToolbox::estimateBallAndSticks(FiberComposition &fibComp, const vec &d
 
   vec weights = 1.0/(nFibers+1)*ones(nFibers+1);
 
+  if (options.init ==1 && !fibComp.fibDirs.is_empty()) {
+    fibDirs = fibComp.fibDirs;
+    kappas = fibComp.fibDiffs;
+    weights = fibComp.fibWeights;
+  }
+
   //optimize
-  mat estimatedSignal = simulateBallAndStickByComponent(bVal, s0, kappas, weights, gradientOrientations, fibDirs);
+  mat estimatedSignal = simulateBallAndStickByComponent(bVal, s0, gradientOrientations, fibDirs, weights, kappas);
   vec A (nGrads);
   bool waitForInput = false;
   
   vec estimatedSignalSum = sum(estimatedSignal, 1);
-  double e = ricianLikelihood(estimatedSignalSum, dwSignal, sigma);
+  double likelihood = ricianLikelihood(estimatedSignalSum, dwSignal, sigma);
+  double e = likelihood + options.sparseFactor*accu(pow(weights,2));
+  double lastE = e;
+  bool bDecreasing = false;
+  int it = 0;
+  mat gradTransposed = gradientOrientations.t();
 
-  for (int it=0; it<options.maxIt; ++it)
-  {
+  long perItTime = 0;
+  long calcTime = 0;
+  long updateTime = 0;
+
+  mat dDirs = zeros(3, nFibers);
+  vec dKappas = zeros(nFibers+1);
+  vec dWeights = zeros(nFibers+1);
+
+  UtilStopWatch::tic();
+
+  for (; it<options.maxIt; ++it) {
+
     mat oldDirs = fibDirs;
     mat oldSignal = estimatedSignal;
     vec oldSignalSum = sum(oldSignal, 1);
@@ -782,17 +839,16 @@ void HardiToolbox::estimateBallAndSticks(FiberComposition &fibComp, const vec &d
 
     for (int iit=0; iit<options.maxInnerIt; ++iit)
     {
-
-      estimatedSignal = simulateBallAndStickByComponent(bVal, s0, kappas, weights, gradientOrientations, fibDirs);
-      mat dDirs = zeros(3, nFibers);
-      vec dKappas = zeros(nFibers+1);
-      vec dWeights = zeros(nFibers+1);
+      estimatedSignal = simulateBallAndStickByComponent(bVal, s0, gradientOrientations, fibDirs, weights, kappas);
+      dDirs.fill(0);
+      dWeights.fill(0);
+      dKappas.fill(0);
 
       for (int i=0; i<nGrads; ++i)
       {
+	vec g = gradTransposed.col(i);
         for (int j=0; j<nFibers+1; ++j)
         {
-          vec g = gradientOrientations.row(i).t();
           double b = 2*(estimatedSignal(i,j)-oldSignal(i,j)+oldSignalSum(i)/nFibers-dwSignal(i)/nFibers*A(i));
 
           if (j<nFibers) /**sticks**/
@@ -805,19 +861,20 @@ void HardiToolbox::estimateBallAndSticks(FiberComposition &fibComp, const vec &d
               dDirs.col(j) += b*estimatedSignal(i,j)*bVal*kappas(j)*sin(2*theta)/theta*logUG;
             }
 
-            dKappas(j) += b*estimatedSignal(i,j)/s0*pow(dot(g, fibDir), 2);
-	    dWeights(j) += s0*exp(-bVal*kappas(j)*pow(dot(g, fibDir), 2));
+            dKappas(j) += options.isEstDiffusivities?b*estimatedSignal(i,j)*pow(dot(g, fibDir), 2):0;
+	    dWeights(j) -= options.isEstWeights?b*s0*exp(-bVal*kappas(j)*pow(dot(g, fibDir), 2)):0;
+	    
           } else /**ball**/
           {
-            dKappas(j) += b*estimatedSignal(i,j)/s0;
-	    dWeights(j) += s0*exp(-bVal*kappas(nFibers));
+            dKappas(j) += options.isEstDiffusivities?b*estimatedSignal(i,j):0;
+	    dWeights(j) -= options.isEstWeights?b*s0*exp(-bVal*kappas(nFibers)):0;
           }
         }
       }
-
+      dDirs *= options.step;
       for (int i=0; i<nFibers; ++i)
       {
-        fibDirs.col(i) = sphereExp(fibDirs.col(i), options.step*dDirs.col(i));
+        fibDirs.col(i) = sphereExp(fibDirs.col(i), dDirs.col(i));
       }
       
       if(options.isEstDiffusivities) {
@@ -825,14 +882,17 @@ void HardiToolbox::estimateBallAndSticks(FiberComposition &fibComp, const vec &d
       }
 
       if (options.isEstWeights) {
-	//cout <<dWeights <<endl;
-	weights += options.weightStep*dWeights;
-	weights -= (sum(weights)-1)/(nFibers+1)*ones(nFibers+1);
-	for (int i=0; i<nFibers+1; ++i) {
-	  weights(i) = weights(i)<0?0:weights(i);
-	}
+	dWeights += options.sparseFactor*2*weights;
+	dWeights -= (sum(dWeights)-1)/(nFibers+1)*ones(nFibers+1);
+	double step = options.weightStep;
+	
+	weights += step*dWeights;
+	for (int i=0; i<nFibers+1; ++i)
+	  weights(i) = max(0.0,weights(i));
 	weights /= sum(weights);
       }
+
+      // removeRedundantComponent(fibDirs, weights, kappas, nFibers);
 
       if (sqrt(accu(pow(dDirs,2)))<options.innerTolerance)
       {
@@ -840,37 +900,58 @@ void HardiToolbox::estimateBallAndSticks(FiberComposition &fibComp, const vec &d
       }
     }
 
-    double lastE = e;
-    
-    estimatedSignal = simulateBallAndStickByComponent(bVal, s0, kappas, weights, gradientOrientations, fibDirs);
-    estimatedSignalSum = sum(estimatedSignal, 1);
-    e = ricianLikelihood (estimatedSignalSum, dwSignal, sigma);
-    cout <<"it #" <<it <<": e=" <<e <<endl;
-    if (fabs(e-lastE)<options.tolerance)
-    {
+    lastE = e;    
+    estimatedSignal = simulateBallAndStickByComponent(bVal, s0, gradientOrientations, fibDirs,weights,kappas);
+    estimatedSignalSum = sum(estimatedSignal,1);
+    likelihood = ricianLikelihood (estimatedSignalSum, dwSignal, sigma);
+    e = likelihood + options.sparseFactor*accu(pow(weights,2));
+
+    // if (options.isPrintDebugInfo) {
+    //   if (bDecreasing && e>lastE) {
+    // 	cout <<"it #" <<it <<": l=" <<likelihood <<endl;
+    // 	cout <<"energy increased " <<e-lastE <<endl;
+    // 	fibDirs.print("--local minima dirs");
+    // 	kappas.print("--local minima diffus");
+    // 	weights.print("--local minima weights");
+    // 	bDecreasing = false;
+    //   }
+
+    //   if (!bDecreasing && e<lastE) {
+    // 	cout <<"it #" <<it <<": l=" <<likelihood <<endl;
+    // 	cout <<"energy decreased " <<-e+lastE <<endl;
+    // 	fibDirs.print("++local maxima dirs");
+    // 	kappas.print("++local maxima diffus");
+    // 	weights.print("++local maxima weights");
+    // 	bDecreasing = true;
+    //   }
+    // }
+
+    if (e-lastE<options.tolerance && fabs(e-lastE)<1e-3) {
       break;
     }
 
-    if(waitForInput)
-    {
-      std::string s;
-      std::getline(std::cin, s);
-      if (strcmp(s.c_str(), "c")==0)
-      {
-        waitForInput = false;
-      }
-    }
+    // if(waitForInput)
+    // {
+    //   std::string s;
+    //   std::getline(std::cin, s);
+    //   if (strcmp(s.c_str(), "c")==0)
+    //   {
+    //     waitForInput = false;
+    //   }
+    // }
+  }
+  if (options.isPrintDebugInfo) {
+    cout <<"it #" <<it <<": l=" <<likelihood <<". increased " <<e-lastE <<endl;
+    cout <<"time elapsed: " <<UtilStopWatch::toc() <<endl;
   }
 
   //output
   fibComp.fibDirs = fibDirs;
-  // for (int i=0; i<nFibers; ++i)
-  // {
-  //   fibComp.fibDirs.col(i) /= norm(fibComp.fibDirs.col(i), 2);
-  // }
   fibComp.fibDiffs = kappas;
   fibComp.fibWeights = weights;
   fibComp.nFibers = nFibers;
+
+  return e;
 }
 
 double HardiToolbox::estimateModifiedBAS(FiberComposition &fibComp, const vec &dwSignal, const mat &gradientOrientations,
@@ -884,8 +965,9 @@ double HardiToolbox::estimateModifiedBAS(FiberComposition &fibComp, const vec &d
 
   if (options.init==0 || fibComp.fibDirs.is_empty()) {
     initRandom(fibDirs, nFibers);
-    kappas = 2.0e-3*ones(nFibers+1);
-    kappas(nFibers) = 1.0e-3;
+    //initFixed(fibDirs, nFibers);
+    kappas = 1.4e-3*ones(nFibers+1);
+    kappas(nFibers) = 3e-4;
     weights = 1.0/nFibers*ones(nFibers);
   } else {
     initRandom(fibDirs, nFibers);
@@ -898,8 +980,6 @@ double HardiToolbox::estimateModifiedBAS(FiberComposition &fibComp, const vec &d
     weights = 1.0/nFibers*ones(nFibers);
   }
 
-  fibDirs.print("init dirs");
-
   double sigma = s0/snr;
 
   /**optimize**/
@@ -908,15 +988,15 @@ double HardiToolbox::estimateModifiedBAS(FiberComposition &fibComp, const vec &d
   bool waitForInput = false;
   // double e = stickLogLikelihood(estimatedSignal, estimatedSignal, dwSignal, sigma);
   vec S = sum(estimatedSignal,1);
-  double e = ricianLikelihood(S, dwSignal, sigma);
+  double e = ricianLikelihood(S, dwSignal, sigma) + options.sparseFactor*accu(pow(weights,2));
   double lastE = e;
-  bool bDecreasing = true;
+  bool bDecreasing = false;
   int it = 0;
   for (it=0; it<options.maxIt; ++it)
   {
 
     /**optimize ball**/
-    if(options.isEstDiffusivities) {
+    //if(options.isEstDiffusivities) {
       for (int iit=0; iit<options.maxInnerIt; ++iit) {
 	double dKappa0 = 0;
 	estimatedSignal = simulateModBASByComponent(bVal, s0, kappas, weights, gradientOrientations, fibDirs);
@@ -926,14 +1006,14 @@ double HardiToolbox::estimateModifiedBAS(FiberComposition &fibComp, const vec &d
 	  double x = dwSignal(i) * estimatedSignalSum(i)/sigma/sigma;
 	  dKappa0 += (estimatedSignalSum(i) - dwSignal(i)*bessiRatio(x))*estimatedSignalSum(i)/pow(sigma, 2);
 	}
-
+	
 	kappas(nFibers) += options.kappa0Step*dKappa0;
 
 	if (fabs(dKappa0)<options.innerTolerance) {
 	  break;
 	}
       }
-    }
+      //}
 
     /**optimize sticks**/
     mat oldDirs = fibDirs;
@@ -972,7 +1052,7 @@ double HardiToolbox::estimateModifiedBAS(FiberComposition &fibComp, const vec &d
 	  }
 
 	  if (options.isEstWeights) {
-	    dWeights(j) -= bVal*s0*exp(-bVal*kappas(nFibers))*exp(-bVal*kappas(j)*pow(dot(g, fibDir),2));
+	    dWeights(j) -= b*s0*exp(-bVal*kappas(nFibers))*exp(-bVal*kappas(j)*pow(dot(g, fibDir),2));
 	  }
         }
       }
@@ -1003,10 +1083,12 @@ double HardiToolbox::estimateModifiedBAS(FiberComposition &fibComp, const vec &d
       }
 
       if (options.isEstDiffusivities) {
+	//dKappas.t().print("dKappas");
 	kappas += options.kappaStep*dKappas;
       }
 
       if (options.isEstWeights) {
+	dWeights += options.sparseFactor*2*weights;
 	weights += options.weightStep*dWeights;
 	weights -= (sum(weights)-1)/nFibers*ones(nFibers);
 	for (int i=0; i<nFibers; ++i) {
@@ -1015,7 +1097,7 @@ double HardiToolbox::estimateModifiedBAS(FiberComposition &fibComp, const vec &d
 	weights /= sum(weights);
       }
 
-      if (sqrt(accu(pow(dDirs,2)))<options.innerTolerance)
+      if (sqrt(accu(pow(dDirs,2)))<options.innerTolerance && norm(dWeights,2)<options.innerTolerance )
       {
 	cout <<"internal stopped. norm of kappas: " <<norm(dKappas,2) <<endl;
         break;
@@ -1025,28 +1107,29 @@ double HardiToolbox::estimateModifiedBAS(FiberComposition &fibComp, const vec &d
     lastE = e;
     estimatedSignal = simulateModBASByComponent(bVal, s0, kappas, weights, gradientOrientations, fibDirs);
     S = sum(estimatedSignal,1);
-    //e = stickLogLikelihood(estimatedSignal, oldSignal, dwSignal, sigma);
-    e = ricianLikelihood(S, dwSignal, sigma);
-    if (bDecreasing && e>lastE) {
-      cout <<"it #" <<it <<": e=" <<e <<endl;
-      // cout <<"energy increased " <<e-lastE <<endl;
-      // fibDirs.print("--local minima dirs");
-      // kappas.print("--local minima diffus");
-      // weights.print("--local minima weights");
-      bDecreasing = false;
-    }
+    e = ricianLikelihood(S, dwSignal, sigma) + options.sparseFactor*accu(pow(weights,2));
+      //printf("it #%5d:\te=%0.6f\t(%0.4f, %0.4f)\n", it, e, kappas(0), kappas(1));
+    
+    // if (bDecreasing && e>lastE) {
+    //   cout <<"it #" <<it <<": e=" <<e <<endl;
+    //   cout <<"energy increased " <<e-lastE <<endl;
+    //   // fibDirs.print("--local minima dirs");
+    //   // kappas.print("--local minima diffus");
+    //   // weights.print("--local minima weights");
+    //   bDecreasing = false;
+    // }
 
-    if (!bDecreasing && e<lastE) {
-      cout <<"it #" <<it <<": e=" <<e <<endl;
-      // cout <<"energy decreased" <<endl;
-      // fibDirs.print("++local maxima dirs");
-      // kappas.print("++local maxima diffus");
-      // weights.print("++local maxima weights");
-      bDecreasing = true;
-    }
+    // if (!bDecreasing && e<lastE) {
+    //   cout <<"it #" <<it <<": e=" <<e <<endl;
+    //   cout <<"energy decreased" <<e-lastE <<endl;
+    //   // fibDirs.print("++local maxima dirs");
+    //   // kappas.print("++local maxima diffus");
+    //   // weights.print("++local maxima weights");
+    //   bDecreasing = true;
+    // }
 
-    // if (fabs(lastE-e)<options.tolerance)
-    if (e-lastE<options.tolerance)
+    //if (fabs(lastE-e)<options.tolerance)
+    if (e-lastE<options.tolerance && fabs(e-lastE)<1e-3)
     {
       break;
     }
@@ -1061,13 +1144,10 @@ double HardiToolbox::estimateModifiedBAS(FiberComposition &fibComp, const vec &d
       }
     }
   }
-  cout <<"it #" <<it <<": e=" <<e <<". decreased " <<lastE-e <<endl;
+  // cout <<"it #" <<it <<": e=" <<e <<". decreased " <<lastE-e <<endl;
 
   //output
   fibComp.fibDirs = fibDirs;
-  // for (int i=0; i<nFibers; ++i) {
-  //   fibComp.fibDirs.col(i) /= norm(fibComp.fibDirs.col(i), 2);
-  // }
   fibComp.fibDiffs = kappas;
   fibComp.fibWeights = weights;
   fibComp.nFibers = nFibers;
@@ -1110,7 +1190,7 @@ void HardiToolbox::estimateModifiedBASByStick(FiberComposition &fibComp, const v
   bool waitForInput = false;
   double e = stickLogLikelihood(estimatedSignal, estimatedSignal, dwSignal, sigma);
   double lastE = e;
-  bool bDecreasing = true;
+  bool bDecreasing = false;
   int it = 0;
   for (it=0; it<options.maxIt; ++it)
   {
@@ -1652,7 +1732,36 @@ double HardiToolbox::ricianLikelihood (const vec &estimatedSignal, const vec &re
   int nGrads = estimatedSignal.n_rows;
   double s = sigma*sigma;
   for (int i=0; i<nGrads; ++i) {
-    l += log(realSignal(i)) - 2*log(s) - (realSignal(i)*realSignal(i)+estimatedSignal(i)*estimatedSignal(i))/(2*s) + log(bessi0(realSignal(i)*estimatedSignal(i)/s));
+    double x = realSignal(i)*estimatedSignal(i)/s;
+    // if (x>1e5)
+    //   l += 0;
+    // else
+    //   l+= log(realSignal(i)) - log(s) - (realSignal(i)*realSignal(i)+estimatedSignal(i)*estimatedSignal(i))/(2*s) + log(bessi0(realSignal(i)*estimatedSignal(i)/s));
+    double l1 = log(realSignal(i)) - log(s) - (realSignal(i)*realSignal(i)+estimatedSignal(i)*estimatedSignal(i))/(2*s) + log(bessi0(x, true)) + x;
+    if (l1>0){
+      // cout <<realSignal(i) <<endl;
+      // cout <<estimatedSignal(i) <<endl;
+      // cout <<bessi0(realSignal(i)*estimatedSignal(i)/s) <<endl;
+      l1 = 0;
+    }
+    l += l1;
   }
   return l;
+}
+
+void HardiToolbox::removeRedundantComponent (FiberComposition &fibComp)
+{
+  removeRedundantComponent(fibComp.fibDirs, fibComp.fibWeights, fibComp.fibDiffs, fibComp.nFibers);
+}
+
+void HardiToolbox::removeRedundantComponent (mat &fibDirs, vec &fibWeights, vec &fibDiffs, int &nFibers)
+{
+  for (int i=nFibers-1; i>=0; --i) {
+    if (fibWeights(i)<1e-3) {
+      fibWeights.shed_row(i);
+      fibDiffs.shed_row(i);
+      fibDirs.shed_col(i);
+      --nFibers;
+    }
+  }  
 }

@@ -1,0 +1,530 @@
+This is pdfTeX, Version 3.1415926-1.40.11 (TeX Live 2010) (format=pdflatex 2011.10.18)  9 JUL 2012 17:42
+entering extended mode
+ restricted \write18 enabled.
+ %&-line parsing enabled.
+**\input summary_sparsity.tex
+(./summary_sparsity.tex (/usr/share/texmf/tex/latex/base/article.cls
+Document Class: article 2007/10/19 v1.4h Standard LaTeX document class
+(/usr/share/texmf/tex/latex/base/size10.clo
+File: size10.clo 2007/10/19 v1.4h Standard LaTeX file (size option)
+)
+\c@part=\count79
+\c@section=\count80
+\c@subsection=\count81
+\c@subsubsection=\count82
+\c@paragraph=\count83
+\c@subparagraph=\count84
+\c@figure=\count85
+\c@table=\count86
+\abovecaptionskip=\skip41
+\belowcaptionskip=\skip42
+\bibindent=\dimen102
+)
+(/usr/share/texmf/tex/latex/graphics/graphicx.sty
+Package: graphicx 1999/02/16 v1.0f Enhanced LaTeX Graphics (DPC,SPQR)
+
+(/usr/share/texmf/tex/latex/graphics/keyval.sty
+Package: keyval 1999/03/16 v1.13 key=value parser (DPC)
+\KV@toks@=\toks14
+)
+(/usr/share/texmf/tex/latex/graphics/graphics.sty
+Package: graphics 2009/02/05 v1.0o Standard LaTeX Graphics (DPC,SPQR)
+
+(/usr/share/texmf/tex/latex/graphics/trig.sty
+Package: trig 1999/03/16 v1.09 sin cos tan (DPC)
+)
+(/usr/share/texmf/tex/latex/latexconfig/graphics.cfg
+File: graphics.cfg 2010/04/23 v1.9 graphics configuration of TeX Live
+)
+Package graphics Info: Driver file: pdftex.def on input line 91.
+
+(/usr/share/texmf/tex/latex/pdftex-def/pdftex.def
+File: pdftex.def 2010/02/14 v0.04n Graphics/color for pdfTeX
+\Gread@gobject=\count87
+))
+\Gin@req@height=\dimen103
+\Gin@req@width=\dimen104
+)
+(/usr/share/texmf/tex/latex/caption/caption.sty
+Package: caption 2010/01/09 v3.1m Customizing captions (AR)
+
+(/usr/share/texmf/tex/latex/caption/caption3.sty
+Package: caption3 2010/01/14 v3.1m caption3 kernel (AR)
+\captionmargin=\dimen105
+\captionmargin@=\dimen106
+\captionwidth=\dimen107
+\caption@indent=\dimen108
+\caption@parindent=\dimen109
+\caption@hangindent=\dimen110
+)
+\c@ContinuedFloat=\count88
+)
+(/usr/share/texmf/tex/latex/caption/subcaption.sty
+Package: subcaption 2008/08/31 v1.0b Adding subcaptions (AR)
+\c@subfigure=\count89
+\c@subtable=\count90
+)
+(/usr/share/texmf/tex/latex/changepage/chngpage.sty
+Package: chngpage 2009/10/20 v1.2b change page layout
+\c@cp@cnt=\count91
+\c@cp@tempcnt=\count92
+) (./summary_sparsity.aux)
+\openout1 = `summary_sparsity.aux'.
+
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 7.
+LaTeX Font Info:    ... okay on input line 7.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 7.
+LaTeX Font Info:    ... okay on input line 7.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 7.
+LaTeX Font Info:    ... okay on input line 7.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 7.
+LaTeX Font Info:    ... okay on input line 7.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 7.
+LaTeX Font Info:    ... okay on input line 7.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 7.
+LaTeX Font Info:    ... okay on input line 7.
+
+(/usr/share/texmf/tex/generic/oberdiek/pdftexcmds.sty
+Package: pdftexcmds 2010/04/01 v0.9 Utility functions of pdfTeX for LuaTeX (HO)
+
+
+(/usr/share/texmf/tex/generic/oberdiek/infwarerr.sty
+Package: infwarerr 2010/04/08 v1.3 Providing info/warning/message (HO)
+)
+(/usr/share/texmf/tex/generic/oberdiek/ifluatex.sty
+Package: ifluatex 2010/03/01 v1.3 Provides the ifluatex switch (HO)
+Package ifluatex Info: LuaTeX not detected.
+)
+(/usr/share/texmf/tex/generic/oberdiek/ltxcmds.sty
+Package: ltxcmds 2010/04/26 v1.7 LaTeX kernel commands for general use (HO)
+)
+Package pdftexcmds Info: LuaTeX not detected.
+Package pdftexcmds Info: \pdf@primitive is available.
+Package pdftexcmds Info: \pdf@ifprimitive is available.
+)
+(/usr/share/texmf/tex/latex/oberdiek/epstopdf-base.sty
+Package: epstopdf-base 2010/02/09 v2.5 Base part for package epstopdf
+
+(/usr/share/texmf/tex/latex/oberdiek/grfext.sty
+Package: grfext 2007/09/30 v1.0 Managing graphics extensions (HO)
+)
+(/usr/share/texmf/tex/latex/oberdiek/kvoptions.sty
+Package: kvoptions 2010/02/22 v3.7 Keyval support for LaTeX options (HO)
+
+(/usr/share/texmf/tex/generic/oberdiek/kvsetkeys.sty
+Package: kvsetkeys 2010/03/01 v1.9 Key value parser (HO)
+
+(/usr/share/texmf/tex/generic/oberdiek/etexcmds.sty
+Package: etexcmds 2010/01/28 v1.3 Prefix for e-TeX command names (HO)
+Package etexcmds Info: Could not find \expanded.
+(etexcmds)             That can mean that you are not using pdfTeX 1.50 or
+(etexcmds)             that some package has redefined \expanded.
+(etexcmds)             In the latter case, load this package earlier.
+)))
+Package grfext Info: Graphics extension search list:
+(grfext)             [.png,.pdf,.jpg,.mps,.jpeg,.jbig2,.jb2,.PNG,.PDF,.JPG,.JPE
+G,.JBIG2,.JB2,.eps]
+(grfext)             \AppendGraphicsExtensions on input line 436.
+
+(/usr/share/texmf/tex/latex/latexconfig/epstopdf-sys.cfg
+File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
+e
+))
+Package caption Info: Begin \AtBeginDocument code.
+Package caption Info: End \AtBeginDocument code.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <12> on input line 12.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <8> on input line 12.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <6> on input line 12.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <7> on input line 22.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <5> on input line 22.
+Package epstopdf Info: Source file: <figures/corpus_callosum.eps>
+(epstopdf)                    date: 2012-07-06 17:33:13
+(epstopdf)                    size: 15466 bytes
+(epstopdf)             Output file: <figures/corpus_callosum-eps-converted-to.p
+df>
+(epstopdf)                    date: 2012-07-06 17:34:15
+(epstopdf)                    size: 9576 bytes
+(epstopdf)             Command: <repstopdf --outfile=figures/corpus_callosum-ep
+s-converted-to.pdf figures/corpus_callosum.eps>
+(epstopdf)             \includegraphics on input line 26.
+Package epstopdf Info: Output file is already uptodate.
+
+<figures/corpus_callosum-eps-converted-to.pdf, id=1, 600.2425pt x 555.07375pt>
+File: figures/corpus_callosum-eps-converted-to.pdf Graphic file (type pdf)
+
+<use figures/corpus_callosum-eps-converted-to.pdf>
+Package epstopdf Info: Source file: <figures/cc_ball_diffus.eps>
+(epstopdf)                    date: 2012-07-05 14:58:50
+(epstopdf)                    size: 10580 bytes
+(epstopdf)             Output file: <figures/cc_ball_diffus-eps-converted-to.pd
+f>
+(epstopdf)                    date: 2012-07-06 18:02:37
+(epstopdf)                    size: 5849 bytes
+(epstopdf)             Command: <repstopdf --outfile=figures/cc_ball_diffus-eps
+-converted-to.pdf figures/cc_ball_diffus.eps>
+(epstopdf)             \includegraphics on input line 35.
+Package epstopdf Info: Output file is already uptodate.
+
+<figures/cc_ball_diffus-eps-converted-to.pdf, id=2, 449.68pt x 338.26375pt>
+File: figures/cc_ball_diffus-eps-converted-to.pdf Graphic file (type pdf)
+
+<use figures/cc_ball_diffus-eps-converted-to.pdf>
+Package epstopdf Info: Source file: <figures/cc_stick_diffus.eps>
+(epstopdf)                    date: 2012-07-05 14:58:43
+(epstopdf)                    size: 10154 bytes
+(epstopdf)             Output file: <figures/cc_stick_diffus-eps-converted-to.p
+df>
+(epstopdf)                    date: 2012-07-06 18:02:37
+(epstopdf)                    size: 5742 bytes
+(epstopdf)             Command: <repstopdf --outfile=figures/cc_stick_diffus-ep
+s-converted-to.pdf figures/cc_stick_diffus.eps>
+(epstopdf)             \includegraphics on input line 40.
+Package epstopdf Info: Output file is already uptodate.
+
+<figures/cc_stick_diffus-eps-converted-to.pdf, id=3, 449.68pt x 338.26375pt>
+File: figures/cc_stick_diffus-eps-converted-to.pdf Graphic file (type pdf)
+
+<use figures/cc_stick_diffus-eps-converted-to.pdf>
+Package epstopdf Info: Source file: <figures/sparsity_roi.eps>
+(epstopdf)                    date: 2012-07-09 10:47:41
+(epstopdf)                    size: 11436 bytes
+(epstopdf)             Output file: <figures/sparsity_roi-eps-converted-to.pdf>
+
+(epstopdf)                    date: 2012-07-09 10:50:56
+(epstopdf)                    size: 6423 bytes
+(epstopdf)             Command: <repstopdf --outfile=figures/sparsity_roi-eps-c
+onverted-to.pdf figures/sparsity_roi.eps>
+(epstopdf)             \includegraphics on input line 53.
+Package epstopdf Info: Output file is already uptodate.
+
+<figures/sparsity_roi-eps-converted-to.pdf, id=4, 554.07pt x 534.99875pt>
+File: figures/sparsity_roi-eps-converted-to.pdf Graphic file (type pdf)
+
+<use figures/sparsity_roi-eps-converted-to.pdf>
+Package epstopdf Info: Source file: <figures/sparsity_50_43_single.eps>
+(epstopdf)                    date: 2012-07-09 11:04:59
+(epstopdf)                    size: 14105 bytes
+(epstopdf)             Output file: <figures/sparsity_50_43_single-eps-converte
+d-to.pdf>
+(epstopdf)                    date: 2012-07-09 11:15:50
+(epstopdf)                    size: 8372 bytes
+(epstopdf)             Command: <repstopdf --outfile=figures/sparsity_50_43_sin
+gle-eps-converted-to.pdf figures/sparsity_50_43_single.eps>
+(epstopdf)             \includegraphics on input line 67.
+Package epstopdf Info: Output file is already uptodate.
+
+<figures/sparsity_50_43_single-eps-converted-to.pdf, id=5, 493.845pt x 396.4812
+5pt>
+File: figures/sparsity_50_43_single-eps-converted-to.pdf Graphic file (type pdf
+)
+ <use figures/sparsity_50_43_single-eps-converted-to.pdf>
+Package epstopdf Info: Source file: <figures/sparsity_51_43_single.eps>
+(epstopdf)                    date: 2012-07-09 11:20:46
+(epstopdf)                    size: 14098 bytes
+(epstopdf)             Output file: <figures/sparsity_51_43_single-eps-converte
+d-to.pdf>
+(epstopdf)                    date: 2012-07-09 11:21:16
+(epstopdf)                    size: 8326 bytes
+(epstopdf)             Command: <repstopdf --outfile=figures/sparsity_51_43_sin
+gle-eps-converted-to.pdf figures/sparsity_51_43_single.eps>
+(epstopdf)             \includegraphics on input line 68.
+Package epstopdf Info: Output file is already uptodate.
+
+<figures/sparsity_51_43_single-eps-converted-to.pdf, id=6, 493.845pt x 396.4812
+5pt>
+File: figures/sparsity_51_43_single-eps-converted-to.pdf Graphic file (type pdf
+)
+ <use figures/sparsity_51_43_single-eps-converted-to.pdf>
+Package epstopdf Info: Source file: <figures/sparsity_52_43_single.eps>
+(epstopdf)                    date: 2012-07-09 11:04:47
+(epstopdf)                    size: 14112 bytes
+(epstopdf)             Output file: <figures/sparsity_52_43_single-eps-converte
+d-to.pdf>
+(epstopdf)                    date: 2012-07-09 11:15:50
+(epstopdf)                    size: 8374 bytes
+(epstopdf)             Command: <repstopdf --outfile=figures/sparsity_52_43_sin
+gle-eps-converted-to.pdf figures/sparsity_52_43_single.eps>
+(epstopdf)             \includegraphics on input line 69.
+Package epstopdf Info: Output file is already uptodate.
+
+<figures/sparsity_52_43_single-eps-converted-to.pdf, id=7, 493.845pt x 396.4812
+5pt>
+File: figures/sparsity_52_43_single-eps-converted-to.pdf Graphic file (type pdf
+)
+ <use figures/sparsity_52_43_single-eps-converted-to.pdf>
+Package epstopdf Info: Source file: <figures/sparsity_60_47_cross.eps>
+(epstopdf)                    date: 2012-07-09 11:05:47
+(epstopdf)                    size: 13933 bytes
+(epstopdf)             Output file: <figures/sparsity_60_47_cross-eps-converted
+-to.pdf>
+(epstopdf)                    date: 2012-07-09 11:19:15
+(epstopdf)                    size: 8321 bytes
+(epstopdf)             Command: <repstopdf --outfile=figures/sparsity_60_47_cro
+ss-eps-converted-to.pdf figures/sparsity_60_47_cross.eps>
+(epstopdf)             \includegraphics on input line 74.
+Package epstopdf Info: Output file is already uptodate.
+
+<figures/sparsity_60_47_cross-eps-converted-to.pdf, id=8, 493.845pt x 396.48125
+pt>
+File: figures/sparsity_60_47_cross-eps-converted-to.pdf Graphic file (type pdf)
+
+ <use figures/sparsity_60_47_cross-eps-converted-to.pdf>
+Package epstopdf Info: Source file: <figures/sparsity_60_48_cross.eps>
+(epstopdf)                    date: 2012-07-09 11:05:58
+(epstopdf)                    size: 13922 bytes
+(epstopdf)             Output file: <figures/sparsity_60_48_cross-eps-converted
+-to.pdf>
+(epstopdf)                    date: 2012-07-09 11:19:15
+(epstopdf)                    size: 8310 bytes
+(epstopdf)             Command: <repstopdf --outfile=figures/sparsity_60_48_cro
+ss-eps-converted-to.pdf figures/sparsity_60_48_cross.eps>
+(epstopdf)             \includegraphics on input line 75.
+Package epstopdf Info: Output file is already uptodate.
+
+<figures/sparsity_60_48_cross-eps-converted-to.pdf, id=9, 493.845pt x 396.48125
+pt>
+File: figures/sparsity_60_48_cross-eps-converted-to.pdf Graphic file (type pdf)
+
+ <use figures/sparsity_60_48_cross-eps-converted-to.pdf>
+Package epstopdf Info: Source file: <figures/sparsity_60_49_cross.eps>
+(epstopdf)                    date: 2012-07-09 11:06:03
+(epstopdf)                    size: 13948 bytes
+(epstopdf)             Output file: <figures/sparsity_60_49_cross-eps-converted
+-to.pdf>
+(epstopdf)                    date: 2012-07-09 11:19:16
+(epstopdf)                    size: 8349 bytes
+(epstopdf)             Command: <repstopdf --outfile=figures/sparsity_60_49_cro
+ss-eps-converted-to.pdf figures/sparsity_60_49_cross.eps>
+(epstopdf)             \includegraphics on input line 76.
+Package epstopdf Info: Output file is already uptodate.
+
+<figures/sparsity_60_49_cross-eps-converted-to.pdf, id=10, 493.845pt x 396.4812
+5pt>
+File: figures/sparsity_60_49_cross-eps-converted-to.pdf Graphic file (type pdf)
+
+ <use figures/sparsity_60_49_cross-eps-converted-to.pdf>
+Package epstopdf Info: Source file: <figures/sparsity_61_47_cross.eps>
+(epstopdf)                    date: 2012-07-09 11:48:24
+(epstopdf)                    size: 13719 bytes
+(epstopdf)             Output file: <figures/sparsity_61_47_cross-eps-converted
+-to.pdf>
+(epstopdf)                    date: 2012-07-09 11:54:26
+(epstopdf)                    size: 8020 bytes
+(epstopdf)             Command: <repstopdf --outfile=figures/sparsity_61_47_cro
+ss-eps-converted-to.pdf figures/sparsity_61_47_cross.eps>
+(epstopdf)             \includegraphics on input line 77.
+Package epstopdf Info: Output file is already uptodate.
+
+<figures/sparsity_61_47_cross-eps-converted-to.pdf, id=11, 493.845pt x 396.4812
+5pt>
+File: figures/sparsity_61_47_cross-eps-converted-to.pdf Graphic file (type pdf)
+
+ <use figures/sparsity_61_47_cross-eps-converted-to.pdf>
+Package epstopdf Info: Source file: <figures/sparsity_61_48_cross.eps>
+(epstopdf)                    date: 2012-07-09 11:06:13
+(epstopdf)                    size: 13938 bytes
+(epstopdf)             Output file: <figures/sparsity_61_48_cross-eps-converted
+-to.pdf>
+(epstopdf)             Command: <repstopdf --outfile=figures/sparsity_61_48_cro
+ss-eps-converted-to.pdf figures/sparsity_61_48_cross.eps>
+(epstopdf)             \includegraphics on input line 78.
+runsystem(repstopdf --outfile=figures/sparsity_61_48_cross-eps-converted-to.pdf
+ figures/sparsity_61_48_cross.eps)...executed safely (allowed).
+
+Package epstopdf Info: Result file: <figures/sparsity_61_48_cross-eps-converted
+-to.pdf>
+(epstopdf)                    date: 2012-07-09 17:42:33
+(epstopdf)                    size: 8347 bytes.
+
+<figures/sparsity_61_48_cross-eps-converted-to.pdf, id=12, 493.845pt x 396.4812
+5pt>
+File: figures/sparsity_61_48_cross-eps-converted-to.pdf Graphic file (type pdf)
+
+ <use figures/sparsity_61_48_cross-eps-converted-to.pdf>
+Package epstopdf Info: Source file: <figures/sparsity_61_49_cross.eps>
+(epstopdf)                    date: 2012-07-09 11:06:08
+(epstopdf)                    size: 13944 bytes
+(epstopdf)             Output file: <figures/sparsity_61_49_cross-eps-converted
+-to.pdf>
+(epstopdf)             Command: <repstopdf --outfile=figures/sparsity_61_49_cro
+ss-eps-converted-to.pdf figures/sparsity_61_49_cross.eps>
+(epstopdf)             \includegraphics on input line 79.
+runsystem(repstopdf --outfile=figures/sparsity_61_49_cross-eps-converted-to.pdf
+ figures/sparsity_61_49_cross.eps)...executed safely (allowed).
+
+Package epstopdf Info: Result file: <figures/sparsity_61_49_cross-eps-converted
+-to.pdf>
+(epstopdf)                    date: 2012-07-09 17:42:33
+(epstopdf)                    size: 8350 bytes.
+
+<figures/sparsity_61_49_cross-eps-converted-to.pdf, id=13, 493.845pt x 396.4812
+5pt>
+File: figures/sparsity_61_49_cross-eps-converted-to.pdf Graphic file (type pdf)
+
+ <use figures/sparsity_61_49_cross-eps-converted-to.pdf>
+Package epstopdf Info: Source file: <figures/sparsity_62_47_cross.eps>
+(epstopdf)                    date: 2012-07-09 11:06:27
+(epstopdf)                    size: 13729 bytes
+(epstopdf)             Output file: <figures/sparsity_62_47_cross-eps-converted
+-to.pdf>
+(epstopdf)                    date: 2012-07-09 11:19:16
+(epstopdf)                    size: 8030 bytes
+(epstopdf)             Command: <repstopdf --outfile=figures/sparsity_62_47_cro
+ss-eps-converted-to.pdf figures/sparsity_62_47_cross.eps>
+(epstopdf)             \includegraphics on input line 80.
+Package epstopdf Info: Output file is already uptodate.
+
+<figures/sparsity_62_47_cross-eps-converted-to.pdf, id=14, 493.845pt x 396.4812
+5pt>
+File: figures/sparsity_62_47_cross-eps-converted-to.pdf Graphic file (type pdf)
+
+ <use figures/sparsity_62_47_cross-eps-converted-to.pdf>
+Package epstopdf Info: Source file: <figures/sparsity_62_48_cross.eps>
+(epstopdf)                    date: 2012-07-09 11:06:32
+(epstopdf)                    size: 13874 bytes
+(epstopdf)             Output file: <figures/sparsity_62_48_cross-eps-converted
+-to.pdf>
+(epstopdf)             Command: <repstopdf --outfile=figures/sparsity_62_48_cro
+ss-eps-converted-to.pdf figures/sparsity_62_48_cross.eps>
+(epstopdf)             \includegraphics on input line 81.
+runsystem(repstopdf --outfile=figures/sparsity_62_48_cross-eps-converted-to.pdf
+ figures/sparsity_62_48_cross.eps)...executed safely (allowed).
+
+Package epstopdf Info: Result file: <figures/sparsity_62_48_cross-eps-converted
+-to.pdf>
+(epstopdf)                    date: 2012-07-09 17:42:33
+(epstopdf)                    size: 8323 bytes.
+
+<figures/sparsity_62_48_cross-eps-converted-to.pdf, id=15, 493.845pt x 396.4812
+5pt>
+File: figures/sparsity_62_48_cross-eps-converted-to.pdf Graphic file (type pdf)
+
+ <use figures/sparsity_62_48_cross-eps-converted-to.pdf>
+Package epstopdf Info: Source file: <figures/sparsity_62_49_cross.eps>
+(epstopdf)                    date: 2012-07-09 11:06:37
+(epstopdf)                    size: 13866 bytes
+(epstopdf)             Output file: <figures/sparsity_62_49_cross-eps-converted
+-to.pdf>
+(epstopdf)             Command: <repstopdf --outfile=figures/sparsity_62_49_cro
+ss-eps-converted-to.pdf figures/sparsity_62_49_cross.eps>
+(epstopdf)             \includegraphics on input line 82.
+runsystem(repstopdf --outfile=figures/sparsity_62_49_cross-eps-converted-to.pdf
+ figures/sparsity_62_49_cross.eps)...executed safely (allowed).
+
+Package epstopdf Info: Result file: <figures/sparsity_62_49_cross-eps-converted
+-to.pdf>
+(epstopdf)                    date: 2012-07-09 17:42:34
+(epstopdf)                    size: 8327 bytes.
+
+<figures/sparsity_62_49_cross-eps-converted-to.pdf, id=16, 493.845pt x 396.4812
+5pt>
+File: figures/sparsity_62_49_cross-eps-converted-to.pdf Graphic file (type pdf)
+
+ <use figures/sparsity_62_49_cross-eps-converted-to.pdf>
+Overfull \hbox (84.43787pt too wide) in paragraph at lines 65--85
+ []$ 
+ []
+
+
+Overfull \hbox (84.43787pt too wide) in paragraph at lines 65--85
+ []$ 
+ []
+
+[1
+
+{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}]
+Package epstopdf Info: Source file: <figures/brain_bas_s=0.eps>
+(epstopdf)                    date: 2012-07-09 13:57:49
+(epstopdf)                    size: 86732 bytes
+(epstopdf)             Output file: <figures/brain_bas_s=0-eps-converted-to.pdf
+>
+(epstopdf)                    date: 2012-07-09 14:00:18
+(epstopdf)                    size: 25364 bytes
+(epstopdf)             Command: <repstopdf --outfile=figures/brain_bas_s=0-eps-
+converted-to.pdf figures/brain_bas_s=0.eps>
+(epstopdf)             \includegraphics on input line 102.
+Package epstopdf Info: Output file is already uptodate.
+
+<figures/brain_bas_s=0-eps-converted-to.pdf, id=30, 321.2pt x 321.2pt>
+File: figures/brain_bas_s=0-eps-converted-to.pdf Graphic file (type pdf)
+
+<use figures/brain_bas_s=0-eps-converted-to.pdf>
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <9> on input line 103.
+Package epstopdf Info: Source file: <figures/brain_bas_s=4e4.eps>
+(epstopdf)                    date: 2012-07-09 13:56:22
+(epstopdf)                    size: 67330 bytes
+(epstopdf)             Output file: <figures/brain_bas_s=4e4-eps-converted-to.p
+df>
+(epstopdf)                    date: 2012-07-09 14:01:44
+(epstopdf)                    size: 20737 bytes
+(epstopdf)             Command: <repstopdf --outfile=figures/brain_bas_s=4e4-ep
+s-converted-to.pdf figures/brain_bas_s=4e4.eps>
+(epstopdf)             \includegraphics on input line 107.
+Package epstopdf Info: Output file is already uptodate.
+
+<figures/brain_bas_s=4e4-eps-converted-to.pdf, id=31, 321.2pt x 321.2pt>
+File: figures/brain_bas_s=4e4-eps-converted-to.pdf Graphic file (type pdf)
+
+<use figures/brain_bas_s=4e4-eps-converted-to.pdf>
+Package epstopdf Info: Source file: <figures/brain_bas_s=1e5.eps>
+(epstopdf)                    date: 2012-07-09 13:55:32
+(epstopdf)                    size: 48223 bytes
+(epstopdf)             Output file: <figures/brain_bas_s=1e5-eps-converted-to.p
+df>
+(epstopdf)                    date: 2012-07-09 14:01:45
+(epstopdf)                    size: 16116 bytes
+(epstopdf)             Command: <repstopdf --outfile=figures/brain_bas_s=1e5-ep
+s-converted-to.pdf figures/brain_bas_s=1e5.eps>
+(epstopdf)             \includegraphics on input line 112.
+Package epstopdf Info: Output file is already uptodate.
+
+<figures/brain_bas_s=1e5-eps-converted-to.pdf, id=32, 321.2pt x 321.2pt>
+File: figures/brain_bas_s=1e5-eps-converted-to.pdf Graphic file (type pdf)
+
+<use figures/brain_bas_s=1e5-eps-converted-to.pdf> (./summary_sparsity.bbl)
+[2] [3 <./figures/corpus_callosum-eps-converted-to.pdf> <./figures/cc_ball_diff
+us-eps-converted-to.pdf> <./figures/cc_stick_diffus-eps-converted-to.pdf>]
+[4 <./figures/sparsity_roi-eps-converted-to.pdf>] [5 <./figures/sparsity_50_43_
+single-eps-converted-to.pdf> <./figures/sparsity_51_43_single-eps-converted-to.
+pdf> <./figures/sparsity_52_43_single-eps-converted-to.pdf> <./figures/sparsity
+_60_47_cross-eps-converted-to.pdf> <./figures/sparsity_60_48_cross-eps-converte
+d-to.pdf> <./figures/sparsity_60_49_cross-eps-converted-to.pdf> <./figures/spar
+sity_61_47_cross-eps-converted-to.pdf> <./figures/sparsity_61_48_cross-eps-conv
+erted-to.pdf> <./figures/sparsity_61_49_cross-eps-converted-to.pdf> <./figures/
+sparsity_62_47_cross-eps-converted-to.pdf> <./figures/sparsity_62_48_cross-eps-
+converted-to.pdf> <./figures/sparsity_62_49_cross-eps-converted-to.pdf>]
+[6 <./figures/brain_bas_s=0-eps-converted-to.pdf> <./figures/brain_bas_s=4e4-ep
+s-converted-to.pdf> <./figures/brain_bas_s=1e5-eps-converted-to.pdf>]
+(./summary_sparsity.aux) ) 
+Here is how much of TeX's memory you used:
+ 2169 strings out of 493747
+ 36838 string characters out of 3151241
+ 98188 words of memory out of 3500000
+ 5442 multiletter control sequences out of 15000+200000
+ 8538 words of font info for 30 fonts, out of 3000000 for 9000
+ 714 hyphenation exceptions out of 8191
+ 38i,7n,38p,544b,524s stack positions out of 5000i,500n,10000p,200000b,50000s
+</usr/share/texmf/fonts/type1/public/amsfonts/cm/cmbx
+12.pfb></usr/share/texmf/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/
+texmf/fonts/type1/public/amsfonts/cm/cmmi9.pfb></usr/share/texmf/fonts/type1/pu
+blic/amsfonts/cm/cmr10.pfb></usr/share/texmf/fonts/type1/public/amsfonts/cm/cmr
+12.pfb></usr/share/texmf/fonts/type1/public/amsfonts/cm/cmr17.pfb></usr/share/t
+exmf/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/share/texmf/fonts/type1/publ
+ic/amsfonts/cm/cmr7.pfb></usr/share/texmf/fonts/type1/public/amsfonts/cm/cmr9.p
+fb></usr/share/texmf/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texm
+f/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/share/texmf/fonts/type1/public
+/amsfonts/cm/cmsy9.pfb></usr/share/texmf/fonts/type1/public/amsfonts/cm/cmti10.
+pfb>
+Output written on summary_sparsity.pdf (6 pages, 270704 bytes).
+PDF statistics:
+ 194 PDF objects out of 1000 (max. 8388607)
+ 132 compressed objects within 2 object streams
+ 0 named destinations out of 1000 (max. 500000)
+ 96 words of extra memory for PDF output out of 10000 (max. 10000000)
+

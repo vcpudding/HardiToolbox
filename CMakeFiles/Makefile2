@@ -123,6 +123,111 @@ clean: CMakeFiles/RunMultiTensorTest.dir/clean
 .PHONY : clean
 
 #=============================================================================
+# Target rules for target CMakeFiles/TestBrainData.dir
+
+# All Build rule for target.
+CMakeFiles/TestBrainData.dir/all:
+	$(MAKE) -f CMakeFiles/TestBrainData.dir/build.make CMakeFiles/TestBrainData.dir/depend
+	$(MAKE) -f CMakeFiles/TestBrainData.dir/build.make CMakeFiles/TestBrainData.dir/build
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/collab/xhzhu/Study/HardiToolbox/CMakeFiles  7 8 9 10
+	@echo "Built target TestBrainData"
+.PHONY : CMakeFiles/TestBrainData.dir/all
+
+# Include target in all.
+all: CMakeFiles/TestBrainData.dir/all
+.PHONY : all
+
+# Build rule for subdir invocation for target.
+CMakeFiles/TestBrainData.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/collab/xhzhu/Study/HardiToolbox/CMakeFiles 4
+	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/TestBrainData.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/collab/xhzhu/Study/HardiToolbox/CMakeFiles 0
+.PHONY : CMakeFiles/TestBrainData.dir/rule
+
+# Convenience name for target.
+TestBrainData: CMakeFiles/TestBrainData.dir/rule
+.PHONY : TestBrainData
+
+# clean rule for target.
+CMakeFiles/TestBrainData.dir/clean:
+	$(MAKE) -f CMakeFiles/TestBrainData.dir/build.make CMakeFiles/TestBrainData.dir/clean
+.PHONY : CMakeFiles/TestBrainData.dir/clean
+
+# clean rule for target.
+clean: CMakeFiles/TestBrainData.dir/clean
+.PHONY : clean
+
+#=============================================================================
+# Target rules for target CMakeFiles/TestPhantomData.dir
+
+# All Build rule for target.
+CMakeFiles/TestPhantomData.dir/all:
+	$(MAKE) -f CMakeFiles/TestPhantomData.dir/build.make CMakeFiles/TestPhantomData.dir/depend
+	$(MAKE) -f CMakeFiles/TestPhantomData.dir/build.make CMakeFiles/TestPhantomData.dir/build
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/collab/xhzhu/Study/HardiToolbox/CMakeFiles  11 12 13
+	@echo "Built target TestPhantomData"
+.PHONY : CMakeFiles/TestPhantomData.dir/all
+
+# Include target in all.
+all: CMakeFiles/TestPhantomData.dir/all
+.PHONY : all
+
+# Build rule for subdir invocation for target.
+CMakeFiles/TestPhantomData.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/collab/xhzhu/Study/HardiToolbox/CMakeFiles 3
+	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/TestPhantomData.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/collab/xhzhu/Study/HardiToolbox/CMakeFiles 0
+.PHONY : CMakeFiles/TestPhantomData.dir/rule
+
+# Convenience name for target.
+TestPhantomData: CMakeFiles/TestPhantomData.dir/rule
+.PHONY : TestPhantomData
+
+# clean rule for target.
+CMakeFiles/TestPhantomData.dir/clean:
+	$(MAKE) -f CMakeFiles/TestPhantomData.dir/build.make CMakeFiles/TestPhantomData.dir/clean
+.PHONY : CMakeFiles/TestPhantomData.dir/clean
+
+# clean rule for target.
+clean: CMakeFiles/TestPhantomData.dir/clean
+.PHONY : clean
+
+#=============================================================================
+# Target rules for target CMakeFiles/TestWeightEst.dir
+
+# All Build rule for target.
+CMakeFiles/TestWeightEst.dir/all:
+	$(MAKE) -f CMakeFiles/TestWeightEst.dir/build.make CMakeFiles/TestWeightEst.dir/depend
+	$(MAKE) -f CMakeFiles/TestWeightEst.dir/build.make CMakeFiles/TestWeightEst.dir/build
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/collab/xhzhu/Study/HardiToolbox/CMakeFiles  14 15 16
+	@echo "Built target TestWeightEst"
+.PHONY : CMakeFiles/TestWeightEst.dir/all
+
+# Include target in all.
+all: CMakeFiles/TestWeightEst.dir/all
+.PHONY : all
+
+# Build rule for subdir invocation for target.
+CMakeFiles/TestWeightEst.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/collab/xhzhu/Study/HardiToolbox/CMakeFiles 3
+	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/TestWeightEst.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/collab/xhzhu/Study/HardiToolbox/CMakeFiles 0
+.PHONY : CMakeFiles/TestWeightEst.dir/rule
+
+# Convenience name for target.
+TestWeightEst: CMakeFiles/TestWeightEst.dir/rule
+.PHONY : TestWeightEst
+
+# clean rule for target.
+CMakeFiles/TestWeightEst.dir/clean:
+	$(MAKE) -f CMakeFiles/TestWeightEst.dir/build.make CMakeFiles/TestWeightEst.dir/clean
+.PHONY : CMakeFiles/TestWeightEst.dir/clean
+
+# clean rule for target.
+clean: CMakeFiles/TestWeightEst.dir/clean
+.PHONY : clean
+
+#=============================================================================
 # Special targets to cleanup operation of make.
 
 # Special rule to run CMake to check the build system integrity.

@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-1.40.11 (TeX Live 2010) (format=pdflatex 2011.10.18)  12 JUN 2012 10:24
+This is pdfTeX, Version 3.1415926-1.40.11 (TeX Live 2010) (format=pdflatex 2011.10.18)  26 JUN 2012 16:43
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -71,21 +71,26 @@ Package: float 2001/11/08 v1.3d Float enhancements (AL)
 \float@box=\box26
 \@float@everytoks=\toks16
 \@floatcapt=\box27
+)
+(/usr/share/texmf/tex/latex/changepage/chngpage.sty
+Package: chngpage 2009/10/20 v1.2b change page layout
+\c@cp@cnt=\count92
+\c@cp@tempcnt=\count93
 ) (./summary.aux)
 \openout1 = `summary.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 7.
-LaTeX Font Info:    ... okay on input line 7.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 7.
-LaTeX Font Info:    ... okay on input line 7.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 7.
-LaTeX Font Info:    ... okay on input line 7.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 7.
-LaTeX Font Info:    ... okay on input line 7.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 7.
-LaTeX Font Info:    ... okay on input line 7.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 7.
-LaTeX Font Info:    ... okay on input line 7.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 8.
+LaTeX Font Info:    ... okay on input line 8.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 8.
+LaTeX Font Info:    ... okay on input line 8.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 8.
+LaTeX Font Info:    ... okay on input line 8.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 8.
+LaTeX Font Info:    ... okay on input line 8.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 8.
+LaTeX Font Info:    ... okay on input line 8.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 8.
+LaTeX Font Info:    ... okay on input line 8.
 
 (/usr/share/texmf/tex/generic/oberdiek/pdftexcmds.sty
 Package: pdftexcmds 2010/04/01 v0.9 Utility functions of pdfTeX for LuaTeX (HO)
@@ -137,290 +142,1724 @@ Package caption Info: Begin \AtBeginDocument code.
 Package caption Info: float package is loaded.
 Package caption Info: End \AtBeginDocument code.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <12> on input line 12.
+(Font)              <12> on input line 13.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <8> on input line 12.
+(Font)              <8> on input line 13.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <6> on input line 12.
-LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <7> on input line 29.
-LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <5> on input line 29.
-Package epstopdf Info: Source file: <figures/one_fiber__snr=20.eps>
-(epstopdf)                    date: 2012-06-11 16:04:44
-(epstopdf)                    size: 14022 bytes
-(epstopdf)             Output file: <figures/one_fiber__snr=20-eps-converted-to
-.pdf>
-(epstopdf)                    date: 2012-06-11 16:14:44
-(epstopdf)                    size: 10757 bytes
-(epstopdf)             Command: <repstopdf --outfile=figures/one_fiber__snr=20-
-eps-converted-to.pdf figures/one_fiber__snr=20.eps>
-(epstopdf)             \includegraphics on input line 37.
+(Font)              <6> on input line 13.
+Package epstopdf Info: Source file: <figures/synth_modbas_weights__snr=20__w1=3
+__angle=30.eps>
+(epstopdf)                    date: 2012-06-26 16:23:38
+(epstopdf)                    size: 12842 bytes
+(epstopdf)             Output file: <figures/synth_modbas_weights__snr=20__w1=3
+__angle=30-eps-converted-to.pdf>
+(epstopdf)                    date: 2012-06-26 16:25:01
+(epstopdf)                    size: 10225 bytes
+(epstopdf)             Command: <repstopdf --outfile=figures/synth_modbas_weigh
+ts__snr=20__w1=3__angle=30-eps-converted-to.pdf figures/synth_modbas_weights__s
+nr=20__w1=3__angle=30.eps>
+(epstopdf)             \includegraphics on input line 33.
 Package epstopdf Info: Output file is already uptodate.
 
-<figures/one_fiber__snr=20-eps-converted-to.pdf, id=1, 959.585pt x 417.56pt>
-File: figures/one_fiber__snr=20-eps-converted-to.pdf Graphic file (type pdf)
+<figures/synth_modbas_weights__snr=20__w1=3__angle=30-eps-converted-to.pdf, id=
+1, 491.8375pt x 411.5375pt>
+File: figures/synth_modbas_weights__snr=20__w1=3__angle=30-eps-converted-to.pdf
+ Graphic file (type pdf)
 
-<use figures/one_fiber__snr=20-eps-converted-to.pdf>
-Package epstopdf Info: Source file: <figures/one_fiber__snr=40.eps>
-(epstopdf)                    date: 2012-06-11 16:03:57
-(epstopdf)                    size: 14125 bytes
-(epstopdf)             Output file: <figures/one_fiber__snr=40-eps-converted-to
-.pdf>
-(epstopdf)                    date: 2012-06-11 16:21:20
-(epstopdf)                    size: 10756 bytes
-(epstopdf)             Command: <repstopdf --outfile=figures/one_fiber__snr=40-
-eps-converted-to.pdf figures/one_fiber__snr=40.eps>
-(epstopdf)             \includegraphics on input line 42.
+<use figures/synth_modbas_weights__snr=20__w1=3__angle=30-eps-converted-to.pdf>
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <7> on input line 34.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <5> on input line 34.
+Package epstopdf Info: Source file: <figures/synth_modbas_weights__snr=20__w1=3
+__angle=60.eps>
+(epstopdf)                    date: 2012-06-26 16:23:39
+(epstopdf)                    size: 12003 bytes
+(epstopdf)             Output file: <figures/synth_modbas_weights__snr=20__w1=3
+__angle=60-eps-converted-to.pdf>
+(epstopdf)                    date: 2012-06-26 16:25:02
+(epstopdf)                    size: 10588 bytes
+(epstopdf)             Command: <repstopdf --outfile=figures/synth_modbas_weigh
+ts__snr=20__w1=3__angle=60-eps-converted-to.pdf figures/synth_modbas_weights__s
+nr=20__w1=3__angle=60.eps>
+(epstopdf)             \includegraphics on input line 38.
 Package epstopdf Info: Output file is already uptodate.
 
-<figures/one_fiber__snr=40-eps-converted-to.pdf, id=2, 959.585pt x 413.545pt>
-File: figures/one_fiber__snr=40-eps-converted-to.pdf Graphic file (type pdf)
+<figures/synth_modbas_weights__snr=20__w1=3__angle=60-eps-converted-to.pdf, id=
+2, 491.8375pt x 411.5375pt>
+File: figures/synth_modbas_weights__snr=20__w1=3__angle=60-eps-converted-to.pdf
+ Graphic file (type pdf)
 
-<use figures/one_fiber__snr=40-eps-converted-to.pdf> [1
-
-{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}]
-Package epstopdf Info: Source file: <figures/two_fiber__snr=20__angle=30.eps>
-(epstopdf)                    date: 2012-06-07 16:12:52
-(epstopdf)                    size: 15386 bytes
-(epstopdf)             Output file: <figures/two_fiber__snr=20__angle=30-eps-co
-nverted-to.pdf>
-(epstopdf)                    date: 2012-06-11 21:37:08
-(epstopdf)                    size: 11738 bytes
-(epstopdf)             Command: <repstopdf --outfile=figures/two_fiber__snr=20_
-_angle=30-eps-converted-to.pdf figures/two_fiber__snr=20__angle=30.eps>
-(epstopdf)             \includegraphics on input line 54.
+<use figures/synth_modbas_weights__snr=20__w1=3__angle=60-eps-converted-to.pdf>
+Package epstopdf Info: Source file: <figures/synth_modbas_weights__snr=20__w1=3
+__angle=90.eps>
+(epstopdf)                    date: 2012-06-26 16:23:40
+(epstopdf)                    size: 12047 bytes
+(epstopdf)             Output file: <figures/synth_modbas_weights__snr=20__w1=3
+__angle=90-eps-converted-to.pdf>
+(epstopdf)                    date: 2012-06-26 16:25:02
+(epstopdf)                    size: 9771 bytes
+(epstopdf)             Command: <repstopdf --outfile=figures/synth_modbas_weigh
+ts__snr=20__w1=3__angle=90-eps-converted-to.pdf figures/synth_modbas_weights__s
+nr=20__w1=3__angle=90.eps>
+(epstopdf)             \includegraphics on input line 43.
 Package epstopdf Info: Output file is already uptodate.
 
-<figures/two_fiber__snr=20__angle=30-eps-converted-to.pdf, id=19, 962.59625pt x
- 402.50375pt>
-File: figures/two_fiber__snr=20__angle=30-eps-converted-to.pdf Graphic file (ty
-pe pdf)
- <use figures/two_fiber__snr=20__angle=30-eps-converted-to.pdf>
-Package epstopdf Info: Source file: <figures/two_fiber__snr=20__angle=45.eps>
-(epstopdf)                    date: 2012-06-07 16:13:40
-(epstopdf)                    size: 15783 bytes
-(epstopdf)             Output file: <figures/two_fiber__snr=20__angle=45-eps-co
-nverted-to.pdf>
-(epstopdf)                    date: 2012-06-11 21:37:08
-(epstopdf)                    size: 11568 bytes
-(epstopdf)             Command: <repstopdf --outfile=figures/two_fiber__snr=20_
-_angle=45-eps-converted-to.pdf figures/two_fiber__snr=20__angle=45.eps>
+<figures/synth_modbas_weights__snr=20__w1=3__angle=90-eps-converted-to.pdf, id=
+3, 491.8375pt x 411.5375pt>
+File: figures/synth_modbas_weights__snr=20__w1=3__angle=90-eps-converted-to.pdf
+ Graphic file (type pdf)
+
+<use figures/synth_modbas_weights__snr=20__w1=3__angle=90-eps-converted-to.pdf>
+
+Overfull \hbox (84.43787pt too wide) in paragraph at lines 30--46
+[]$[]$ 
+ []
+
+Package epstopdf Info: Source file: <figures/synth_modbas_weights__snr=20__w1=4
+__angle=30.eps>
+(epstopdf)                    date: 2012-06-26 16:23:41
+(epstopdf)                    size: 12167 bytes
+(epstopdf)             Output file: <figures/synth_modbas_weights__snr=20__w1=4
+__angle=30-eps-converted-to.pdf>
+(epstopdf)                    date: 2012-06-26 16:25:02
+(epstopdf)                    size: 10119 bytes
+(epstopdf)             Command: <repstopdf --outfile=figures/synth_modbas_weigh
+ts__snr=20__w1=4__angle=30-eps-converted-to.pdf figures/synth_modbas_weights__s
+nr=20__w1=4__angle=30.eps>
+(epstopdf)             \includegraphics on input line 50.
+Package epstopdf Info: Output file is already uptodate.
+
+<figures/synth_modbas_weights__snr=20__w1=4__angle=30-eps-converted-to.pdf, id=
+4, 491.8375pt x 411.5375pt>
+File: figures/synth_modbas_weights__snr=20__w1=4__angle=30-eps-converted-to.pdf
+ Graphic file (type pdf)
+
+<use figures/synth_modbas_weights__snr=20__w1=4__angle=30-eps-converted-to.pdf>
+Package epstopdf Info: Source file: <figures/synth_modbas_weights__snr=20__w1=4
+__angle=60.eps>
+(epstopdf)                    date: 2012-06-26 16:23:42
+(epstopdf)                    size: 12001 bytes
+(epstopdf)             Output file: <figures/synth_modbas_weights__snr=20__w1=4
+__angle=60-eps-converted-to.pdf>
+(epstopdf)                    date: 2012-06-26 16:25:02
+(epstopdf)                    size: 10183 bytes
+(epstopdf)             Command: <repstopdf --outfile=figures/synth_modbas_weigh
+ts__snr=20__w1=4__angle=60-eps-converted-to.pdf figures/synth_modbas_weights__s
+nr=20__w1=4__angle=60.eps>
 (epstopdf)             \includegraphics on input line 55.
 Package epstopdf Info: Output file is already uptodate.
 
-<figures/two_fiber__snr=20__angle=45-eps-converted-to.pdf, id=20, 959.585pt x 3
-95.4775pt>
-File: figures/two_fiber__snr=20__angle=45-eps-converted-to.pdf Graphic file (ty
-pe pdf)
- <use figures/two_fiber__snr=20__angle=45-eps-converted-to.pdf>
-Package epstopdf Info: Source file: <figures/two_fiber__snr=20__angle=60.eps>
-(epstopdf)                    date: 2012-06-07 16:15:49
-(epstopdf)                    size: 15653 bytes
-(epstopdf)             Output file: <figures/two_fiber__snr=20__angle=60-eps-co
-nverted-to.pdf>
-(epstopdf)                    date: 2012-06-11 21:37:09
-(epstopdf)                    size: 11823 bytes
-(epstopdf)             Command: <repstopdf --outfile=figures/two_fiber__snr=20_
-_angle=60-eps-converted-to.pdf figures/two_fiber__snr=20__angle=60.eps>
-(epstopdf)             \includegraphics on input line 56.
+<figures/synth_modbas_weights__snr=20__w1=4__angle=60-eps-converted-to.pdf, id=
+5, 491.8375pt x 411.5375pt>
+File: figures/synth_modbas_weights__snr=20__w1=4__angle=60-eps-converted-to.pdf
+ Graphic file (type pdf)
+
+<use figures/synth_modbas_weights__snr=20__w1=4__angle=60-eps-converted-to.pdf>
+Package epstopdf Info: Source file: <figures/synth_modbas_weights__snr=20__w1=4
+__angle=90.eps>
+(epstopdf)                    date: 2012-06-26 16:23:43
+(epstopdf)                    size: 12267 bytes
+(epstopdf)             Output file: <figures/synth_modbas_weights__snr=20__w1=4
+__angle=90-eps-converted-to.pdf>
+(epstopdf)                    date: 2012-06-26 16:25:03
+(epstopdf)                    size: 9718 bytes
+(epstopdf)             Command: <repstopdf --outfile=figures/synth_modbas_weigh
+ts__snr=20__w1=4__angle=90-eps-converted-to.pdf figures/synth_modbas_weights__s
+nr=20__w1=4__angle=90.eps>
+(epstopdf)             \includegraphics on input line 60.
 Package epstopdf Info: Output file is already uptodate.
 
-<figures/two_fiber__snr=20__angle=60-eps-converted-to.pdf, id=21, 962.59625pt x
- 402.50375pt>
-File: figures/two_fiber__snr=20__angle=60-eps-converted-to.pdf Graphic file (ty
-pe pdf)
- <use figures/two_fiber__snr=20__angle=60-eps-converted-to.pdf>
-Package epstopdf Info: Source file: <figures/two_fiber__snr=20__angle=90.eps>
-(epstopdf)                    date: 2012-06-07 16:16:49
-(epstopdf)                    size: 15475 bytes
-(epstopdf)             Output file: <figures/two_fiber__snr=20__angle=90-eps-co
-nverted-to.pdf>
-(epstopdf)                    date: 2012-06-11 21:37:09
-(epstopdf)                    size: 11762 bytes
-(epstopdf)             Command: <repstopdf --outfile=figures/two_fiber__snr=20_
-_angle=90-eps-converted-to.pdf figures/two_fiber__snr=20__angle=90.eps>
-(epstopdf)             \includegraphics on input line 57.
-Package epstopdf Info: Output file is already uptodate.
+<figures/synth_modbas_weights__snr=20__w1=4__angle=90-eps-converted-to.pdf, id=
+6, 497.86pt x 411.5375pt>
+File: figures/synth_modbas_weights__snr=20__w1=4__angle=90-eps-converted-to.pdf
+ Graphic file (type pdf)
 
-<figures/two_fiber__snr=20__angle=90-eps-converted-to.pdf, id=22, 959.585pt x 3
-98.48875pt>
-File: figures/two_fiber__snr=20__angle=90-eps-converted-to.pdf Graphic file (ty
-pe pdf)
- <use figures/two_fiber__snr=20__angle=90-eps-converted-to.pdf>
-[2 <./figures/one_fiber__snr=20-eps-converted-to.pdf> <./figures/one_fiber__snr
-=40-eps-converted-to.pdf>]
-Overfull \vbox (60.96477pt too high) has occurred while \output is active []
-
-
-[3 <./figures/two_fiber__snr=20__angle=30-eps-converted-to.pdf> <./figures/two_
-fiber__snr=20__angle=45-eps-converted-to.pdf> <./figures/two_fiber__snr=20__ang
-le=60-eps-converted-to.pdf> <./figures/two_fiber__snr=20__angle=90-eps-converte
-d-to.pdf>]
-Package epstopdf Info: Source file: <figures/two_fiber__snr=40__angle=30.eps>
-(epstopdf)                    date: 2012-06-07 16:24:30
-(epstopdf)                    size: 16012 bytes
-(epstopdf)             Output file: <figures/two_fiber__snr=40__angle=30-eps-co
-nverted-to.pdf>
-(epstopdf)                    date: 2012-06-11 21:39:49
-(epstopdf)                    size: 11678 bytes
-(epstopdf)             Command: <repstopdf --outfile=figures/two_fiber__snr=40_
-_angle=30-eps-converted-to.pdf figures/two_fiber__snr=40__angle=30.eps>
-(epstopdf)             \includegraphics on input line 65.
-Package epstopdf Info: Output file is already uptodate.
-
-<figures/two_fiber__snr=40__angle=30-eps-converted-to.pdf, id=65, 959.585pt x 4
-02.50375pt>
-File: figures/two_fiber__snr=40__angle=30-eps-converted-to.pdf Graphic file (ty
-pe pdf)
- <use figures/two_fiber__snr=40__angle=30-eps-converted-to.pdf>
-Package epstopdf Info: Source file: <figures/two_fiber__snr=40__angle=45.eps>
-(epstopdf)                    date: 2012-06-07 16:47:37
-(epstopdf)                    size: 15812 bytes
-(epstopdf)             Output file: <figures/two_fiber__snr=40__angle=45-eps-co
-nverted-to.pdf>
-(epstopdf)                    date: 2012-06-11 21:39:50
-(epstopdf)                    size: 11825 bytes
-(epstopdf)             Command: <repstopdf --outfile=figures/two_fiber__snr=40_
-_angle=45-eps-converted-to.pdf figures/two_fiber__snr=40__angle=45.eps>
+<use figures/synth_modbas_weights__snr=20__w1=4__angle=90-eps-converted-to.pdf>
+Package epstopdf Info: Source file: <figures/synth_modbas_weights__snr=20__w1=5
+__angle=30.eps>
+(epstopdf)                    date: 2012-06-26 16:23:44
+(epstopdf)                    size: 12112 bytes
+(epstopdf)             Output file: <figures/synth_modbas_weights__snr=20__w1=5
+__angle=30-eps-converted-to.pdf>
+(epstopdf)                    date: 2012-06-26 16:26:55
+(epstopdf)                    size: 10104 bytes
+(epstopdf)             Command: <repstopdf --outfile=figures/synth_modbas_weigh
+ts__snr=20__w1=5__angle=30-eps-converted-to.pdf figures/synth_modbas_weights__s
+nr=20__w1=5__angle=30.eps>
 (epstopdf)             \includegraphics on input line 66.
 Package epstopdf Info: Output file is already uptodate.
 
-<figures/two_fiber__snr=40__angle=45-eps-converted-to.pdf, id=66, 959.585pt x 4
-04.51125pt>
-File: figures/two_fiber__snr=40__angle=45-eps-converted-to.pdf Graphic file (ty
-pe pdf)
- <use figures/two_fiber__snr=40__angle=45-eps-converted-to.pdf>
-Package epstopdf Info: Source file: <figures/two_fiber__snr=40__angle=60.eps>
-(epstopdf)                    date: 2012-06-07 16:48:35
-(epstopdf)                    size: 15927 bytes
-(epstopdf)             Output file: <figures/two_fiber__snr=40__angle=60-eps-co
-nverted-to.pdf>
-(epstopdf)                    date: 2012-06-11 21:39:50
-(epstopdf)                    size: 11442 bytes
-(epstopdf)             Command: <repstopdf --outfile=figures/two_fiber__snr=40_
-_angle=60-eps-converted-to.pdf figures/two_fiber__snr=40__angle=60.eps>
-(epstopdf)             \includegraphics on input line 67.
+<figures/synth_modbas_weights__snr=20__w1=5__angle=30-eps-converted-to.pdf, id=
+7, 491.8375pt x 411.5375pt>
+File: figures/synth_modbas_weights__snr=20__w1=5__angle=30-eps-converted-to.pdf
+ Graphic file (type pdf)
+
+<use figures/synth_modbas_weights__snr=20__w1=5__angle=30-eps-converted-to.pdf>
+Package epstopdf Info: Source file: <figures/synth_modbas_weights__snr=20__w1=5
+__angle=60.eps>
+(epstopdf)                    date: 2012-06-26 16:23:45
+(epstopdf)                    size: 12143 bytes
+(epstopdf)             Output file: <figures/synth_modbas_weights__snr=20__w1=5
+__angle=60-eps-converted-to.pdf>
+(epstopdf)                    date: 2012-06-26 16:26:55
+(epstopdf)                    size: 9653 bytes
+(epstopdf)             Command: <repstopdf --outfile=figures/synth_modbas_weigh
+ts__snr=20__w1=5__angle=60-eps-converted-to.pdf figures/synth_modbas_weights__s
+nr=20__w1=5__angle=60.eps>
+(epstopdf)             \includegraphics on input line 71.
 Package epstopdf Info: Output file is already uptodate.
 
-<figures/two_fiber__snr=40__angle=60-eps-converted-to.pdf, id=67, 962.59625pt x
- 402.50375pt>
-File: figures/two_fiber__snr=40__angle=60-eps-converted-to.pdf Graphic file (ty
-pe pdf)
- <use figures/two_fiber__snr=40__angle=60-eps-converted-to.pdf>
-Package epstopdf Info: Source file: <figures/two_fiber__snr=40__angle=90.eps>
-(epstopdf)                    date: 2012-06-07 16:49:16
-(epstopdf)                    size: 15632 bytes
-(epstopdf)             Output file: <figures/two_fiber__snr=40__angle=90-eps-co
-nverted-to.pdf>
-(epstopdf)                    date: 2012-06-11 21:39:50
-(epstopdf)                    size: 11855 bytes
-(epstopdf)             Command: <repstopdf --outfile=figures/two_fiber__snr=40_
-_angle=90-eps-converted-to.pdf figures/two_fiber__snr=40__angle=90.eps>
-(epstopdf)             \includegraphics on input line 68.
+<figures/synth_modbas_weights__snr=20__w1=5__angle=60-eps-converted-to.pdf, id=
+8, 491.8375pt x 411.5375pt>
+File: figures/synth_modbas_weights__snr=20__w1=5__angle=60-eps-converted-to.pdf
+ Graphic file (type pdf)
+
+<use figures/synth_modbas_weights__snr=20__w1=5__angle=60-eps-converted-to.pdf>
+Package epstopdf Info: Source file: <figures/synth_modbas_weights__snr=20__w1=5
+__angle=90.eps>
+(epstopdf)                    date: 2012-06-26 16:23:46
+(epstopdf)                    size: 12249 bytes
+(epstopdf)             Output file: <figures/synth_modbas_weights__snr=20__w1=5
+__angle=90-eps-converted-to.pdf>
+(epstopdf)                    date: 2012-06-26 16:26:56
+(epstopdf)                    size: 9661 bytes
+(epstopdf)             Command: <repstopdf --outfile=figures/synth_modbas_weigh
+ts__snr=20__w1=5__angle=90-eps-converted-to.pdf figures/synth_modbas_weights__s
+nr=20__w1=5__angle=90.eps>
+(epstopdf)             \includegraphics on input line 76.
 Package epstopdf Info: Output file is already uptodate.
 
-<figures/two_fiber__snr=40__angle=90-eps-converted-to.pdf, id=68, 959.585pt x 4
-07.5225pt>
-File: figures/two_fiber__snr=40__angle=90-eps-converted-to.pdf Graphic file (ty
-pe pdf)
- <use figures/two_fiber__snr=40__angle=90-eps-converted-to.pdf>
-Overfull \vbox (67.915pt too high) has occurred while \output is active []
+<figures/synth_modbas_weights__snr=20__w1=5__angle=90-eps-converted-to.pdf, id=
+9, 497.86pt x 411.5375pt>
+File: figures/synth_modbas_weights__snr=20__w1=5__angle=90-eps-converted-to.pdf
+ Graphic file (type pdf)
+
+<use figures/synth_modbas_weights__snr=20__w1=5__angle=90-eps-converted-to.pdf>
+
+Overfull \hbox (84.43787pt too wide) in paragraph at lines 47--79
+[]$[]$
+ []
 
 
-[4 <./figures/two_fiber__snr=40__angle=30-eps-converted-to.pdf> <./figures/two_
-fiber__snr=40__angle=45-eps-converted-to.pdf> <./figures/two_fiber__snr=40__ang
-le=60-eps-converted-to.pdf> <./figures/two_fiber__snr=40__angle=90-eps-converte
-d-to.pdf>]
-Package epstopdf Info: Source file: <figures/phantom_diffus.eps>
-(epstopdf)                    date: 2012-06-11 21:58:13
-(epstopdf)                    size: 77897 bytes
-(epstopdf)             Output file: <figures/phantom_diffus-eps-converted-to.pd
-f>
-(epstopdf)                    date: 2012-06-11 21:59:03
-(epstopdf)                    size: 23047 bytes
-(epstopdf)             Command: <repstopdf --outfile=figures/phantom_diffus-eps
--converted-to.pdf figures/phantom_diffus.eps>
-(epstopdf)             \includegraphics on input line 84.
+Overfull \hbox (84.43787pt too wide) in paragraph at lines 47--79
+[]$ 
+ []
+
+[1
+
+{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}]
+Package epstopdf Info: Source file: <figures/synth_modbas_diffus__snr=20__w1=3_
+_angle=30.eps>
+(epstopdf)                    date: 2012-06-26 16:22:57
+(epstopdf)                    size: 12918 bytes
+(epstopdf)             Output file: <figures/synth_modbas_diffus__snr=20__w1=3_
+_angle=30-eps-converted-to.pdf>
+(epstopdf)                    date: 2012-06-26 16:25:03
+(epstopdf)                    size: 9988 bytes
+(epstopdf)             Command: <repstopdf --outfile=figures/synth_modbas_diffu
+s__snr=20__w1=3__angle=30-eps-converted-to.pdf figures/synth_modbas_diffus__snr
+=20__w1=3__angle=30.eps>
+(epstopdf)             \includegraphics on input line 89.
 Package epstopdf Info: Output file is already uptodate.
 
-<figures/phantom_diffus-eps-converted-to.pdf, id=96, 321.2pt x 321.2pt>
-File: figures/phantom_diffus-eps-converted-to.pdf Graphic file (type pdf)
+<figures/synth_modbas_diffus__snr=20__w1=3__angle=30-eps-converted-to.pdf, id=2
+1, 491.8375pt x 411.5375pt>
+File: figures/synth_modbas_diffus__snr=20__w1=3__angle=30-eps-converted-to.pdf 
+Graphic file (type pdf)
 
-<use figures/phantom_diffus-eps-converted-to.pdf>
-Package epstopdf Info: Source file: <figures/phantom_diffus_like.eps>
-(epstopdf)                    date: 2012-06-11 21:51:47
-(epstopdf)                    size: 17192 bytes
-(epstopdf)             Output file: <figures/phantom_diffus_like-eps-converted-
-to.pdf>
-(epstopdf)                    date: 2012-06-11 21:52:20
-(epstopdf)                    size: 8876 bytes
-(epstopdf)             Command: <repstopdf --outfile=figures/phantom_diffus_lik
-e-eps-converted-to.pdf figures/phantom_diffus_like.eps>
-(epstopdf)             \includegraphics on input line 85.
-Package epstopdf Info: Output file is already uptodate.
-
-<figures/phantom_diffus_like-eps-converted-to.pdf, id=97, 962.59625pt x 321.2pt
->
-File: figures/phantom_diffus_like-eps-converted-to.pdf Graphic file (type pdf)
- <use figures/phantom_diffus_like-eps-converted-to.pdf>
-Package epstopdf Info: Source file: <figures/phantom_weights.eps>
-(epstopdf)                    date: 2012-06-11 21:59:02
-(epstopdf)                    size: 77898 bytes
-(epstopdf)             Output file: <figures/phantom_weights-eps-converted-to.p
-df>
-(epstopdf)                    date: 2012-06-11 21:59:04
-(epstopdf)                    size: 23072 bytes
-(epstopdf)             Command: <repstopdf --outfile=figures/phantom_weights-ep
-s-converted-to.pdf figures/phantom_weights.eps>
-(epstopdf)             \includegraphics on input line 93.
-Package epstopdf Info: Output file is already uptodate.
-
-<figures/phantom_weights-eps-converted-to.pdf, id=98, 321.2pt x 321.2pt>
-File: figures/phantom_weights-eps-converted-to.pdf Graphic file (type pdf)
-
-<use figures/phantom_weights-eps-converted-to.pdf>
-Package epstopdf Info: Source file: <figures/phantom_weights_like.eps>
-(epstopdf)                    date: 2012-06-11 21:51:23
-(epstopdf)                    size: 17062 bytes
-(epstopdf)             Output file: <figures/phantom_weights_like-eps-converted
--to.pdf>
-(epstopdf)                    date: 2012-06-11 21:53:51
-(epstopdf)                    size: 8797 bytes
-(epstopdf)             Command: <repstopdf --outfile=figures/phantom_weights_li
-ke-eps-converted-to.pdf figures/phantom_weights_like.eps>
+<use figures/synth_modbas_diffus__snr=20__w1=3__angle=30-eps-converted-to.pdf>
+Package epstopdf Info: Source file: <figures/synth_modbas_diffus__snr=20__w1=3_
+_angle=60.eps>
+(epstopdf)                    date: 2012-06-26 16:22:58
+(epstopdf)                    size: 12180 bytes
+(epstopdf)             Output file: <figures/synth_modbas_diffus__snr=20__w1=3_
+_angle=60-eps-converted-to.pdf>
+(epstopdf)                    date: 2012-06-26 16:25:03
+(epstopdf)                    size: 10060 bytes
+(epstopdf)             Command: <repstopdf --outfile=figures/synth_modbas_diffu
+s__snr=20__w1=3__angle=60-eps-converted-to.pdf figures/synth_modbas_diffus__snr
+=20__w1=3__angle=60.eps>
 (epstopdf)             \includegraphics on input line 94.
 Package epstopdf Info: Output file is already uptodate.
 
-<figures/phantom_weights_like-eps-converted-to.pdf, id=99, 962.59625pt x 321.2p
-t>
-File: figures/phantom_weights_like-eps-converted-to.pdf Graphic file (type pdf)
+<figures/synth_modbas_diffus__snr=20__w1=3__angle=60-eps-converted-to.pdf, id=2
+2, 491.8375pt x 411.5375pt>
+File: figures/synth_modbas_diffus__snr=20__w1=3__angle=60-eps-converted-to.pdf 
+Graphic file (type pdf)
 
- <use figures/phantom_weights_like-eps-converted-to.pdf> [5 <./figures/phantom_
-diffus-eps-converted-to.pdf> <./figures/phantom_diffus_like-eps-converted-to.pd
-f>] [6 <./figures/phantom_weights-eps-converted-to.pdf> <./figures/phantom_weig
-hts_like-eps-converted-to.pdf>] (./summary.aux) ) 
+<use figures/synth_modbas_diffus__snr=20__w1=3__angle=60-eps-converted-to.pdf>
+Package epstopdf Info: Source file: <figures/synth_modbas_diffus__snr=20__w1=3_
+_angle=90.eps>
+(epstopdf)                    date: 2012-06-26 16:22:59
+(epstopdf)                    size: 12287 bytes
+(epstopdf)             Output file: <figures/synth_modbas_diffus__snr=20__w1=3_
+_angle=90-eps-converted-to.pdf>
+(epstopdf)                    date: 2012-06-26 16:25:04
+(epstopdf)                    size: 9686 bytes
+(epstopdf)             Command: <repstopdf --outfile=figures/synth_modbas_diffu
+s__snr=20__w1=3__angle=90-eps-converted-to.pdf figures/synth_modbas_diffus__snr
+=20__w1=3__angle=90.eps>
+(epstopdf)             \includegraphics on input line 99.
+Package epstopdf Info: Output file is already uptodate.
+
+<figures/synth_modbas_diffus__snr=20__w1=3__angle=90-eps-converted-to.pdf, id=2
+3, 491.8375pt x 411.5375pt>
+File: figures/synth_modbas_diffus__snr=20__w1=3__angle=90-eps-converted-to.pdf 
+Graphic file (type pdf)
+
+<use figures/synth_modbas_diffus__snr=20__w1=3__angle=90-eps-converted-to.pdf>
+Overfull \hbox (84.43787pt too wide) in paragraph at lines 86--102
+[]$[]$ 
+ []
+
+Package epstopdf Info: Source file: <figures/synth_modbas_diffus__snr=20__w1=4_
+_angle=30.eps>
+(epstopdf)                    date: 2012-06-26 16:23:00
+(epstopdf)                    size: 12271 bytes
+(epstopdf)             Output file: <figures/synth_modbas_diffus__snr=20__w1=4_
+_angle=30-eps-converted-to.pdf>
+(epstopdf)                    date: 2012-06-26 16:25:04
+(epstopdf)                    size: 9803 bytes
+(epstopdf)             Command: <repstopdf --outfile=figures/synth_modbas_diffu
+s__snr=20__w1=4__angle=30-eps-converted-to.pdf figures/synth_modbas_diffus__snr
+=20__w1=4__angle=30.eps>
+(epstopdf)             \includegraphics on input line 106.
+Package epstopdf Info: Output file is already uptodate.
+
+<figures/synth_modbas_diffus__snr=20__w1=4__angle=30-eps-converted-to.pdf, id=2
+4, 491.8375pt x 411.5375pt>
+File: figures/synth_modbas_diffus__snr=20__w1=4__angle=30-eps-converted-to.pdf 
+Graphic file (type pdf)
+
+<use figures/synth_modbas_diffus__snr=20__w1=4__angle=30-eps-converted-to.pdf>
+Package epstopdf Info: Source file: <figures/synth_modbas_diffus__snr=20__w1=4_
+_angle=60.eps>
+(epstopdf)                    date: 2012-06-26 16:23:01
+(epstopdf)                    size: 11985 bytes
+(epstopdf)             Output file: <figures/synth_modbas_diffus__snr=20__w1=4_
+_angle=60-eps-converted-to.pdf>
+(epstopdf)                    date: 2012-06-26 16:25:04
+(epstopdf)                    size: 10050 bytes
+(epstopdf)             Command: <repstopdf --outfile=figures/synth_modbas_diffu
+s__snr=20__w1=4__angle=60-eps-converted-to.pdf figures/synth_modbas_diffus__snr
+=20__w1=4__angle=60.eps>
+(epstopdf)             \includegraphics on input line 111.
+Package epstopdf Info: Output file is already uptodate.
+
+<figures/synth_modbas_diffus__snr=20__w1=4__angle=60-eps-converted-to.pdf, id=2
+5, 491.8375pt x 411.5375pt>
+File: figures/synth_modbas_diffus__snr=20__w1=4__angle=60-eps-converted-to.pdf 
+Graphic file (type pdf)
+
+<use figures/synth_modbas_diffus__snr=20__w1=4__angle=60-eps-converted-to.pdf>
+Package epstopdf Info: Source file: <figures/synth_modbas_diffus__snr=20__w1=4_
+_angle=90.eps>
+(epstopdf)                    date: 2012-06-26 16:23:02
+(epstopdf)                    size: 12023 bytes
+(epstopdf)             Output file: <figures/synth_modbas_diffus__snr=20__w1=4_
+_angle=90-eps-converted-to.pdf>
+(epstopdf)                    date: 2012-06-26 16:25:04
+(epstopdf)                    size: 10017 bytes
+(epstopdf)             Command: <repstopdf --outfile=figures/synth_modbas_diffu
+s__snr=20__w1=4__angle=90-eps-converted-to.pdf figures/synth_modbas_diffus__snr
+=20__w1=4__angle=90.eps>
+(epstopdf)             \includegraphics on input line 116.
+Package epstopdf Info: Output file is already uptodate.
+
+<figures/synth_modbas_diffus__snr=20__w1=4__angle=90-eps-converted-to.pdf, id=2
+6, 491.8375pt x 411.5375pt>
+File: figures/synth_modbas_diffus__snr=20__w1=4__angle=90-eps-converted-to.pdf 
+Graphic file (type pdf)
+
+<use figures/synth_modbas_diffus__snr=20__w1=4__angle=90-eps-converted-to.pdf>
+Package epstopdf Info: Source file: <figures/synth_modbas_diffus__snr=20__w1=5_
+_angle=30.eps>
+(epstopdf)                    date: 2012-06-26 16:23:03
+(epstopdf)                    size: 12125 bytes
+(epstopdf)             Output file: <figures/synth_modbas_diffus__snr=20__w1=5_
+_angle=30-eps-converted-to.pdf>
+(epstopdf)                    date: 2012-06-26 16:26:56
+(epstopdf)                    size: 9710 bytes
+(epstopdf)             Command: <repstopdf --outfile=figures/synth_modbas_diffu
+s__snr=20__w1=5__angle=30-eps-converted-to.pdf figures/synth_modbas_diffus__snr
+=20__w1=5__angle=30.eps>
+(epstopdf)             \includegraphics on input line 122.
+Package epstopdf Info: Output file is already uptodate.
+
+<figures/synth_modbas_diffus__snr=20__w1=5__angle=30-eps-converted-to.pdf, id=2
+7, 491.8375pt x 411.5375pt>
+File: figures/synth_modbas_diffus__snr=20__w1=5__angle=30-eps-converted-to.pdf 
+Graphic file (type pdf)
+
+<use figures/synth_modbas_diffus__snr=20__w1=5__angle=30-eps-converted-to.pdf>
+Package epstopdf Info: Source file: <figures/synth_modbas_diffus__snr=20__w1=5_
+_angle=60.eps>
+(epstopdf)                    date: 2012-06-26 16:23:04
+(epstopdf)                    size: 12267 bytes
+(epstopdf)             Output file: <figures/synth_modbas_diffus__snr=20__w1=5_
+_angle=60-eps-converted-to.pdf>
+(epstopdf)                    date: 2012-06-26 16:26:56
+(epstopdf)                    size: 9653 bytes
+(epstopdf)             Command: <repstopdf --outfile=figures/synth_modbas_diffu
+s__snr=20__w1=5__angle=60-eps-converted-to.pdf figures/synth_modbas_diffus__snr
+=20__w1=5__angle=60.eps>
+(epstopdf)             \includegraphics on input line 127.
+Package epstopdf Info: Output file is already uptodate.
+
+<figures/synth_modbas_diffus__snr=20__w1=5__angle=60-eps-converted-to.pdf, id=2
+8, 491.8375pt x 411.5375pt>
+File: figures/synth_modbas_diffus__snr=20__w1=5__angle=60-eps-converted-to.pdf 
+Graphic file (type pdf)
+
+<use figures/synth_modbas_diffus__snr=20__w1=5__angle=60-eps-converted-to.pdf>
+Package epstopdf Info: Source file: <figures/synth_modbas_diffus__snr=20__w1=5_
+_angle=90.eps>
+(epstopdf)                    date: 2012-06-26 16:23:05
+(epstopdf)                    size: 12245 bytes
+(epstopdf)             Output file: <figures/synth_modbas_diffus__snr=20__w1=5_
+_angle=90-eps-converted-to.pdf>
+(epstopdf)                    date: 2012-06-26 16:26:57
+(epstopdf)                    size: 9714 bytes
+(epstopdf)             Command: <repstopdf --outfile=figures/synth_modbas_diffu
+s__snr=20__w1=5__angle=90-eps-converted-to.pdf figures/synth_modbas_diffus__snr
+=20__w1=5__angle=90.eps>
+(epstopdf)             \includegraphics on input line 132.
+Package epstopdf Info: Output file is already uptodate.
+
+<figures/synth_modbas_diffus__snr=20__w1=5__angle=90-eps-converted-to.pdf, id=2
+9, 491.8375pt x 411.5375pt>
+File: figures/synth_modbas_diffus__snr=20__w1=5__angle=90-eps-converted-to.pdf 
+Graphic file (type pdf)
+
+<use figures/synth_modbas_diffus__snr=20__w1=5__angle=90-eps-converted-to.pdf>
+Overfull \hbox (84.43787pt too wide) in paragraph at lines 103--135
+[]$[]$
+ []
+
+
+Overfull \hbox (84.43787pt too wide) in paragraph at lines 103--135
+[]$ 
+ []
+
+[2 <./figures/synth_modbas_weights__snr=20__w1=3__angle=30-eps-converted-to.pdf
+> <./figures/synth_modbas_weights__snr=20__w1=3__angle=60-eps-converted-to.pdf>
+ <./figures/synth_modbas_weights__snr=20__w1=3__angle=90-eps-converted-to.pdf> 
+<./figures/synth_modbas_weights__snr=20__w1=4__angle=30-eps-converted-to.pdf> <
+./figures/synth_modbas_weights__snr=20__w1=4__angle=60-eps-converted-to.pdf> <.
+/figures/synth_modbas_weights__snr=20__w1=4__angle=90-eps-converted-to.pdf> <./
+figures/synth_modbas_weights__snr=20__w1=5__angle=30-eps-converted-to.pdf> <./f
+igures/synth_modbas_weights__snr=20__w1=5__angle=60-eps-converted-to.pdf> <./fi
+gures/synth_modbas_weights__snr=20__w1=5__angle=90-eps-converted-to.pdf>]
+Package epstopdf Info: Source file: <figures/synth_modbas_weights_diffus__snr=2
+0__w1=3__angle=30.eps>
+(epstopdf)                    date: 2012-06-26 16:23:23
+(epstopdf)                    size: 13046 bytes
+(epstopdf)             Output file: <figures/synth_modbas_weights_diffus__snr=2
+0__w1=3__angle=30-eps-converted-to.pdf>
+(epstopdf)                    date: 2012-06-26 16:25:05
+(epstopdf)                    size: 9912 bytes
+(epstopdf)             Command: <repstopdf --outfile=figures/synth_modbas_weigh
+ts_diffus__snr=20__w1=3__angle=30-eps-converted-to.pdf figures/synth_modbas_wei
+ghts_diffus__snr=20__w1=3__angle=30.eps>
+(epstopdf)             \includegraphics on input line 145.
+Package epstopdf Info: Output file is already uptodate.
+
+<figures/synth_modbas_weights_diffus__snr=20__w1=3__angle=30-eps-converted-to.p
+df, id=119, 491.8375pt x 411.5375pt>
+File: figures/synth_modbas_weights_diffus__snr=20__w1=3__angle=30-eps-converted
+-to.pdf Graphic file (type pdf)
+
+<use figures/synth_modbas_weights_diffus__snr=20__w1=3__angle=30-eps-converted-
+to.pdf>
+Package epstopdf Info: Source file: <figures/synth_modbas_weights_diffus__snr=2
+0__w1=3__angle=60.eps>
+(epstopdf)                    date: 2012-06-26 16:23:24
+(epstopdf)                    size: 12302 bytes
+(epstopdf)             Output file: <figures/synth_modbas_weights_diffus__snr=2
+0__w1=3__angle=60-eps-converted-to.pdf>
+(epstopdf)                    date: 2012-06-26 16:25:05
+(epstopdf)                    size: 9733 bytes
+(epstopdf)             Command: <repstopdf --outfile=figures/synth_modbas_weigh
+ts_diffus__snr=20__w1=3__angle=60-eps-converted-to.pdf figures/synth_modbas_wei
+ghts_diffus__snr=20__w1=3__angle=60.eps>
+(epstopdf)             \includegraphics on input line 150.
+Package epstopdf Info: Output file is already uptodate.
+
+<figures/synth_modbas_weights_diffus__snr=20__w1=3__angle=60-eps-converted-to.p
+df, id=120, 491.8375pt x 411.5375pt>
+File: figures/synth_modbas_weights_diffus__snr=20__w1=3__angle=60-eps-converted
+-to.pdf Graphic file (type pdf)
+
+<use figures/synth_modbas_weights_diffus__snr=20__w1=3__angle=60-eps-converted-
+to.pdf>
+Package epstopdf Info: Source file: <figures/synth_modbas_weights_diffus__snr=2
+0__w1=3__angle=90.eps>
+(epstopdf)                    date: 2012-06-26 16:23:25
+(epstopdf)                    size: 12248 bytes
+(epstopdf)             Output file: <figures/synth_modbas_weights_diffus__snr=2
+0__w1=3__angle=90-eps-converted-to.pdf>
+(epstopdf)                    date: 2012-06-26 16:25:05
+(epstopdf)                    size: 9719 bytes
+(epstopdf)             Command: <repstopdf --outfile=figures/synth_modbas_weigh
+ts_diffus__snr=20__w1=3__angle=90-eps-converted-to.pdf figures/synth_modbas_wei
+ghts_diffus__snr=20__w1=3__angle=90.eps>
+(epstopdf)             \includegraphics on input line 155.
+Package epstopdf Info: Output file is already uptodate.
+
+<figures/synth_modbas_weights_diffus__snr=20__w1=3__angle=90-eps-converted-to.p
+df, id=121, 491.8375pt x 411.5375pt>
+File: figures/synth_modbas_weights_diffus__snr=20__w1=3__angle=90-eps-converted
+-to.pdf Graphic file (type pdf)
+
+<use figures/synth_modbas_weights_diffus__snr=20__w1=3__angle=90-eps-converted-
+to.pdf>
+Overfull \hbox (84.43787pt too wide) in paragraph at lines 142--158
+[]$[]$ 
+ []
+
+Package epstopdf Info: Source file: <figures/synth_modbas_weights_diffus__snr=2
+0__w1=4__angle=30.eps>
+(epstopdf)                    date: 2012-06-26 16:23:26
+(epstopdf)                    size: 12366 bytes
+(epstopdf)             Output file: <figures/synth_modbas_weights_diffus__snr=2
+0__w1=4__angle=30-eps-converted-to.pdf>
+(epstopdf)                    date: 2012-06-26 16:25:06
+(epstopdf)                    size: 9749 bytes
+(epstopdf)             Command: <repstopdf --outfile=figures/synth_modbas_weigh
+ts_diffus__snr=20__w1=4__angle=30-eps-converted-to.pdf figures/synth_modbas_wei
+ghts_diffus__snr=20__w1=4__angle=30.eps>
+(epstopdf)             \includegraphics on input line 162.
+Package epstopdf Info: Output file is already uptodate.
+
+<figures/synth_modbas_weights_diffus__snr=20__w1=4__angle=30-eps-converted-to.p
+df, id=122, 491.8375pt x 411.5375pt>
+File: figures/synth_modbas_weights_diffus__snr=20__w1=4__angle=30-eps-converted
+-to.pdf Graphic file (type pdf)
+
+<use figures/synth_modbas_weights_diffus__snr=20__w1=4__angle=30-eps-converted-
+to.pdf>
+Package epstopdf Info: Source file: <figures/synth_modbas_weights_diffus__snr=2
+0__w1=4__angle=60.eps>
+(epstopdf)                    date: 2012-06-26 16:23:26
+(epstopdf)                    size: 12202 bytes
+(epstopdf)             Output file: <figures/synth_modbas_weights_diffus__snr=2
+0__w1=4__angle=60-eps-converted-to.pdf>
+(epstopdf)                    date: 2012-06-26 16:25:06
+(epstopdf)                    size: 9700 bytes
+(epstopdf)             Command: <repstopdf --outfile=figures/synth_modbas_weigh
+ts_diffus__snr=20__w1=4__angle=60-eps-converted-to.pdf figures/synth_modbas_wei
+ghts_diffus__snr=20__w1=4__angle=60.eps>
+(epstopdf)             \includegraphics on input line 167.
+Package epstopdf Info: Output file is already uptodate.
+
+<figures/synth_modbas_weights_diffus__snr=20__w1=4__angle=60-eps-converted-to.p
+df, id=123, 491.8375pt x 411.5375pt>
+File: figures/synth_modbas_weights_diffus__snr=20__w1=4__angle=60-eps-converted
+-to.pdf Graphic file (type pdf)
+
+<use figures/synth_modbas_weights_diffus__snr=20__w1=4__angle=60-eps-converted-
+to.pdf>
+Package epstopdf Info: Source file: <figures/synth_modbas_weights_diffus__snr=2
+0__w1=4__angle=90.eps>
+(epstopdf)                    date: 2012-06-26 16:23:27
+(epstopdf)                    size: 12199 bytes
+(epstopdf)             Output file: <figures/synth_modbas_weights_diffus__snr=2
+0__w1=4__angle=90-eps-converted-to.pdf>
+(epstopdf)                    date: 2012-06-26 16:25:06
+(epstopdf)                    size: 9716 bytes
+(epstopdf)             Command: <repstopdf --outfile=figures/synth_modbas_weigh
+ts_diffus__snr=20__w1=4__angle=90-eps-converted-to.pdf figures/synth_modbas_wei
+ghts_diffus__snr=20__w1=4__angle=90.eps>
+(epstopdf)             \includegraphics on input line 172.
+Package epstopdf Info: Output file is already uptodate.
+
+<figures/synth_modbas_weights_diffus__snr=20__w1=4__angle=90-eps-converted-to.p
+df, id=124, 491.8375pt x 411.5375pt>
+File: figures/synth_modbas_weights_diffus__snr=20__w1=4__angle=90-eps-converted
+-to.pdf Graphic file (type pdf)
+
+<use figures/synth_modbas_weights_diffus__snr=20__w1=4__angle=90-eps-converted-
+to.pdf>
+Package epstopdf Info: Source file: <figures/synth_modbas_weights_diffus__snr=2
+0__w1=5__angle=30.eps>
+(epstopdf)                    date: 2012-06-26 16:23:28
+(epstopdf)                    size: 12279 bytes
+(epstopdf)             Output file: <figures/synth_modbas_weights_diffus__snr=2
+0__w1=5__angle=30-eps-converted-to.pdf>
+(epstopdf)                    date: 2012-06-26 16:26:57
+(epstopdf)                    size: 9728 bytes
+(epstopdf)             Command: <repstopdf --outfile=figures/synth_modbas_weigh
+ts_diffus__snr=20__w1=5__angle=30-eps-converted-to.pdf figures/synth_modbas_wei
+ghts_diffus__snr=20__w1=5__angle=30.eps>
+(epstopdf)             \includegraphics on input line 178.
+Package epstopdf Info: Output file is already uptodate.
+
+<figures/synth_modbas_weights_diffus__snr=20__w1=5__angle=30-eps-converted-to.p
+df, id=125, 491.8375pt x 411.5375pt>
+File: figures/synth_modbas_weights_diffus__snr=20__w1=5__angle=30-eps-converted
+-to.pdf Graphic file (type pdf)
+
+<use figures/synth_modbas_weights_diffus__snr=20__w1=5__angle=30-eps-converted-
+to.pdf>
+Package epstopdf Info: Source file: <figures/synth_modbas_weights_diffus__snr=2
+0__w1=5__angle=60.eps>
+(epstopdf)                    date: 2012-06-26 16:23:29
+(epstopdf)                    size: 12333 bytes
+(epstopdf)             Output file: <figures/synth_modbas_weights_diffus__snr=2
+0__w1=5__angle=60-eps-converted-to.pdf>
+(epstopdf)                    date: 2012-06-26 16:26:57
+(epstopdf)                    size: 9723 bytes
+(epstopdf)             Command: <repstopdf --outfile=figures/synth_modbas_weigh
+ts_diffus__snr=20__w1=5__angle=60-eps-converted-to.pdf figures/synth_modbas_wei
+ghts_diffus__snr=20__w1=5__angle=60.eps>
+(epstopdf)             \includegraphics on input line 183.
+Package epstopdf Info: Output file is already uptodate.
+
+<figures/synth_modbas_weights_diffus__snr=20__w1=5__angle=60-eps-converted-to.p
+df, id=126, 491.8375pt x 411.5375pt>
+File: figures/synth_modbas_weights_diffus__snr=20__w1=5__angle=60-eps-converted
+-to.pdf Graphic file (type pdf)
+
+<use figures/synth_modbas_weights_diffus__snr=20__w1=5__angle=60-eps-converted-
+to.pdf>
+Package epstopdf Info: Source file: <figures/synth_modbas_weights_diffus__snr=2
+0__w1=5__angle=90.eps>
+(epstopdf)                    date: 2012-06-26 16:23:30
+(epstopdf)                    size: 12333 bytes
+(epstopdf)             Output file: <figures/synth_modbas_weights_diffus__snr=2
+0__w1=5__angle=90-eps-converted-to.pdf>
+(epstopdf)                    date: 2012-06-26 16:26:57
+(epstopdf)                    size: 9762 bytes
+(epstopdf)             Command: <repstopdf --outfile=figures/synth_modbas_weigh
+ts_diffus__snr=20__w1=5__angle=90-eps-converted-to.pdf figures/synth_modbas_wei
+ghts_diffus__snr=20__w1=5__angle=90.eps>
+(epstopdf)             \includegraphics on input line 188.
+Package epstopdf Info: Output file is already uptodate.
+
+<figures/synth_modbas_weights_diffus__snr=20__w1=5__angle=90-eps-converted-to.p
+df, id=127, 491.8375pt x 411.5375pt>
+File: figures/synth_modbas_weights_diffus__snr=20__w1=5__angle=90-eps-converted
+-to.pdf Graphic file (type pdf)
+
+<use figures/synth_modbas_weights_diffus__snr=20__w1=5__angle=90-eps-converted-
+to.pdf>
+Overfull \hbox (84.43787pt too wide) in paragraph at lines 159--191
+[]$[]$
+ []
+
+
+Overfull \hbox (84.43787pt too wide) in paragraph at lines 159--191
+[]$ 
+ []
+
+[3 <./figures/synth_modbas_diffus__snr=20__w1=3__angle=30-eps-converted-to.pdf>
+ <./figures/synth_modbas_diffus__snr=20__w1=3__angle=60-eps-converted-to.pdf> <
+./figures/synth_modbas_diffus__snr=20__w1=3__angle=90-eps-converted-to.pdf> <./
+figures/synth_modbas_diffus__snr=20__w1=4__angle=30-eps-converted-to.pdf> <./fi
+gures/synth_modbas_diffus__snr=20__w1=4__angle=60-eps-converted-to.pdf> <./figu
+res/synth_modbas_diffus__snr=20__w1=4__angle=90-eps-converted-to.pdf> <./figure
+s/synth_modbas_diffus__snr=20__w1=5__angle=30-eps-converted-to.pdf> <./figures/
+synth_modbas_diffus__snr=20__w1=5__angle=60-eps-converted-to.pdf> <./figures/sy
+nth_modbas_diffus__snr=20__w1=5__angle=90-eps-converted-to.pdf>]
+Package epstopdf Info: Source file: <figures/synth_bas_weights__snr=20__w1=2__a
+ngle=30.eps>
+(epstopdf)                    date: 2012-06-26 16:11:31
+(epstopdf)                    size: 13016 bytes
+(epstopdf)             Output file: <figures/synth_bas_weights__snr=20__w1=2__a
+ngle=30-eps-converted-to.pdf>
+(epstopdf)                    date: 2012-06-26 16:13:14
+(epstopdf)                    size: 9840 bytes
+(epstopdf)             Command: <repstopdf --outfile=figures/synth_bas_weights_
+_snr=20__w1=2__angle=30-eps-converted-to.pdf figures/synth_bas_weights__snr=20_
+_w1=2__angle=30.eps>
+(epstopdf)             \includegraphics on input line 203.
+Package epstopdf Info: Output file is already uptodate.
+
+<figures/synth_bas_weights__snr=20__w1=2__angle=30-eps-converted-to.pdf, id=213
+, 491.8375pt x 411.5375pt>
+File: figures/synth_bas_weights__snr=20__w1=2__angle=30-eps-converted-to.pdf Gr
+aphic file (type pdf)
+
+<use figures/synth_bas_weights__snr=20__w1=2__angle=30-eps-converted-to.pdf>
+Package epstopdf Info: Source file: <figures/synth_bas_weights__snr=20__w1=2__a
+ngle=60.eps>
+(epstopdf)                    date: 2012-06-26 16:11:32
+(epstopdf)                    size: 12167 bytes
+(epstopdf)             Output file: <figures/synth_bas_weights__snr=20__w1=2__a
+ngle=60-eps-converted-to.pdf>
+(epstopdf)                    date: 2012-06-26 16:13:14
+(epstopdf)                    size: 9650 bytes
+(epstopdf)             Command: <repstopdf --outfile=figures/synth_bas_weights_
+_snr=20__w1=2__angle=60-eps-converted-to.pdf figures/synth_bas_weights__snr=20_
+_w1=2__angle=60.eps>
+(epstopdf)             \includegraphics on input line 208.
+Package epstopdf Info: Output file is already uptodate.
+
+<figures/synth_bas_weights__snr=20__w1=2__angle=60-eps-converted-to.pdf, id=214
+, 493.845pt x 411.5375pt>
+File: figures/synth_bas_weights__snr=20__w1=2__angle=60-eps-converted-to.pdf Gr
+aphic file (type pdf)
+
+<use figures/synth_bas_weights__snr=20__w1=2__angle=60-eps-converted-to.pdf>
+Package epstopdf Info: Source file: <figures/synth_bas_weights__snr=20__w1=2__a
+ngle=90.eps>
+(epstopdf)                    date: 2012-06-26 16:11:33
+(epstopdf)                    size: 12207 bytes
+(epstopdf)             Output file: <figures/synth_bas_weights__snr=20__w1=2__a
+ngle=90-eps-converted-to.pdf>
+(epstopdf)                    date: 2012-06-26 16:13:14
+(epstopdf)                    size: 9668 bytes
+(epstopdf)             Command: <repstopdf --outfile=figures/synth_bas_weights_
+_snr=20__w1=2__angle=90-eps-converted-to.pdf figures/synth_bas_weights__snr=20_
+_w1=2__angle=90.eps>
+(epstopdf)             \includegraphics on input line 213.
+Package epstopdf Info: Output file is already uptodate.
+
+<figures/synth_bas_weights__snr=20__w1=2__angle=90-eps-converted-to.pdf, id=215
+, 493.845pt x 411.5375pt>
+File: figures/synth_bas_weights__snr=20__w1=2__angle=90-eps-converted-to.pdf Gr
+aphic file (type pdf)
+
+<use figures/synth_bas_weights__snr=20__w1=2__angle=90-eps-converted-to.pdf>
+Overfull \hbox (84.43787pt too wide) in paragraph at lines 200--216
+[]$[]$ 
+ []
+
+Package epstopdf Info: Source file: <figures/synth_bas_weights__snr=20__w1=3__a
+ngle=30.eps>
+(epstopdf)                    date: 2012-06-26 16:11:34
+(epstopdf)                    size: 12186 bytes
+(epstopdf)             Output file: <figures/synth_bas_weights__snr=20__w1=3__a
+ngle=30-eps-converted-to.pdf>
+(epstopdf)                    date: 2012-06-26 16:13:15
+(epstopdf)                    size: 9599 bytes
+(epstopdf)             Command: <repstopdf --outfile=figures/synth_bas_weights_
+_snr=20__w1=3__angle=30-eps-converted-to.pdf figures/synth_bas_weights__snr=20_
+_w1=3__angle=30.eps>
+(epstopdf)             \includegraphics on input line 220.
+Package epstopdf Info: Output file is already uptodate.
+
+<figures/synth_bas_weights__snr=20__w1=3__angle=30-eps-converted-to.pdf, id=216
+, 485.815pt x 411.5375pt>
+File: figures/synth_bas_weights__snr=20__w1=3__angle=30-eps-converted-to.pdf Gr
+aphic file (type pdf)
+
+<use figures/synth_bas_weights__snr=20__w1=3__angle=30-eps-converted-to.pdf>
+Package epstopdf Info: Source file: <figures/synth_bas_weights__snr=20__w1=3__a
+ngle=60.eps>
+(epstopdf)                    date: 2012-06-26 16:11:35
+(epstopdf)                    size: 12100 bytes
+(epstopdf)             Output file: <figures/synth_bas_weights__snr=20__w1=3__a
+ngle=60-eps-converted-to.pdf>
+(epstopdf)                    date: 2012-06-26 16:13:15
+(epstopdf)                    size: 9627 bytes
+(epstopdf)             Command: <repstopdf --outfile=figures/synth_bas_weights_
+_snr=20__w1=3__angle=60-eps-converted-to.pdf figures/synth_bas_weights__snr=20_
+_w1=3__angle=60.eps>
+(epstopdf)             \includegraphics on input line 225.
+Package epstopdf Info: Output file is already uptodate.
+
+<figures/synth_bas_weights__snr=20__w1=3__angle=60-eps-converted-to.pdf, id=217
+, 493.845pt x 411.5375pt>
+File: figures/synth_bas_weights__snr=20__w1=3__angle=60-eps-converted-to.pdf Gr
+aphic file (type pdf)
+
+<use figures/synth_bas_weights__snr=20__w1=3__angle=60-eps-converted-to.pdf>
+Package epstopdf Info: Source file: <figures/synth_bas_weights__snr=20__w1=3__a
+ngle=90.eps>
+(epstopdf)                    date: 2012-06-26 16:11:36
+(epstopdf)                    size: 12336 bytes
+(epstopdf)             Output file: <figures/synth_bas_weights__snr=20__w1=3__a
+ngle=90-eps-converted-to.pdf>
+(epstopdf)                    date: 2012-06-26 16:13:15
+(epstopdf)                    size: 9723 bytes
+(epstopdf)             Command: <repstopdf --outfile=figures/synth_bas_weights_
+_snr=20__w1=3__angle=90-eps-converted-to.pdf figures/synth_bas_weights__snr=20_
+_w1=3__angle=90.eps>
+(epstopdf)             \includegraphics on input line 230.
+Package epstopdf Info: Output file is already uptodate.
+
+<figures/synth_bas_weights__snr=20__w1=3__angle=90-eps-converted-to.pdf, id=218
+, 493.845pt x 411.5375pt>
+File: figures/synth_bas_weights__snr=20__w1=3__angle=90-eps-converted-to.pdf Gr
+aphic file (type pdf)
+
+<use figures/synth_bas_weights__snr=20__w1=3__angle=90-eps-converted-to.pdf>
+Package epstopdf Info: Source file: <figures/synth_bas_weights__snr=20__w1=4__a
+ngle=30.eps>
+(epstopdf)                    date: 2012-06-26 16:11:37
+(epstopdf)                    size: 12169 bytes
+(epstopdf)             Output file: <figures/synth_bas_weights__snr=20__w1=4__a
+ngle=30-eps-converted-to.pdf>
+(epstopdf)                    date: 2012-06-26 16:13:15
+(epstopdf)                    size: 9629 bytes
+(epstopdf)             Command: <repstopdf --outfile=figures/synth_bas_weights_
+_snr=20__w1=4__angle=30-eps-converted-to.pdf figures/synth_bas_weights__snr=20_
+_w1=4__angle=30.eps>
+(epstopdf)             \includegraphics on input line 236.
+Package epstopdf Info: Output file is already uptodate.
+
+<figures/synth_bas_weights__snr=20__w1=4__angle=30-eps-converted-to.pdf, id=219
+, 493.845pt x 411.5375pt>
+File: figures/synth_bas_weights__snr=20__w1=4__angle=30-eps-converted-to.pdf Gr
+aphic file (type pdf)
+
+<use figures/synth_bas_weights__snr=20__w1=4__angle=30-eps-converted-to.pdf>
+Package epstopdf Info: Source file: <figures/synth_bas_weights__snr=20__w1=4__a
+ngle=60.eps>
+(epstopdf)                    date: 2012-06-26 16:11:38
+(epstopdf)                    size: 12068 bytes
+(epstopdf)             Output file: <figures/synth_bas_weights__snr=20__w1=4__a
+ngle=60-eps-converted-to.pdf>
+(epstopdf)                    date: 2012-06-26 16:13:16
+(epstopdf)                    size: 9592 bytes
+(epstopdf)             Command: <repstopdf --outfile=figures/synth_bas_weights_
+_snr=20__w1=4__angle=60-eps-converted-to.pdf figures/synth_bas_weights__snr=20_
+_w1=4__angle=60.eps>
+(epstopdf)             \includegraphics on input line 241.
+Package epstopdf Info: Output file is already uptodate.
+
+<figures/synth_bas_weights__snr=20__w1=4__angle=60-eps-converted-to.pdf, id=220
+, 493.845pt x 411.5375pt>
+File: figures/synth_bas_weights__snr=20__w1=4__angle=60-eps-converted-to.pdf Gr
+aphic file (type pdf)
+
+<use figures/synth_bas_weights__snr=20__w1=4__angle=60-eps-converted-to.pdf>
+Package epstopdf Info: Source file: <figures/synth_bas_weights__snr=20__w1=4__a
+ngle=90.eps>
+(epstopdf)                    date: 2012-06-26 16:11:39
+(epstopdf)                    size: 12012 bytes
+(epstopdf)             Output file: <figures/synth_bas_weights__snr=20__w1=4__a
+ngle=90-eps-converted-to.pdf>
+(epstopdf)                    date: 2012-06-26 16:13:16
+(epstopdf)                    size: 10235 bytes
+(epstopdf)             Command: <repstopdf --outfile=figures/synth_bas_weights_
+_snr=20__w1=4__angle=90-eps-converted-to.pdf figures/synth_bas_weights__snr=20_
+_w1=4__angle=90.eps>
+(epstopdf)             \includegraphics on input line 246.
+Package epstopdf Info: Output file is already uptodate.
+
+<figures/synth_bas_weights__snr=20__w1=4__angle=90-eps-converted-to.pdf, id=221
+, 493.845pt x 411.5375pt>
+File: figures/synth_bas_weights__snr=20__w1=4__angle=90-eps-converted-to.pdf Gr
+aphic file (type pdf)
+
+<use figures/synth_bas_weights__snr=20__w1=4__angle=90-eps-converted-to.pdf>
+Overfull \hbox (84.43787pt too wide) in paragraph at lines 217--249
+[]$[]$
+ []
+
+
+Overfull \hbox (84.43787pt too wide) in paragraph at lines 217--249
+[]$ 
+ []
+
+[4 <./figures/synth_modbas_weights_diffus__snr=20__w1=3__angle=30-eps-converted
+-to.pdf> <./figures/synth_modbas_weights_diffus__snr=20__w1=3__angle=60-eps-con
+verted-to.pdf> <./figures/synth_modbas_weights_diffus__snr=20__w1=3__angle=90-e
+ps-converted-to.pdf> <./figures/synth_modbas_weights_diffus__snr=20__w1=4__angl
+e=30-eps-converted-to.pdf> <./figures/synth_modbas_weights_diffus__snr=20__w1=4
+__angle=60-eps-converted-to.pdf> <./figures/synth_modbas_weights_diffus__snr=20
+__w1=4__angle=90-eps-converted-to.pdf> <./figures/synth_modbas_weights_diffus__
+snr=20__w1=5__angle=30-eps-converted-to.pdf> <./figures/synth_modbas_weights_di
+ffus__snr=20__w1=5__angle=60-eps-converted-to.pdf> <./figures/synth_modbas_weig
+hts_diffus__snr=20__w1=5__angle=90-eps-converted-to.pdf>]
+Package epstopdf Info: Source file: <figures/synth_bas_diffus__snr=20__w1=2__an
+gle=30.eps>
+(epstopdf)                    date: 2012-06-26 16:17:50
+(epstopdf)                    size: 12804 bytes
+(epstopdf)             Output file: <figures/synth_bas_diffus__snr=20__w1=2__an
+gle=30-eps-converted-to.pdf>
+(epstopdf)                    date: 2012-06-26 16:18:01
+(epstopdf)                    size: 9893 bytes
+(epstopdf)             Command: <repstopdf --outfile=figures/synth_bas_diffus__
+snr=20__w1=2__angle=30-eps-converted-to.pdf figures/synth_bas_diffus__snr=20__w
+1=2__angle=30.eps>
+(epstopdf)             \includegraphics on input line 259.
+Package epstopdf Info: Output file is already uptodate.
+
+<figures/synth_bas_diffus__snr=20__w1=2__angle=30-eps-converted-to.pdf, id=306,
+ 491.8375pt x 411.5375pt>
+File: figures/synth_bas_diffus__snr=20__w1=2__angle=30-eps-converted-to.pdf Gra
+phic file (type pdf)
+
+<use figures/synth_bas_diffus__snr=20__w1=2__angle=30-eps-converted-to.pdf>
+Package epstopdf Info: Source file: <figures/synth_bas_diffus__snr=20__w1=2__an
+gle=60.eps>
+(epstopdf)                    date: 2012-06-26 16:17:51
+(epstopdf)                    size: 12136 bytes
+(epstopdf)             Output file: <figures/synth_bas_diffus__snr=20__w1=2__an
+gle=60-eps-converted-to.pdf>
+(epstopdf)                    date: 2012-06-26 16:18:01
+(epstopdf)                    size: 10083 bytes
+(epstopdf)             Command: <repstopdf --outfile=figures/synth_bas_diffus__
+snr=20__w1=2__angle=60-eps-converted-to.pdf figures/synth_bas_diffus__snr=20__w
+1=2__angle=60.eps>
+(epstopdf)             \includegraphics on input line 264.
+Package epstopdf Info: Output file is already uptodate.
+
+<figures/synth_bas_diffus__snr=20__w1=2__angle=60-eps-converted-to.pdf, id=307,
+ 493.845pt x 411.5375pt>
+File: figures/synth_bas_diffus__snr=20__w1=2__angle=60-eps-converted-to.pdf Gra
+phic file (type pdf)
+
+<use figures/synth_bas_diffus__snr=20__w1=2__angle=60-eps-converted-to.pdf>
+Package epstopdf Info: Source file: <figures/synth_bas_diffus__snr=20__w1=2__an
+gle=90.eps>
+(epstopdf)                    date: 2012-06-26 16:17:52
+(epstopdf)                    size: 11988 bytes
+(epstopdf)             Output file: <figures/synth_bas_diffus__snr=20__w1=2__an
+gle=90-eps-converted-to.pdf>
+(epstopdf)                    date: 2012-06-26 16:18:02
+(epstopdf)                    size: 9950 bytes
+(epstopdf)             Command: <repstopdf --outfile=figures/synth_bas_diffus__
+snr=20__w1=2__angle=90-eps-converted-to.pdf figures/synth_bas_diffus__snr=20__w
+1=2__angle=90.eps>
+(epstopdf)             \includegraphics on input line 269.
+Package epstopdf Info: Output file is already uptodate.
+
+<figures/synth_bas_diffus__snr=20__w1=2__angle=90-eps-converted-to.pdf, id=308,
+ 493.845pt x 411.5375pt>
+File: figures/synth_bas_diffus__snr=20__w1=2__angle=90-eps-converted-to.pdf Gra
+phic file (type pdf)
+
+<use figures/synth_bas_diffus__snr=20__w1=2__angle=90-eps-converted-to.pdf>
+Overfull \hbox (84.43787pt too wide) in paragraph at lines 256--272
+[]$[]$ 
+ []
+
+Package epstopdf Info: Source file: <figures/synth_bas_diffus__snr=20__w1=3__an
+gle=30.eps>
+(epstopdf)                    date: 2012-06-26 16:17:53
+(epstopdf)                    size: 12206 bytes
+(epstopdf)             Output file: <figures/synth_bas_diffus__snr=20__w1=3__an
+gle=30-eps-converted-to.pdf>
+(epstopdf)                    date: 2012-06-26 16:18:02
+(epstopdf)                    size: 9579 bytes
+(epstopdf)             Command: <repstopdf --outfile=figures/synth_bas_diffus__
+snr=20__w1=3__angle=30-eps-converted-to.pdf figures/synth_bas_diffus__snr=20__w
+1=3__angle=30.eps>
+(epstopdf)             \includegraphics on input line 276.
+Package epstopdf Info: Output file is already uptodate.
+
+<figures/synth_bas_diffus__snr=20__w1=3__angle=30-eps-converted-to.pdf, id=309,
+ 493.845pt x 411.5375pt>
+File: figures/synth_bas_diffus__snr=20__w1=3__angle=30-eps-converted-to.pdf Gra
+phic file (type pdf)
+
+<use figures/synth_bas_diffus__snr=20__w1=3__angle=30-eps-converted-to.pdf>
+Package epstopdf Info: Source file: <figures/synth_bas_diffus__snr=20__w1=3__an
+gle=60.eps>
+(epstopdf)                    date: 2012-06-26 16:17:54
+(epstopdf)                    size: 12134 bytes
+(epstopdf)             Output file: <figures/synth_bas_diffus__snr=20__w1=3__an
+gle=60-eps-converted-to.pdf>
+(epstopdf)                    date: 2012-06-26 16:18:02
+(epstopdf)                    size: 9764 bytes
+(epstopdf)             Command: <repstopdf --outfile=figures/synth_bas_diffus__
+snr=20__w1=3__angle=60-eps-converted-to.pdf figures/synth_bas_diffus__snr=20__w
+1=3__angle=60.eps>
+(epstopdf)             \includegraphics on input line 281.
+Package epstopdf Info: Output file is already uptodate.
+
+<figures/synth_bas_diffus__snr=20__w1=3__angle=60-eps-converted-to.pdf, id=310,
+ 493.845pt x 411.5375pt>
+File: figures/synth_bas_diffus__snr=20__w1=3__angle=60-eps-converted-to.pdf Gra
+phic file (type pdf)
+
+<use figures/synth_bas_diffus__snr=20__w1=3__angle=60-eps-converted-to.pdf>
+Package epstopdf Info: Source file: <figures/synth_bas_diffus__snr=20__w1=3__an
+gle=90.eps>
+(epstopdf)                    date: 2012-06-26 16:17:55
+(epstopdf)                    size: 12075 bytes
+(epstopdf)             Output file: <figures/synth_bas_diffus__snr=20__w1=3__an
+gle=90-eps-converted-to.pdf>
+(epstopdf)                    date: 2012-06-26 16:18:02
+(epstopdf)                    size: 9824 bytes
+(epstopdf)             Command: <repstopdf --outfile=figures/synth_bas_diffus__
+snr=20__w1=3__angle=90-eps-converted-to.pdf figures/synth_bas_diffus__snr=20__w
+1=3__angle=90.eps>
+(epstopdf)             \includegraphics on input line 286.
+Package epstopdf Info: Output file is already uptodate.
+
+<figures/synth_bas_diffus__snr=20__w1=3__angle=90-eps-converted-to.pdf, id=311,
+ 493.845pt x 411.5375pt>
+File: figures/synth_bas_diffus__snr=20__w1=3__angle=90-eps-converted-to.pdf Gra
+phic file (type pdf)
+
+<use figures/synth_bas_diffus__snr=20__w1=3__angle=90-eps-converted-to.pdf>
+Package epstopdf Info: Source file: <figures/synth_bas_diffus__snr=20__w1=4__an
+gle=30.eps>
+(epstopdf)                    date: 2012-06-26 16:17:56
+(epstopdf)                    size: 12222 bytes
+(epstopdf)             Output file: <figures/synth_bas_diffus__snr=20__w1=4__an
+gle=30-eps-converted-to.pdf>
+(epstopdf)                    date: 2012-06-26 16:18:03
+(epstopdf)                    size: 9580 bytes
+(epstopdf)             Command: <repstopdf --outfile=figures/synth_bas_diffus__
+snr=20__w1=4__angle=30-eps-converted-to.pdf figures/synth_bas_diffus__snr=20__w
+1=4__angle=30.eps>
+(epstopdf)             \includegraphics on input line 292.
+Package epstopdf Info: Output file is already uptodate.
+
+<figures/synth_bas_diffus__snr=20__w1=4__angle=30-eps-converted-to.pdf, id=312,
+ 493.845pt x 411.5375pt>
+File: figures/synth_bas_diffus__snr=20__w1=4__angle=30-eps-converted-to.pdf Gra
+phic file (type pdf)
+
+<use figures/synth_bas_diffus__snr=20__w1=4__angle=30-eps-converted-to.pdf>
+Package epstopdf Info: Source file: <figures/synth_bas_diffus__snr=20__w1=4__an
+gle=60.eps>
+(epstopdf)                    date: 2012-06-26 16:17:57
+(epstopdf)                    size: 12304 bytes
+(epstopdf)             Output file: <figures/synth_bas_diffus__snr=20__w1=4__an
+gle=60-eps-converted-to.pdf>
+(epstopdf)                    date: 2012-06-26 16:18:03
+(epstopdf)                    size: 9667 bytes
+(epstopdf)             Command: <repstopdf --outfile=figures/synth_bas_diffus__
+snr=20__w1=4__angle=60-eps-converted-to.pdf figures/synth_bas_diffus__snr=20__w
+1=4__angle=60.eps>
+(epstopdf)             \includegraphics on input line 297.
+Package epstopdf Info: Output file is already uptodate.
+
+<figures/synth_bas_diffus__snr=20__w1=4__angle=60-eps-converted-to.pdf, id=313,
+ 493.845pt x 411.5375pt>
+File: figures/synth_bas_diffus__snr=20__w1=4__angle=60-eps-converted-to.pdf Gra
+phic file (type pdf)
+
+<use figures/synth_bas_diffus__snr=20__w1=4__angle=60-eps-converted-to.pdf>
+Package epstopdf Info: Source file: <figures/synth_bas_diffus__snr=20__w1=4__an
+gle=90.eps>
+(epstopdf)                    date: 2012-06-26 16:17:57
+(epstopdf)                    size: 12206 bytes
+(epstopdf)             Output file: <figures/synth_bas_diffus__snr=20__w1=4__an
+gle=90-eps-converted-to.pdf>
+(epstopdf)                    date: 2012-06-26 16:18:03
+(epstopdf)                    size: 9854 bytes
+(epstopdf)             Command: <repstopdf --outfile=figures/synth_bas_diffus__
+snr=20__w1=4__angle=90-eps-converted-to.pdf figures/synth_bas_diffus__snr=20__w
+1=4__angle=90.eps>
+(epstopdf)             \includegraphics on input line 302.
+Package epstopdf Info: Output file is already uptodate.
+
+<figures/synth_bas_diffus__snr=20__w1=4__angle=90-eps-converted-to.pdf, id=314,
+ 493.845pt x 411.5375pt>
+File: figures/synth_bas_diffus__snr=20__w1=4__angle=90-eps-converted-to.pdf Gra
+phic file (type pdf)
+
+<use figures/synth_bas_diffus__snr=20__w1=4__angle=90-eps-converted-to.pdf>
+Overfull \hbox (84.43787pt too wide) in paragraph at lines 273--305
+[]$[]$
+ []
+
+
+Overfull \hbox (84.43787pt too wide) in paragraph at lines 273--305
+[]$ 
+ []
+
+[5 <./figures/synth_bas_weights__snr=20__w1=2__angle=30-eps-converted-to.pdf> <
+./figures/synth_bas_weights__snr=20__w1=2__angle=60-eps-converted-to.pdf> <./fi
+gures/synth_bas_weights__snr=20__w1=2__angle=90-eps-converted-to.pdf> <./figure
+s/synth_bas_weights__snr=20__w1=3__angle=30-eps-converted-to.pdf> <./figures/sy
+nth_bas_weights__snr=20__w1=3__angle=60-eps-converted-to.pdf> <./figures/synth_
+bas_weights__snr=20__w1=3__angle=90-eps-converted-to.pdf> <./figures/synth_bas_
+weights__snr=20__w1=4__angle=30-eps-converted-to.pdf> <./figures/synth_bas_weig
+hts__snr=20__w1=4__angle=60-eps-converted-to.pdf> <./figures/synth_bas_weights_
+_snr=20__w1=4__angle=90-eps-converted-to.pdf>]
+Package epstopdf Info: Source file: <figures/synth_bas_weights_diffus__snr=20__
+w1=2__angle=30.eps>
+(epstopdf)                    date: 2012-06-26 11:53:33
+(epstopdf)                    size: 12322 bytes
+(epstopdf)             Output file: <figures/synth_bas_weights_diffus__snr=20__
+w1=2__angle=30-eps-converted-to.pdf>
+(epstopdf)                    date: 2012-06-26 11:54:57
+(epstopdf)                    size: 9816 bytes
+(epstopdf)             Command: <repstopdf --outfile=figures/synth_bas_weights_
+diffus__snr=20__w1=2__angle=30-eps-converted-to.pdf figures/synth_bas_weights_d
+iffus__snr=20__w1=2__angle=30.eps>
+(epstopdf)             \includegraphics on input line 315.
+Package epstopdf Info: Output file is already uptodate.
+
+<figures/synth_bas_weights_diffus__snr=20__w1=2__angle=30-eps-converted-to.pdf,
+ id=400, 487.8225pt x 411.5375pt>
+File: figures/synth_bas_weights_diffus__snr=20__w1=2__angle=30-eps-converted-to
+.pdf Graphic file (type pdf)
+
+<use figures/synth_bas_weights_diffus__snr=20__w1=2__angle=30-eps-converted-to.
+pdf>
+Package epstopdf Info: Source file: <figures/synth_bas_weights_diffus__snr=20__
+w1=2__angle=60.eps>
+(epstopdf)                    date: 2012-06-26 11:53:34
+(epstopdf)                    size: 11372 bytes
+(epstopdf)             Output file: <figures/synth_bas_weights_diffus__snr=20__
+w1=2__angle=60-eps-converted-to.pdf>
+(epstopdf)                    date: 2012-06-26 11:54:58
+(epstopdf)                    size: 9434 bytes
+(epstopdf)             Command: <repstopdf --outfile=figures/synth_bas_weights_
+diffus__snr=20__w1=2__angle=60-eps-converted-to.pdf figures/synth_bas_weights_d
+iffus__snr=20__w1=2__angle=60.eps>
+(epstopdf)             \includegraphics on input line 320.
+Package epstopdf Info: Output file is already uptodate.
+
+<figures/synth_bas_weights_diffus__snr=20__w1=2__angle=60-eps-converted-to.pdf,
+ id=401, 489.83pt x 411.5375pt>
+File: figures/synth_bas_weights_diffus__snr=20__w1=2__angle=60-eps-converted-to
+.pdf Graphic file (type pdf)
+
+<use figures/synth_bas_weights_diffus__snr=20__w1=2__angle=60-eps-converted-to.
+pdf>
+Package epstopdf Info: Source file: <figures/synth_bas_weights_diffus__snr=20__
+w1=2__angle=90.eps>
+(epstopdf)                    date: 2012-06-26 11:53:34
+(epstopdf)                    size: 11288 bytes
+(epstopdf)             Output file: <figures/synth_bas_weights_diffus__snr=20__
+w1=2__angle=90-eps-converted-to.pdf>
+(epstopdf)                    date: 2012-06-26 11:54:58
+(epstopdf)                    size: 9362 bytes
+(epstopdf)             Command: <repstopdf --outfile=figures/synth_bas_weights_
+diffus__snr=20__w1=2__angle=90-eps-converted-to.pdf figures/synth_bas_weights_d
+iffus__snr=20__w1=2__angle=90.eps>
+(epstopdf)             \includegraphics on input line 325.
+Package epstopdf Info: Output file is already uptodate.
+
+<figures/synth_bas_weights_diffus__snr=20__w1=2__angle=90-eps-converted-to.pdf,
+ id=402, 489.83pt x 411.5375pt>
+File: figures/synth_bas_weights_diffus__snr=20__w1=2__angle=90-eps-converted-to
+.pdf Graphic file (type pdf)
+
+<use figures/synth_bas_weights_diffus__snr=20__w1=2__angle=90-eps-converted-to.
+pdf>
+Overfull \hbox (84.43787pt too wide) in paragraph at lines 312--328
+[]$[]$ 
+ []
+
+Package epstopdf Info: Source file: <figures/synth_bas_weights_diffus__snr=20__
+w1=3__angle=30.eps>
+(epstopdf)                    date: 2012-06-26 11:53:35
+(epstopdf)                    size: 11519 bytes
+(epstopdf)             Output file: <figures/synth_bas_weights_diffus__snr=20__
+w1=3__angle=30-eps-converted-to.pdf>
+(epstopdf)                    date: 2012-06-26 16:08:01
+(epstopdf)                    size: 9458 bytes
+(epstopdf)             Command: <repstopdf --outfile=figures/synth_bas_weights_
+diffus__snr=20__w1=3__angle=30-eps-converted-to.pdf figures/synth_bas_weights_d
+iffus__snr=20__w1=3__angle=30.eps>
+(epstopdf)             \includegraphics on input line 332.
+Package epstopdf Info: Output file is already uptodate.
+
+<figures/synth_bas_weights_diffus__snr=20__w1=3__angle=30-eps-converted-to.pdf,
+ id=403, 489.83pt x 411.5375pt>
+File: figures/synth_bas_weights_diffus__snr=20__w1=3__angle=30-eps-converted-to
+.pdf Graphic file (type pdf)
+
+<use figures/synth_bas_weights_diffus__snr=20__w1=3__angle=30-eps-converted-to.
+pdf>
+Package epstopdf Info: Source file: <figures/synth_bas_weights_diffus__snr=20__
+w1=3__angle=60.eps>
+(epstopdf)                    date: 2012-06-26 11:53:35
+(epstopdf)                    size: 11373 bytes
+(epstopdf)             Output file: <figures/synth_bas_weights_diffus__snr=20__
+w1=3__angle=60-eps-converted-to.pdf>
+(epstopdf)                    date: 2012-06-26 16:08:01
+(epstopdf)                    size: 9404 bytes
+(epstopdf)             Command: <repstopdf --outfile=figures/synth_bas_weights_
+diffus__snr=20__w1=3__angle=60-eps-converted-to.pdf figures/synth_bas_weights_d
+iffus__snr=20__w1=3__angle=60.eps>
+(epstopdf)             \includegraphics on input line 337.
+Package epstopdf Info: Output file is already uptodate.
+
+<figures/synth_bas_weights_diffus__snr=20__w1=3__angle=60-eps-converted-to.pdf,
+ id=404, 489.83pt x 411.5375pt>
+File: figures/synth_bas_weights_diffus__snr=20__w1=3__angle=60-eps-converted-to
+.pdf Graphic file (type pdf)
+
+<use figures/synth_bas_weights_diffus__snr=20__w1=3__angle=60-eps-converted-to.
+pdf>
+Package epstopdf Info: Source file: <figures/synth_bas_weights_diffus__snr=20__
+w1=3__angle=90.eps>
+(epstopdf)                    date: 2012-06-26 11:53:36
+(epstopdf)                    size: 11290 bytes
+(epstopdf)             Output file: <figures/synth_bas_weights_diffus__snr=20__
+w1=3__angle=90-eps-converted-to.pdf>
+(epstopdf)                    date: 2012-06-26 16:08:01
+(epstopdf)                    size: 9539 bytes
+(epstopdf)             Command: <repstopdf --outfile=figures/synth_bas_weights_
+diffus__snr=20__w1=3__angle=90-eps-converted-to.pdf figures/synth_bas_weights_d
+iffus__snr=20__w1=3__angle=90.eps>
+(epstopdf)             \includegraphics on input line 342.
+Package epstopdf Info: Output file is already uptodate.
+
+<figures/synth_bas_weights_diffus__snr=20__w1=3__angle=90-eps-converted-to.pdf,
+ id=405, 489.83pt x 411.5375pt>
+File: figures/synth_bas_weights_diffus__snr=20__w1=3__angle=90-eps-converted-to
+.pdf Graphic file (type pdf)
+
+<use figures/synth_bas_weights_diffus__snr=20__w1=3__angle=90-eps-converted-to.
+pdf>
+Package epstopdf Info: Source file: <figures/synth_bas_weights_diffus__snr=20__
+w1=4__angle=30.eps>
+(epstopdf)                    date: 2012-06-26 11:53:36
+(epstopdf)                    size: 11422 bytes
+(epstopdf)             Output file: <figures/synth_bas_weights_diffus__snr=20__
+w1=4__angle=30-eps-converted-to.pdf>
+(epstopdf)                    date: 2012-06-26 16:08:02
+(epstopdf)                    size: 9416 bytes
+(epstopdf)             Command: <repstopdf --outfile=figures/synth_bas_weights_
+diffus__snr=20__w1=4__angle=30-eps-converted-to.pdf figures/synth_bas_weights_d
+iffus__snr=20__w1=4__angle=30.eps>
+(epstopdf)             \includegraphics on input line 348.
+Package epstopdf Info: Output file is already uptodate.
+
+<figures/synth_bas_weights_diffus__snr=20__w1=4__angle=30-eps-converted-to.pdf,
+ id=406, 489.83pt x 411.5375pt>
+File: figures/synth_bas_weights_diffus__snr=20__w1=4__angle=30-eps-converted-to
+.pdf Graphic file (type pdf)
+
+<use figures/synth_bas_weights_diffus__snr=20__w1=4__angle=30-eps-converted-to.
+pdf>
+Package epstopdf Info: Source file: <figures/synth_bas_weights_diffus__snr=20__
+w1=4__angle=60.eps>
+(epstopdf)                    date: 2012-06-26 11:53:37
+(epstopdf)                    size: 11497 bytes
+(epstopdf)             Output file: <figures/synth_bas_weights_diffus__snr=20__
+w1=4__angle=60-eps-converted-to.pdf>
+(epstopdf)                    date: 2012-06-26 16:08:02
+(epstopdf)                    size: 9437 bytes
+(epstopdf)             Command: <repstopdf --outfile=figures/synth_bas_weights_
+diffus__snr=20__w1=4__angle=60-eps-converted-to.pdf figures/synth_bas_weights_d
+iffus__snr=20__w1=4__angle=60.eps>
+(epstopdf)             \includegraphics on input line 353.
+Package epstopdf Info: Output file is already uptodate.
+
+<figures/synth_bas_weights_diffus__snr=20__w1=4__angle=60-eps-converted-to.pdf,
+ id=407, 489.83pt x 411.5375pt>
+File: figures/synth_bas_weights_diffus__snr=20__w1=4__angle=60-eps-converted-to
+.pdf Graphic file (type pdf)
+
+<use figures/synth_bas_weights_diffus__snr=20__w1=4__angle=60-eps-converted-to.
+pdf>
+Package epstopdf Info: Source file: <figures/synth_bas_weights_diffus__snr=20__
+w1=4__angle=90.eps>
+(epstopdf)                    date: 2012-06-26 11:53:37
+(epstopdf)                    size: 11272 bytes
+(epstopdf)             Output file: <figures/synth_bas_weights_diffus__snr=20__
+w1=4__angle=90-eps-converted-to.pdf>
+(epstopdf)                    date: 2012-06-26 16:08:02
+(epstopdf)                    size: 9927 bytes
+(epstopdf)             Command: <repstopdf --outfile=figures/synth_bas_weights_
+diffus__snr=20__w1=4__angle=90-eps-converted-to.pdf figures/synth_bas_weights_d
+iffus__snr=20__w1=4__angle=90.eps>
+(epstopdf)             \includegraphics on input line 358.
+Package epstopdf Info: Output file is already uptodate.
+
+<figures/synth_bas_weights_diffus__snr=20__w1=4__angle=90-eps-converted-to.pdf,
+ id=408, 489.83pt x 411.5375pt>
+File: figures/synth_bas_weights_diffus__snr=20__w1=4__angle=90-eps-converted-to
+.pdf Graphic file (type pdf)
+
+<use figures/synth_bas_weights_diffus__snr=20__w1=4__angle=90-eps-converted-to.
+pdf>
+Overfull \hbox (84.43787pt too wide) in paragraph at lines 329--361
+[]$[]$
+ []
+
+
+Overfull \hbox (84.43787pt too wide) in paragraph at lines 329--361
+[]$ 
+ []
+
+[6 <./figures/synth_bas_diffus__snr=20__w1=2__angle=30-eps-converted-to.pdf> <.
+/figures/synth_bas_diffus__snr=20__w1=2__angle=60-eps-converted-to.pdf> <./figu
+res/synth_bas_diffus__snr=20__w1=2__angle=90-eps-converted-to.pdf> <./figures/s
+ynth_bas_diffus__snr=20__w1=3__angle=30-eps-converted-to.pdf> <./figures/synth_
+bas_diffus__snr=20__w1=3__angle=60-eps-converted-to.pdf> <./figures/synth_bas_d
+iffus__snr=20__w1=3__angle=90-eps-converted-to.pdf> <./figures/synth_bas_diffus
+__snr=20__w1=4__angle=30-eps-converted-to.pdf> <./figures/synth_bas_diffus__snr
+=20__w1=4__angle=60-eps-converted-to.pdf> <./figures/synth_bas_diffus__snr=20__
+w1=4__angle=90-eps-converted-to.pdf>]
+Package epstopdf Info: Source file: <figures/phantom_modbas_diffus_dir.eps>
+(epstopdf)                    date: 2012-06-26 10:09:23
+(epstopdf)                    size: 78309 bytes
+(epstopdf)             Output file: <figures/phantom_modbas_diffus_dir-eps-conv
+erted-to.pdf>
+(epstopdf)                    date: 2012-06-26 10:13:09
+(epstopdf)                    size: 23915 bytes
+(epstopdf)             Command: <repstopdf --outfile=figures/phantom_modbas_dif
+fus_dir-eps-converted-to.pdf figures/phantom_modbas_diffus_dir.eps>
+(epstopdf)             \includegraphics on input line 374.
+Package epstopdf Info: Output file is already uptodate.
+
+<figures/phantom_modbas_diffus_dir-eps-converted-to.pdf, id=494, 376.40625pt x 
+375.4025pt>
+File: figures/phantom_modbas_diffus_dir-eps-converted-to.pdf Graphic file (type
+ pdf)
+ <use figures/phantom_modbas_diffus_dir-eps-converted-to.pdf>
+Package epstopdf Info: Source file: <figures/phantom_modbas_diffus_like.eps>
+(epstopdf)                    date: 2012-06-26 10:09:25
+(epstopdf)                    size: 61589 bytes
+(epstopdf)             Output file: <figures/phantom_modbas_diffus_like-eps-con
+verted-to.pdf>
+(epstopdf)                    date: 2012-06-26 10:13:09
+(epstopdf)                    size: 9039 bytes
+(epstopdf)             Command: <repstopdf --outfile=figures/phantom_modbas_dif
+fus_like-eps-converted-to.pdf figures/phantom_modbas_diffus_like.eps>
+(epstopdf)             \includegraphics on input line 375.
+Package epstopdf Info: Output file is already uptodate.
+
+<figures/phantom_modbas_diffus_like-eps-converted-to.pdf, id=495, 484.81125pt x
+ 186.6975pt>
+File: figures/phantom_modbas_diffus_like-eps-converted-to.pdf Graphic file (typ
+e pdf)
+ <use figures/phantom_modbas_diffus_like-eps-converted-to.pdf>
+[7 <./figures/synth_bas_weights_diffus__snr=20__w1=2__angle=30-eps-converted-to
+.pdf> <./figures/synth_bas_weights_diffus__snr=20__w1=2__angle=60-eps-converted
+-to.pdf> <./figures/synth_bas_weights_diffus__snr=20__w1=2__angle=90-eps-conver
+ted-to.pdf> <./figures/synth_bas_weights_diffus__snr=20__w1=3__angle=30-eps-con
+verted-to.pdf> <./figures/synth_bas_weights_diffus__snr=20__w1=3__angle=60-eps-
+converted-to.pdf> <./figures/synth_bas_weights_diffus__snr=20__w1=3__angle=90-e
+ps-converted-to.pdf> <./figures/synth_bas_weights_diffus__snr=20__w1=4__angle=3
+0-eps-converted-to.pdf> <./figures/synth_bas_weights_diffus__snr=20__w1=4__angl
+e=60-eps-converted-to.pdf> <./figures/synth_bas_weights_diffus__snr=20__w1=4__a
+ngle=90-eps-converted-to.pdf>]
+Package epstopdf Info: Source file: <figures/phantom_modbas_weights_dir.eps>
+(epstopdf)                    date: 2012-06-26 10:17:57
+(epstopdf)                    size: 78310 bytes
+(epstopdf)             Output file: <figures/phantom_modbas_weights_dir-eps-con
+verted-to.pdf>
+(epstopdf)                    date: 2012-06-26 10:20:48
+(epstopdf)                    size: 23818 bytes
+(epstopdf)             Command: <repstopdf --outfile=figures/phantom_modbas_wei
+ghts_dir-eps-converted-to.pdf figures/phantom_modbas_weights_dir.eps>
+(epstopdf)             \includegraphics on input line 381.
+Package epstopdf Info: Output file is already uptodate.
+
+<figures/phantom_modbas_weights_dir-eps-converted-to.pdf, id=581, 376.40625pt x
+ 375.4025pt>
+File: figures/phantom_modbas_weights_dir-eps-converted-to.pdf Graphic file (typ
+e pdf)
+ <use figures/phantom_modbas_weights_dir-eps-converted-to.pdf>
+Package epstopdf Info: Source file: <figures/phantom_modbas_weights_like.eps>
+(epstopdf)                    date: 2012-06-26 10:17:59
+(epstopdf)                    size: 61661 bytes
+(epstopdf)             Output file: <figures/phantom_modbas_weights_like-eps-co
+nverted-to.pdf>
+(epstopdf)                    date: 2012-06-26 10:20:48
+(epstopdf)                    size: 8917 bytes
+(epstopdf)             Command: <repstopdf --outfile=figures/phantom_modbas_wei
+ghts_like-eps-converted-to.pdf figures/phantom_modbas_weights_like.eps>
+(epstopdf)             \includegraphics on input line 382.
+Package epstopdf Info: Output file is already uptodate.
+
+<figures/phantom_modbas_weights_like-eps-converted-to.pdf, id=582, 484.81125pt 
+x 186.6975pt>
+File: figures/phantom_modbas_weights_like-eps-converted-to.pdf Graphic file (ty
+pe pdf)
+ <use figures/phantom_modbas_weights_like-eps-converted-to.pdf>
+[8 <./figures/phantom_modbas_diffus_dir-eps-converted-to.pdf> <./figures/phanto
+m_modbas_diffus_like-eps-converted-to.pdf>]
+Package epstopdf Info: Source file: <figures/phantom_modbas_weights_diffus_dir.
+eps>
+(epstopdf)                    date: 2012-06-25 14:54:10
+(epstopdf)                    size: 78317 bytes
+(epstopdf)             Output file: <figures/phantom_modbas_weights_diffus_dir-
+eps-converted-to.pdf>
+(epstopdf)                    date: 2012-06-26 10:14:55
+(epstopdf)                    size: 24006 bytes
+(epstopdf)             Command: <repstopdf --outfile=figures/phantom_modbas_wei
+ghts_diffus_dir-eps-converted-to.pdf figures/phantom_modbas_weights_diffus_dir.
+eps>
+(epstopdf)             \includegraphics on input line 388.
+Package epstopdf Info: Output file is already uptodate.
+
+<figures/phantom_modbas_weights_diffus_dir-eps-converted-to.pdf, id=600, 376.40
+625pt x 375.4025pt>
+File: figures/phantom_modbas_weights_diffus_dir-eps-converted-to.pdf Graphic fi
+le (type pdf)
+
+<use figures/phantom_modbas_weights_diffus_dir-eps-converted-to.pdf>
+Package epstopdf Info: Source file: <figures/phantom_modbas_weights_diffus_like
+.eps>
+(epstopdf)                    date: 2012-06-25 14:54:12
+(epstopdf)                    size: 61597 bytes
+(epstopdf)             Output file: <figures/phantom_modbas_weights_diffus_like
+-eps-converted-to.pdf>
+(epstopdf)                    date: 2012-06-26 10:14:55
+(epstopdf)                    size: 9046 bytes
+(epstopdf)             Command: <repstopdf --outfile=figures/phantom_modbas_wei
+ghts_diffus_like-eps-converted-to.pdf figures/phantom_modbas_weights_diffus_lik
+e.eps>
+(epstopdf)             \includegraphics on input line 389.
+Package epstopdf Info: Output file is already uptodate.
+
+<figures/phantom_modbas_weights_diffus_like-eps-converted-to.pdf, id=601, 484.8
+1125pt x 186.6975pt>
+File: figures/phantom_modbas_weights_diffus_like-eps-converted-to.pdf Graphic f
+ile (type pdf)
+
+<use figures/phantom_modbas_weights_diffus_like-eps-converted-to.pdf> [9 <./fig
+ures/phantom_modbas_weights_dir-eps-converted-to.pdf> <./figures/phantom_modbas
+_weights_like-eps-converted-to.pdf>]
+Package epstopdf Info: Source file: <figures/phantom_bas_diffus_dir.eps>
+(epstopdf)                    date: 2012-06-26 10:20:36
+(epstopdf)                    size: 74645 bytes
+(epstopdf)             Output file: <figures/phantom_bas_diffus_dir-eps-convert
+ed-to.pdf>
+(epstopdf)                    date: 2012-06-26 10:20:48
+(epstopdf)                    size: 22538 bytes
+(epstopdf)             Command: <repstopdf --outfile=figures/phantom_bas_diffus
+_dir-eps-converted-to.pdf figures/phantom_bas_diffus_dir.eps>
+(epstopdf)             \includegraphics on input line 397.
+Package epstopdf Info: Output file is already uptodate.
+
+<figures/phantom_bas_diffus_dir-eps-converted-to.pdf, id=618, 376.40625pt x 375
+.4025pt>
+File: figures/phantom_bas_diffus_dir-eps-converted-to.pdf Graphic file (type pd
+f)
+ <use figures/phantom_bas_diffus_dir-eps-converted-to.pdf>
+Package epstopdf Info: Source file: <figures/phantom_bas_diffus_like.eps>
+(epstopdf)                    date: 2012-06-26 10:20:38
+(epstopdf)                    size: 61951 bytes
+(epstopdf)             Output file: <figures/phantom_bas_diffus_like-eps-conver
+ted-to.pdf>
+(epstopdf)                    date: 2012-06-26 10:20:49
+(epstopdf)                    size: 10396 bytes
+(epstopdf)             Command: <repstopdf --outfile=figures/phantom_bas_diffus
+_like-eps-converted-to.pdf figures/phantom_bas_diffus_like.eps>
+(epstopdf)             \includegraphics on input line 398.
+Package epstopdf Info: Output file is already uptodate.
+
+<figures/phantom_bas_diffus_like-eps-converted-to.pdf, id=619, 484.81125pt x 18
+6.6975pt>
+File: figures/phantom_bas_diffus_like-eps-converted-to.pdf Graphic file (type p
+df)
+ <use figures/phantom_bas_diffus_like-eps-converted-to.pdf> [10 <./figures/phan
+tom_modbas_weights_diffus_dir-eps-converted-to.pdf> <./figures/phantom_modbas_w
+eights_diffus_like-eps-converted-to.pdf>]
+Package epstopdf Info: Source file: <figures/phantom_bas_weights_dir.eps>
+(epstopdf)                    date: 2012-06-26 10:18:41
+(epstopdf)                    size: 78307 bytes
+(epstopdf)             Output file: <figures/phantom_bas_weights_dir-eps-conver
+ted-to.pdf>
+(epstopdf)                    date: 2012-06-26 10:20:49
+(epstopdf)                    size: 23643 bytes
+(epstopdf)             Command: <repstopdf --outfile=figures/phantom_bas_weight
+s_dir-eps-converted-to.pdf figures/phantom_bas_weights_dir.eps>
+(epstopdf)             \includegraphics on input line 404.
+Package epstopdf Info: Output file is already uptodate.
+
+<figures/phantom_bas_weights_dir-eps-converted-to.pdf, id=636, 376.40625pt x 37
+5.4025pt>
+File: figures/phantom_bas_weights_dir-eps-converted-to.pdf Graphic file (type p
+df)
+ <use figures/phantom_bas_weights_dir-eps-converted-to.pdf>
+Package epstopdf Info: Source file: <figures/phantom_bas_weights_like.eps>
+(epstopdf)                    date: 2012-06-26 10:18:43
+(epstopdf)                    size: 61665 bytes
+(epstopdf)             Output file: <figures/phantom_bas_weights_like-eps-conve
+rted-to.pdf>
+(epstopdf)                    date: 2012-06-26 10:20:49
+(epstopdf)                    size: 10061 bytes
+(epstopdf)             Command: <repstopdf --outfile=figures/phantom_bas_weight
+s_like-eps-converted-to.pdf figures/phantom_bas_weights_like.eps>
+(epstopdf)             \includegraphics on input line 405.
+Package epstopdf Info: Output file is already uptodate.
+
+<figures/phantom_bas_weights_like-eps-converted-to.pdf, id=637, 484.81125pt x 1
+86.6975pt>
+File: figures/phantom_bas_weights_like-eps-converted-to.pdf Graphic file (type 
+pdf)
+ <use figures/phantom_bas_weights_like-eps-converted-to.pdf> [11 <./figures/pha
+ntom_bas_diffus_dir-eps-converted-to.pdf> <./figures/phantom_bas_diffus_like-ep
+s-converted-to.pdf>]
+Package epstopdf Info: Source file: <figures/phantom_bas_weights_diffus_dir.eps
+>
+(epstopdf)                    date: 2012-06-26 10:19:51
+(epstopdf)                    size: 75337 bytes
+(epstopdf)             Output file: <figures/phantom_bas_weights_diffus_dir-eps
+-converted-to.pdf>
+(epstopdf)                    date: 2012-06-26 10:20:50
+(epstopdf)                    size: 22919 bytes
+(epstopdf)             Command: <repstopdf --outfile=figures/phantom_bas_weight
+s_diffus_dir-eps-converted-to.pdf figures/phantom_bas_weights_diffus_dir.eps>
+(epstopdf)             \includegraphics on input line 411.
+Package epstopdf Info: Output file is already uptodate.
+
+<figures/phantom_bas_weights_diffus_dir-eps-converted-to.pdf, id=654, 376.40625
+pt x 375.4025pt>
+File: figures/phantom_bas_weights_diffus_dir-eps-converted-to.pdf Graphic file 
+(type pdf)
+
+<use figures/phantom_bas_weights_diffus_dir-eps-converted-to.pdf>
+Package epstopdf Info: Source file: <figures/phantom_bas_weights_diffus_like.ep
+s>
+(epstopdf)                    date: 2012-06-26 10:19:53
+(epstopdf)                    size: 61887 bytes
+(epstopdf)             Output file: <figures/phantom_bas_weights_diffus_like-ep
+s-converted-to.pdf>
+(epstopdf)                    date: 2012-06-26 10:20:50
+(epstopdf)                    size: 10397 bytes
+(epstopdf)             Command: <repstopdf --outfile=figures/phantom_bas_weight
+s_diffus_like-eps-converted-to.pdf figures/phantom_bas_weights_diffus_like.eps>
+
+(epstopdf)             \includegraphics on input line 412.
+Package epstopdf Info: Output file is already uptodate.
+
+<figures/phantom_bas_weights_diffus_like-eps-converted-to.pdf, id=655, 484.8112
+5pt x 186.6975pt>
+File: figures/phantom_bas_weights_diffus_like-eps-converted-to.pdf Graphic file
+ (type pdf)
+
+<use figures/phantom_bas_weights_diffus_like-eps-converted-to.pdf> [12 <./figur
+es/phantom_bas_weights_dir-eps-converted-to.pdf> <./figures/phantom_bas_weights
+_like-eps-converted-to.pdf>]
+Package epstopdf Info: Source file: <figures/brain_modbas_diffus_dir.eps>
+(epstopdf)                    date: 2012-06-26 10:07:40
+(epstopdf)                    size: 55575 bytes
+(epstopdf)             Output file: <figures/brain_modbas_diffus_dir-eps-conver
+ted-to.pdf>
+(epstopdf)                    date: 2012-06-26 10:20:50
+(epstopdf)                    size: 17906 bytes
+(epstopdf)             Command: <repstopdf --outfile=figures/brain_modbas_diffu
+s_dir-eps-converted-to.pdf figures/brain_modbas_diffus_dir.eps>
+(epstopdf)             \includegraphics on input line 426.
+Package epstopdf Info: Output file is already uptodate.
+
+<figures/brain_modbas_diffus_dir-eps-converted-to.pdf, id=672, 376.40625pt x 37
+5.4025pt>
+File: figures/brain_modbas_diffus_dir-eps-converted-to.pdf Graphic file (type p
+df)
+ <use figures/brain_modbas_diffus_dir-eps-converted-to.pdf>
+Package epstopdf Info: Source file: <figures/brain_modbas_diffus_like.eps>
+(epstopdf)                    date: 2012-06-26 10:07:42
+(epstopdf)                    size: 17096 bytes
+(epstopdf)             Output file: <figures/brain_modbas_diffus_like-eps-conve
+rted-to.pdf>
+(epstopdf)                    date: 2012-06-26 10:20:51
+(epstopdf)                    size: 6895 bytes
+(epstopdf)             Command: <repstopdf --outfile=figures/brain_modbas_diffu
+s_like-eps-converted-to.pdf figures/brain_modbas_diffus_like.eps>
+(epstopdf)             \includegraphics on input line 427.
+Package epstopdf Info: Output file is already uptodate.
+
+<figures/brain_modbas_diffus_like-eps-converted-to.pdf, id=673, 478.78876pt x 1
+86.6975pt>
+File: figures/brain_modbas_diffus_like-eps-converted-to.pdf Graphic file (type 
+pdf)
+ <use figures/brain_modbas_diffus_like-eps-converted-to.pdf> [13 <./figures/pha
+ntom_bas_weights_diffus_dir-eps-converted-to.pdf> <./figures/phantom_bas_weight
+s_diffus_like-eps-converted-to.pdf>]
+Package epstopdf Info: Source file: <figures/brain_modbas_weights_dir.eps>
+(epstopdf)                    date: 2012-06-26 10:06:58
+(epstopdf)                    size: 55551 bytes
+(epstopdf)             Output file: <figures/brain_modbas_weights_dir-eps-conve
+rted-to.pdf>
+(epstopdf)                    date: 2012-06-26 10:20:51
+(epstopdf)                    size: 17887 bytes
+(epstopdf)             Command: <repstopdf --outfile=figures/brain_modbas_weigh
+ts_dir-eps-converted-to.pdf figures/brain_modbas_weights_dir.eps>
+(epstopdf)             \includegraphics on input line 433.
+Package epstopdf Info: Output file is already uptodate.
+
+<figures/brain_modbas_weights_dir-eps-converted-to.pdf, id=691, 376.40625pt x 3
+75.4025pt>
+File: figures/brain_modbas_weights_dir-eps-converted-to.pdf Graphic file (type 
+pdf)
+ <use figures/brain_modbas_weights_dir-eps-converted-to.pdf>
+Package epstopdf Info: Source file: <figures/brain_modbas_weights_like.eps>
+(epstopdf)                    date: 2012-06-26 10:06:59
+(epstopdf)                    size: 17179 bytes
+(epstopdf)             Output file: <figures/brain_modbas_weights_like-eps-conv
+erted-to.pdf>
+(epstopdf)                    date: 2012-06-26 10:20:51
+(epstopdf)                    size: 7137 bytes
+(epstopdf)             Command: <repstopdf --outfile=figures/brain_modbas_weigh
+ts_like-eps-converted-to.pdf figures/brain_modbas_weights_like.eps>
+(epstopdf)             \includegraphics on input line 434.
+Package epstopdf Info: Output file is already uptodate.
+
+<figures/brain_modbas_weights_like-eps-converted-to.pdf, id=692, 484.81125pt x 
+186.6975pt>
+File: figures/brain_modbas_weights_like-eps-converted-to.pdf Graphic file (type
+ pdf)
+ <use figures/brain_modbas_weights_like-eps-converted-to.pdf>
+[14 <./figures/brain_modbas_diffus_dir-eps-converted-to.pdf> <./figures/brain_m
+odbas_diffus_like-eps-converted-to.pdf>]
+Package epstopdf Info: Source file: <figures/brain_modbas_weights_diffus_dir.ep
+s>
+(epstopdf)                    date: 2012-06-26 10:06:31
+(epstopdf)                    size: 55459 bytes
+(epstopdf)             Output file: <figures/brain_modbas_weights_diffus_dir-ep
+s-converted-to.pdf>
+(epstopdf)                    date: 2012-06-26 10:20:52
+(epstopdf)                    size: 17888 bytes
+(epstopdf)             Command: <repstopdf --outfile=figures/brain_modbas_weigh
+ts_diffus_dir-eps-converted-to.pdf figures/brain_modbas_weights_diffus_dir.eps>
+
+(epstopdf)             \includegraphics on input line 440.
+Package epstopdf Info: Output file is already uptodate.
+
+<figures/brain_modbas_weights_diffus_dir-eps-converted-to.pdf, id=707, 376.4062
+5pt x 375.4025pt>
+File: figures/brain_modbas_weights_diffus_dir-eps-converted-to.pdf Graphic file
+ (type pdf)
+
+<use figures/brain_modbas_weights_diffus_dir-eps-converted-to.pdf>
+Package epstopdf Info: Source file: <figures/brain_modbas_weights_diffus_like.e
+ps>
+(epstopdf)                    date: 2012-06-26 10:06:32
+(epstopdf)                    size: 17034 bytes
+(epstopdf)             Output file: <figures/brain_modbas_weights_diffus_like-e
+ps-converted-to.pdf>
+(epstopdf)                    date: 2012-06-26 10:20:52
+(epstopdf)                    size: 6974 bytes
+(epstopdf)             Command: <repstopdf --outfile=figures/brain_modbas_weigh
+ts_diffus_like-eps-converted-to.pdf figures/brain_modbas_weights_diffus_like.ep
+s>
+(epstopdf)             \includegraphics on input line 441.
+Package epstopdf Info: Output file is already uptodate.
+
+<figures/brain_modbas_weights_diffus_like-eps-converted-to.pdf, id=708, 478.788
+76pt x 186.6975pt>
+File: figures/brain_modbas_weights_diffus_like-eps-converted-to.pdf Graphic fil
+e (type pdf)
+
+<use figures/brain_modbas_weights_diffus_like-eps-converted-to.pdf> [15 <./figu
+res/brain_modbas_weights_dir-eps-converted-to.pdf> <./figures/brain_modbas_weig
+hts_like-eps-converted-to.pdf>]
+Package epstopdf Info: Source file: <figures/brain_bas_diffus_dir.eps>
+(epstopdf)                    date: 2012-06-26 10:04:51
+(epstopdf)                    size: 55522 bytes
+(epstopdf)             Output file: <figures/brain_bas_diffus_dir-eps-converted
+-to.pdf>
+(epstopdf)                    date: 2012-06-26 10:20:52
+(epstopdf)                    size: 17898 bytes
+(epstopdf)             Command: <repstopdf --outfile=figures/brain_bas_diffus_d
+ir-eps-converted-to.pdf figures/brain_bas_diffus_dir.eps>
+(epstopdf)             \includegraphics on input line 449.
+Package epstopdf Info: Output file is already uptodate.
+
+<figures/brain_bas_diffus_dir-eps-converted-to.pdf, id=723, 376.40625pt x 375.4
+025pt>
+File: figures/brain_bas_diffus_dir-eps-converted-to.pdf Graphic file (type pdf)
+
+ <use figures/brain_bas_diffus_dir-eps-converted-to.pdf>
+Package epstopdf Info: Source file: <figures/brain_bas_diffus_like.eps>
+(epstopdf)                    date: 2012-06-26 10:04:52
+(epstopdf)                    size: 17239 bytes
+(epstopdf)             Output file: <figures/brain_bas_diffus_like-eps-converte
+d-to.pdf>
+(epstopdf)                    date: 2012-06-26 10:20:53
+(epstopdf)                    size: 7433 bytes
+(epstopdf)             Command: <repstopdf --outfile=figures/brain_bas_diffus_l
+ike-eps-converted-to.pdf figures/brain_bas_diffus_like.eps>
+(epstopdf)             \includegraphics on input line 450.
+Package epstopdf Info: Output file is already uptodate.
+
+<figures/brain_bas_diffus_like-eps-converted-to.pdf, id=724, 484.81125pt x 186.
+6975pt>
+File: figures/brain_bas_diffus_like-eps-converted-to.pdf Graphic file (type pdf
+)
+ <use figures/brain_bas_diffus_like-eps-converted-to.pdf> [16 <./figures/brain_
+modbas_weights_diffus_dir-eps-converted-to.pdf> <./figures/brain_modbas_weights
+_diffus_like-eps-converted-to.pdf>]
+Package epstopdf Info: Source file: <figures/brain_bas_weights_dir.eps>
+(epstopdf)                    date: 2012-06-26 09:58:14
+(epstopdf)                    size: 55523 bytes
+(epstopdf)             Output file: <figures/brain_bas_weights_dir-eps-converte
+d-to.pdf>
+(epstopdf)                    date: 2012-06-26 10:20:53
+(epstopdf)                    size: 17895 bytes
+(epstopdf)             Command: <repstopdf --outfile=figures/brain_bas_weights_
+dir-eps-converted-to.pdf figures/brain_bas_weights_dir.eps>
+(epstopdf)             \includegraphics on input line 456.
+Package epstopdf Info: Output file is already uptodate.
+
+<figures/brain_bas_weights_dir-eps-converted-to.pdf, id=739, 376.40625pt x 375.
+4025pt>
+File: figures/brain_bas_weights_dir-eps-converted-to.pdf Graphic file (type pdf
+)
+ <use figures/brain_bas_weights_dir-eps-converted-to.pdf>
+Package epstopdf Info: Source file: <figures/brain_bas_weights_like.eps>
+(epstopdf)                    date: 2012-06-26 09:58:15
+(epstopdf)                    size: 17174 bytes
+(epstopdf)             Output file: <figures/brain_bas_weights_like-eps-convert
+ed-to.pdf>
+(epstopdf)                    date: 2012-06-26 10:20:53
+(epstopdf)                    size: 7361 bytes
+(epstopdf)             Command: <repstopdf --outfile=figures/brain_bas_weights_
+like-eps-converted-to.pdf figures/brain_bas_weights_like.eps>
+(epstopdf)             \includegraphics on input line 457.
+Package epstopdf Info: Output file is already uptodate.
+
+<figures/brain_bas_weights_like-eps-converted-to.pdf, id=740, 484.81125pt x 186
+.6975pt>
+File: figures/brain_bas_weights_like-eps-converted-to.pdf Graphic file (type pd
+f)
+ <use figures/brain_bas_weights_like-eps-converted-to.pdf> [17 <./figures/brain
+_bas_diffus_dir-eps-converted-to.pdf> <./figures/brain_bas_diffus_like-eps-conv
+erted-to.pdf>]
+Package epstopdf Info: Source file: <figures/brain_bas_weights_diffus_dir.eps>
+(epstopdf)                    date: 2012-06-26 10:05:40
+(epstopdf)                    size: 55530 bytes
+(epstopdf)             Output file: <figures/brain_bas_weights_diffus_dir-eps-c
+onverted-to.pdf>
+(epstopdf)                    date: 2012-06-26 10:20:54
+(epstopdf)                    size: 17863 bytes
+(epstopdf)             Command: <repstopdf --outfile=figures/brain_bas_weights_
+diffus_dir-eps-converted-to.pdf figures/brain_bas_weights_diffus_dir.eps>
+(epstopdf)             \includegraphics on input line 463.
+Package epstopdf Info: Output file is already uptodate.
+
+<figures/brain_bas_weights_diffus_dir-eps-converted-to.pdf, id=756, 376.40625pt
+ x 375.4025pt>
+File: figures/brain_bas_weights_diffus_dir-eps-converted-to.pdf Graphic file (t
+ype pdf)
+ <use figures/brain_bas_weights_diffus_dir-eps-converted-to.pdf>
+Package epstopdf Info: Source file: <figures/brain_bas_weights_diffus_like.eps>
+
+(epstopdf)                    date: 2012-06-26 10:05:42
+(epstopdf)                    size: 17317 bytes
+(epstopdf)             Output file: <figures/brain_bas_weights_diffus_like-eps-
+converted-to.pdf>
+(epstopdf)                    date: 2012-06-26 10:20:54
+(epstopdf)                    size: 7480 bytes
+(epstopdf)             Command: <repstopdf --outfile=figures/brain_bas_weights_
+diffus_like-eps-converted-to.pdf figures/brain_bas_weights_diffus_like.eps>
+(epstopdf)             \includegraphics on input line 464.
+Package epstopdf Info: Output file is already uptodate.
+
+<figures/brain_bas_weights_diffus_like-eps-converted-to.pdf, id=757, 484.81125p
+t x 186.6975pt>
+File: figures/brain_bas_weights_diffus_like-eps-converted-to.pdf Graphic file (
+type pdf)
+
+<use figures/brain_bas_weights_diffus_like-eps-converted-to.pdf> [18 <./figures
+/brain_bas_weights_dir-eps-converted-to.pdf> <./figures/brain_bas_weights_like-
+eps-converted-to.pdf>] [19 <./figures/brain_bas_weights_diffus_dir-eps-converte
+d-to.pdf> <./figures/brain_bas_weights_diffus_like-eps-converted-to.pdf>]
+(./summary.aux) ) 
 Here is how much of TeX's memory you used:
- 2145 strings out of 493747
- 35909 string characters out of 3151241
- 93188 words of memory out of 3500000
- 5427 multiletter control sequences out of 15000+200000
+ 2501 strings out of 493747
+ 58848 string characters out of 3151241
+ 94188 words of memory out of 3500000
+ 5715 multiletter control sequences out of 15000+200000
  8502 words of font info for 30 fonts, out of 3000000 for 9000
  714 hyphenation exceptions out of 8191
- 38i,7n,38p,550b,472s stack positions out of 5000i,500n,10000p,200000b,50000s
-</usr/share/texmf/fonts/type1/
-public/amsfonts/cm/cmbx10.pfb></usr/share/texmf/fonts/type1/public/amsfonts/cm/
-cmbx12.pfb></usr/share/texmf/fonts/type1/public/amsfonts/cm/cmbx9.pfb></usr/sha
-re/texmf/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texmf/fonts/type
-1/public/amsfonts/cm/cmr10.pfb></usr/share/texmf/fonts/type1/public/amsfonts/cm
-/cmr12.pfb></usr/share/texmf/fonts/type1/public/amsfonts/cm/cmr17.pfb></usr/sha
-re/texmf/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/share/texmf/fonts/type1/
-public/amsfonts/cm/cmr9.pfb></usr/share/texmf/fonts/type1/public/amsfonts/cm/cm
-sy10.pfb></usr/share/texmf/fonts/type1/public/amsfonts/cm/cmsy7.pfb>
-Output written on summary.pdf (6 pages, 256292 bytes).
+ 38i,9n,38p,471b,487s stack positions out of 5000i,500n,10000p,200000b,50000s
+</usr/share/texmf/fonts/type1/public/amsfonts/cm/cmbx10.pfb></
+usr/share/texmf/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/share/texmf/fon
+ts/type1/public/amsfonts/cm/cmbx9.pfb></usr/share/texmf/fonts/type1/public/amsf
+onts/cm/cmmi10.pfb></usr/share/texmf/fonts/type1/public/amsfonts/cm/cmr10.pfb><
+/usr/share/texmf/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/share/texmf/fon
+ts/type1/public/amsfonts/cm/cmr17.pfb></usr/share/texmf/fonts/type1/public/amsf
+onts/cm/cmr7.pfb></usr/share/texmf/fonts/type1/public/amsfonts/cm/cmr9.pfb></us
+r/share/texmf/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texmf/fonts
+/type1/public/amsfonts/cm/cmsy7.pfb>
+Output written on summary.pdf (19 pages, 739137 bytes).
 PDF statistics:
- 170 PDF objects out of 1000 (max. 8388607)
- 117 compressed objects within 2 object streams
+ 823 PDF objects out of 1000 (max. 8388607)
+ 563 compressed objects within 6 object streams
  0 named destinations out of 1000 (max. 500000)
- 71 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 391 words of extra memory for PDF output out of 10000 (max. 10000000)
 

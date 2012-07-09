@@ -27,8 +27,23 @@ ADD_EXECUTABLE(RunMultiTensorTest
   testMultiTensor.cpp HardiToolbox.cpp
   )
 
+ADD_EXECUTABLE(TestWeightEst
+  tests/testWeightEst.cpp HardiToolbox.cpp utils.cpp
+  )
+
+ADD_EXECUTABLE(TestBrainData
+  tests/testBrainData.cpp HardiToolbox.cpp utils.cpp testProc.cpp
+  )
+
+ADD_EXECUTABLE(TestPhantomData
+  tests/testPhantomData.cpp HardiToolbox.cpp utils.cpp
+  )
+
 #need to link to some other libraries ? just add them here
 
 TARGET_LINK_LIBRARIES(HardiToolbox libarmadillo.so ${ITK_LIBRARIES})
+TARGET_LINK_LIBRARIES(TestWeightEst libarmadillo.so)
+TARGET_LINK_LIBRARIES(TestBrainData libarmadillo.so ${ITK_LIBRARIES})
+TARGET_LINK_LIBRARIES(TestPhantomData libarmadillo.so ${ITK_LIBRARIES})
 TARGET_LINK_LIBRARIES(RunMultiTensorTest libarmadillo.so)
 #TARGET_LINK_LIBRARIES(singlemrf emon ${ITK_LIBRARIES} boost_program_options boost_filesystem)

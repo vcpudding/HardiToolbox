@@ -42,6 +42,7 @@ namespace HardiToolbox
   void      initFiberComp (FiberComposition &fibComp, int initCode=0);
 
   vec       fiberDeviation (const FiberComposition &fibComp, const FiberComposition &trueFibComp);
+  double    fiberDeviation (const FiberComposition &fibComp, const FiberComposition &trueFibComp, vec &dirDev, vec &fibDev, vec &diffusDev);
 
   vec       simulateMultiTensor (int bVal, double s0, const mat &gradientOrientations, const mat &fibDirs,
 				 const vec &weights=vec(), const mat &diffus=mat());
@@ -83,9 +84,9 @@ namespace HardiToolbox
   mat       simulateStickByComponent (int bVal, double s0, const vec &diffusivities, const mat &gradientOrientations, const mat &fibDirs);
 
   vec       simulateBallAndStick (int bVal, double s0, const mat &gradientOrientations, const mat &fibDirs, const vec &weights=vec(), const vec &diffusivities=vec());
-  mat       simulateBallAndStickByComponent (int bVal, double s0, const vec &diffusivities, const vec &weights, const mat &gradientOrientations, const mat &fibDirs);
+  mat       simulateBallAndStickByComponent (int bVal, double s0, const mat &gradientOrientations, const mat &fibDirs, const vec &weights, const vec &diffusivities);
 
-  vec       simulateModBAS (int bVal, double s0, const vec &diffusivities, const vec &weights, const mat &gradientOrientations, const vec &fibDirs);
+  vec       simulateModBAS (int bVal, double s0, const vec &diffusivities, const vec &weights, const mat &gradientOrientations, const mat &fibDirs);
   mat       simulateModBASByComponent (int bVal, double s0, const vec &diffusivities, const vec &weights, const mat &gradientOrientations, const mat &fibDirs);
 
 
@@ -101,8 +102,10 @@ namespace HardiToolbox
     double  weightStep;
     double  tolerance;
     double  innerTolerance;
+    double  sparseFactor;
     bool    isEstDiffusivities;
     bool    isEstWeights;
+    bool    isPrintDebugInfo;
     bool    useLineSearch;
   };
 
@@ -113,7 +116,7 @@ namespace HardiToolbox
   void      estimateSticksDiffs (FiberComposition &fibComp, const vec &dwSignal, const mat &gradientOrientations,
                             int bVal, double s0, double snr, int nFibers, const StickEstimateOption &options);
 
-  void      estimateBallAndSticks (FiberComposition &fibComp, const vec &dwSignal, const mat &gradientOrientations,
+  double    estimateBallAndSticks (FiberComposition &fibComp, const vec &dwSignal, const mat &gradientOrientations,
                             int bVal, double s0, double snr, int nFibers, const StickEstimateOption &options);
   double    estimateModifiedBAS (FiberComposition &fibComp, const vec &dwSignal, const mat &gradientOrientations,
                             int bVal, double s0, double snr, int nFibers, const StickEstimateOption &options);
@@ -128,6 +131,9 @@ namespace HardiToolbox
 
   vec       sphereLog (const vec &p, const vec &q);
   vec       sphereExp (const vec &p, const vec &v);
+
+  void      removeRedundantComponent (FiberComposition &fibComp);
+  void      removeRedundantComponent (mat &fibDirs, vec &fibWeights, vec &fibDiffs, int &nFibers);
 }
 
 #endif

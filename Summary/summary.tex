@@ -3,6 +3,7 @@
 \usepackage{caption}
 \usepackage{subcaption}
 \usepackage{float}
+\usepackage{chngpage}
 
 \begin{document}
 
@@ -22,78 +23,446 @@
 \section{Estimating weights V.S. diffusivities}
 \subsection{Synthesized data}
 
-\begin{enumerate}
-
-\item{\textbf{Single compartment}}
-
-DW signal is simulated with the multi-tensor model, with major and minor diffusivities ranging from $[1.3\times 10^{-3}, 2.1\times 10^{-3}]$ and $[2\times 10^{-4}, 5\times 10^{-4}]$, respectively. It is also assumed that the diffusivities in perpendicular directions are equal. When estimating the fiber compartment, the diffusivities are fixed at $(1.7e-3, 3e-4, 3e-4)$, while the weights are to be optimized. For each combination of diffusivities, the estimation is repeated for 200 times to test its stability.
-
-Figure \ref{figOneFiber} are results of single compartment estimation. It is shown that the standard deviation of angular deviation and likelihood are very small, which indicates the algorithm converges stably over the 200 repetitions.
-
+In the following figures series of DW data are synthesized with different diffusivities and weights.
+\subsubsection{Multiplicative Ball-And-Sticks Model}
 \begin{figure}[H]
-  \caption{\label{figOneFiber}Single compartment estimation results}
-  \begin{subfigure}{\textwidth}
-    \centering
-    \includegraphics[width=\textwidth]{figures/one_fiber__snr=20.eps}
-    \caption{SNR=20}
-  \end{subfigure}
-  \begin{subfigure}{\textwidth}
-    \centering
-    \includegraphics[width=\textwidth]{figures/one_fiber__snr=40.eps}
-    \caption{SNR=40}
-  \end{subfigure}
-\end{figure}
-
-\item \textbf{Two compartments}
-
-In the simulation of two-compartment DW signals, each compartment is simulated the same way as single multi-tensor compartment. Figure \ref{figTwoFibers1} and \ref{figTwoFibers2} are results of two-compartment estimation. Solid lines stand for mean and standard deviation of the mean angular deviation between the two compartments, while the dashed ones stand for the maximum deviation between the two compartments.
-
-\begin{figure}[H]
-  %\begin{subfigure}{\textwidth}
-    \centering
-    \includegraphics[width=\textwidth]{figures/two_fiber__snr=20__angle=30.eps}
-    \includegraphics[width=\textwidth]{figures/two_fiber__snr=20__angle=45.eps}
-    \includegraphics[width=\textwidth]{figures/two_fiber__snr=20__angle=60.eps}
-    \includegraphics[width=\textwidth]{figures/two_fiber__snr=20__angle=90.eps}
-    \caption{\label{figTwoFibers1}Two compartment estimation results: SNR=20. From top to bottom: separation angle 30, 45, 60 and 90 degrees}
-  %\end{subfigure}
-\end{figure}
+  \begin{adjustwidth}{-\oddsidemargin}{-\rightmargin}
+    \begin{subfigure}{0.8\paperwidth}
+      \begin{subfigure}{0.3\textwidth}
+        \centering
+        \includegraphics[width=\textwidth]{figures/synth_modbas_weights__snr=20__w1=3__angle=30.eps}
+      \end{subfigure}
+      ~
+      \begin{subfigure}{0.3\textwidth}
+        \centering
+        \includegraphics[width=\textwidth]{figures/synth_modbas_weights__snr=20__w1=3__angle=60.eps}
+      \end{subfigure}
+      ~
+      \begin{subfigure}{0.3\textwidth}
+        \centering
+        \includegraphics[width=\textwidth]{figures/synth_modbas_weights__snr=20__w1=3__angle=90.eps}
+      \end{subfigure}
+    \end{subfigure}
+    
+    \begin{subfigure}{0.8\paperwidth}
+      \begin{subfigure}{0.3\textwidth}
+        \centering
+        \includegraphics[width=\textwidth]{figures/synth_modbas_weights__snr=20__w1=4__angle=30.eps}
+      \end{subfigure}
+      ~
+      \begin{subfigure}{0.3\textwidth}
+        \centering
+        \includegraphics[width=\textwidth]{figures/synth_modbas_weights__snr=20__w1=4__angle=60.eps}
+      \end{subfigure}
+      ~
+      \begin{subfigure}{0.3\textwidth}
+        \centering
+        \includegraphics[width=\textwidth]{figures/synth_modbas_weights__snr=20__w1=4__angle=90.eps}
+      \end{subfigure}
+    \end{subfigure}
+    \begin{subfigure}{0.8\paperwidth}
+      \begin{subfigure}{0.3\textwidth}
+        \centering
+        \includegraphics[width=\textwidth]{figures/synth_modbas_weights__snr=20__w1=5__angle=30.eps}
+      \end{subfigure}
+      ~
+      \begin{subfigure}{0.3\textwidth}
+        \centering
+        \includegraphics[width=\textwidth]{figures/synth_modbas_weights__snr=20__w1=5__angle=60.eps}
+      \end{subfigure}
+      ~
+      \begin{subfigure}{0.3\textwidth}
+        \centering
+        \includegraphics[width=\textwidth]{figures/synth_modbas_weights__snr=20__w1=5__angle=90.eps}
+      \end{subfigure}
+    \end{subfigure}
+  \end{adjustwidth}
   
+  \caption{Estimation results with weight and ball-diffusivity estimation. Stick diffusivities are fixed at $1.7\times 10^{-3}$. From top to bottom: synthesized weights are (0.3, 0.7), (0.4, 0.6), (0.5, 0.5) respectively. From left to right: separation angles are 30, 60 and 90 degrees, respectively. Simulated SNR is 20.}
+\end{figure}
+
 \begin{figure}[H]
-  %\begin{subfigure}{\textwidth}
-    \centering
-    \includegraphics[width=\textwidth]{figures/two_fiber__snr=40__angle=30.eps}
-    \includegraphics[width=\textwidth]{figures/two_fiber__snr=40__angle=45.eps}
-    \includegraphics[width=\textwidth]{figures/two_fiber__snr=40__angle=60.eps}
-    \includegraphics[width=\textwidth]{figures/two_fiber__snr=40__angle=90.eps}
-    \caption{\label{figTwoFibers2}Two compartment estimation results: SNR=40. From top to bottom: separation angle 30, 45, 60 and 90 degrees}
-  %\end{subfigure}
+  \begin{adjustwidth}{-\oddsidemargin}{-\rightmargin}
+    \begin{subfigure}{0.8\paperwidth}
+      \begin{subfigure}{0.3\textwidth}
+        \centering
+        \includegraphics[width=\textwidth]{figures/synth_modbas_diffus__snr=20__w1=3__angle=30.eps}
+      \end{subfigure}
+      ~
+      \begin{subfigure}{0.3\textwidth}
+        \centering
+        \includegraphics[width=\textwidth]{figures/synth_modbas_diffus__snr=20__w1=3__angle=60.eps}
+      \end{subfigure}
+      ~
+      \begin{subfigure}{0.3\textwidth}
+        \centering
+        \includegraphics[width=\textwidth]{figures/synth_modbas_diffus__snr=20__w1=3__angle=90.eps}
+      \end{subfigure}
+    \end{subfigure}
+    
+    \begin{subfigure}{0.8\paperwidth}
+      \begin{subfigure}{0.3\textwidth}
+        \centering
+        \includegraphics[width=\textwidth]{figures/synth_modbas_diffus__snr=20__w1=4__angle=30.eps}
+      \end{subfigure}
+      ~
+      \begin{subfigure}{0.3\textwidth}
+        \centering
+        \includegraphics[width=\textwidth]{figures/synth_modbas_diffus__snr=20__w1=4__angle=60.eps}
+      \end{subfigure}
+      ~
+      \begin{subfigure}{0.3\textwidth}
+        \centering
+        \includegraphics[width=\textwidth]{figures/synth_modbas_diffus__snr=20__w1=4__angle=90.eps}
+      \end{subfigure}
+    \end{subfigure}
+    \begin{subfigure}{0.8\paperwidth}
+      \begin{subfigure}{0.3\textwidth}
+        \centering
+        \includegraphics[width=\textwidth]{figures/synth_modbas_diffus__snr=20__w1=5__angle=30.eps}
+      \end{subfigure}
+      ~
+      \begin{subfigure}{0.3\textwidth}
+        \centering
+        \includegraphics[width=\textwidth]{figures/synth_modbas_diffus__snr=20__w1=5__angle=60.eps}
+      \end{subfigure}
+      ~
+      \begin{subfigure}{0.3\textwidth}
+        \centering
+        \includegraphics[width=\textwidth]{figures/synth_modbas_diffus__snr=20__w1=5__angle=90.eps}
+      \end{subfigure}
+    \end{subfigure}
+  \end{adjustwidth}
+  
+  \caption{Estimation results with diffusivity estimation. Weights are fixed at (0.5, 0.5). From top to bottom: synthesized weights are (0.3, 0.7), (0.4, 0.6), (0.5, 0.5) respectively. From left to right: separation angles are 30, 60 and 90 degrees, respectively. Simulated SNR is 20.}
+\end{figure}
+
+\begin{figure}[H]
+  \begin{adjustwidth}{-\oddsidemargin}{-\rightmargin}
+    \begin{subfigure}{0.8\paperwidth}
+      \begin{subfigure}{0.3\textwidth}
+        \centering
+        \includegraphics[width=\textwidth]{figures/synth_modbas_weights_diffus__snr=20__w1=3__angle=30.eps}
+      \end{subfigure}
+      ~
+      \begin{subfigure}{0.3\textwidth}
+        \centering
+        \includegraphics[width=\textwidth]{figures/synth_modbas_weights_diffus__snr=20__w1=3__angle=60.eps}
+      \end{subfigure}
+      ~
+      \begin{subfigure}{0.3\textwidth}
+        \centering
+        \includegraphics[width=\textwidth]{figures/synth_modbas_weights_diffus__snr=20__w1=3__angle=90.eps}
+      \end{subfigure}
+  \end{subfigure}
+
+  \begin{subfigure}{0.8\paperwidth}
+    \begin{subfigure}{0.3\textwidth}
+      \centering
+      \includegraphics[width=\textwidth]{figures/synth_modbas_weights_diffus__snr=20__w1=4__angle=30.eps}
+    \end{subfigure}
+      ~
+      \begin{subfigure}{0.3\textwidth}
+        \centering
+        \includegraphics[width=\textwidth]{figures/synth_modbas_weights_diffus__snr=20__w1=4__angle=60.eps}
+      \end{subfigure}
+      ~
+      \begin{subfigure}{0.3\textwidth}
+        \centering
+        \includegraphics[width=\textwidth]{figures/synth_modbas_weights_diffus__snr=20__w1=4__angle=90.eps}
+      \end{subfigure}
+  \end{subfigure}
+  \begin{subfigure}{0.8\paperwidth}
+      \begin{subfigure}{0.3\textwidth}
+        \centering
+        \includegraphics[width=\textwidth]{figures/synth_modbas_weights_diffus__snr=20__w1=5__angle=30.eps}
+      \end{subfigure}
+      ~
+      \begin{subfigure}{0.3\textwidth}
+        \centering
+        \includegraphics[width=\textwidth]{figures/synth_modbas_weights_diffus__snr=20__w1=5__angle=60.eps}
+      \end{subfigure}
+      ~
+      \begin{subfigure}{0.3\textwidth}
+        \centering
+        \includegraphics[width=\textwidth]{figures/synth_modbas_weights_diffus__snr=20__w1=5__angle=90.eps}
+      \end{subfigure}
+  \end{subfigure}
+\end{adjustwidth}
+  \caption{Estimation results with both weight and diffusivity estimation. From top to bottom: synthesized weights are (0.3, 0.7), (0.4, 0.6), (0.5, 0.5) respectively. From left to right: separation angles are 30, 60 and 90 degrees, respectively. Simulated SNR is 20.}
 \end{figure}
 
 
-\end{enumerate}
+\subsubsection{Ball-And-Sticks Model}
+
+\begin{figure}[H]
+  \begin{adjustwidth}{-\oddsidemargin}{-\rightmargin}
+    \begin{subfigure}{0.8\paperwidth}
+      \begin{subfigure}{0.3\textwidth}
+        \centering
+        \includegraphics[width=\textwidth]{figures/synth_bas_weights__snr=20__w1=2__angle=30.eps}
+      \end{subfigure}
+      ~
+      \begin{subfigure}{0.3\textwidth}
+        \centering
+        \includegraphics[width=\textwidth]{figures/synth_bas_weights__snr=20__w1=2__angle=60.eps}
+      \end{subfigure}
+      ~
+      \begin{subfigure}{0.3\textwidth}
+        \centering
+        \includegraphics[width=\textwidth]{figures/synth_bas_weights__snr=20__w1=2__angle=90.eps}
+      \end{subfigure}
+    \end{subfigure}
+    
+    \begin{subfigure}{0.8\paperwidth}
+      \begin{subfigure}{0.3\textwidth}
+        \centering
+        \includegraphics[width=\textwidth]{figures/synth_bas_weights__snr=20__w1=3__angle=30.eps}
+      \end{subfigure}
+      ~
+      \begin{subfigure}{0.3\textwidth}
+        \centering
+        \includegraphics[width=\textwidth]{figures/synth_bas_weights__snr=20__w1=3__angle=60.eps}
+      \end{subfigure}
+      ~
+      \begin{subfigure}{0.3\textwidth}
+        \centering
+        \includegraphics[width=\textwidth]{figures/synth_bas_weights__snr=20__w1=3__angle=90.eps}
+      \end{subfigure}
+    \end{subfigure}
+    \begin{subfigure}{0.8\paperwidth}
+      \begin{subfigure}{0.3\textwidth}
+        \centering
+        \includegraphics[width=\textwidth]{figures/synth_bas_weights__snr=20__w1=4__angle=30.eps}
+      \end{subfigure}
+      ~
+      \begin{subfigure}{0.3\textwidth}
+        \centering
+        \includegraphics[width=\textwidth]{figures/synth_bas_weights__snr=20__w1=4__angle=60.eps}
+      \end{subfigure}
+      ~
+      \begin{subfigure}{0.3\textwidth}
+        \centering
+        \includegraphics[width=\textwidth]{figures/synth_bas_weights__snr=20__w1=4__angle=90.eps}
+      \end{subfigure}
+    \end{subfigure}
+  \end{adjustwidth}
+  
+  \caption{Estimation results with weight estimation. Stick diffusivities are fixed at $1.7\times 10^{-3}$, ball diffusivity at $3.0\times 10^{-4}$. From top to bottom: synthesized weights are (0.2, 0.2, 0.6), (0.3, 0.3, 0.4), (0.4, 0.4, 0.2) respectively. From left to right: separation angles are 30, 60 and 90 degrees, respectively. Simulated SNR is 20.}
+\end{figure}
+
+\begin{figure}[H]
+  \begin{adjustwidth}{-\oddsidemargin}{-\rightmargin}
+    \begin{subfigure}{0.8\paperwidth}
+      \begin{subfigure}{0.3\textwidth}
+        \centering
+        \includegraphics[width=\textwidth]{figures/synth_bas_diffus__snr=20__w1=2__angle=30.eps}
+      \end{subfigure}
+      ~
+      \begin{subfigure}{0.3\textwidth}
+        \centering
+        \includegraphics[width=\textwidth]{figures/synth_bas_diffus__snr=20__w1=2__angle=60.eps}
+      \end{subfigure}
+      ~
+      \begin{subfigure}{0.3\textwidth}
+        \centering
+        \includegraphics[width=\textwidth]{figures/synth_bas_diffus__snr=20__w1=2__angle=90.eps}
+      \end{subfigure}
+    \end{subfigure}
+    
+    \begin{subfigure}{0.8\paperwidth}
+      \begin{subfigure}{0.3\textwidth}
+        \centering
+        \includegraphics[width=\textwidth]{figures/synth_bas_diffus__snr=20__w1=3__angle=30.eps}
+      \end{subfigure}
+      ~
+      \begin{subfigure}{0.3\textwidth}
+        \centering
+        \includegraphics[width=\textwidth]{figures/synth_bas_diffus__snr=20__w1=3__angle=60.eps}
+      \end{subfigure}
+      ~
+      \begin{subfigure}{0.3\textwidth}
+        \centering
+        \includegraphics[width=\textwidth]{figures/synth_bas_diffus__snr=20__w1=3__angle=90.eps}
+      \end{subfigure}
+    \end{subfigure}
+    \begin{subfigure}{0.8\paperwidth}
+      \begin{subfigure}{0.3\textwidth}
+        \centering
+        \includegraphics[width=\textwidth]{figures/synth_bas_diffus__snr=20__w1=4__angle=30.eps}
+      \end{subfigure}
+      ~
+      \begin{subfigure}{0.3\textwidth}
+        \centering
+        \includegraphics[width=\textwidth]{figures/synth_bas_diffus__snr=20__w1=4__angle=60.eps}
+      \end{subfigure}
+      ~
+      \begin{subfigure}{0.3\textwidth}
+        \centering
+        \includegraphics[width=\textwidth]{figures/synth_bas_diffus__snr=20__w1=4__angle=90.eps}
+      \end{subfigure}
+    \end{subfigure}
+  \end{adjustwidth}
+  
+  \caption{Estimation results with diffusivity estimation. Weights are fixed at (0.3, 0.3, 0.3). From top to bottom: synthesized weights are (0.2, 0.2, 0.6), (0.3, 0.3, 0.4), (0.4, 0.4, 0.2) respectively. From left to right: separation angles are 30, 60 and 90 degrees, respectively. Simulated SNR is 20.}
+\end{figure}
+
+\begin{figure}[H]
+  \begin{adjustwidth}{-\oddsidemargin}{-\rightmargin}
+    \begin{subfigure}{0.8\paperwidth}
+      \begin{subfigure}{0.3\textwidth}
+        \centering
+        \includegraphics[width=\textwidth]{figures/synth_bas_weights_diffus__snr=20__w1=2__angle=30.eps}
+      \end{subfigure}
+      ~
+      \begin{subfigure}{0.3\textwidth}
+        \centering
+        \includegraphics[width=\textwidth]{figures/synth_bas_weights_diffus__snr=20__w1=2__angle=60.eps}
+      \end{subfigure}
+      ~
+      \begin{subfigure}{0.3\textwidth}
+        \centering
+        \includegraphics[width=\textwidth]{figures/synth_bas_weights_diffus__snr=20__w1=2__angle=90.eps}
+      \end{subfigure}
+  \end{subfigure}
+
+  \begin{subfigure}{0.8\paperwidth}
+    \begin{subfigure}{0.3\textwidth}
+      \centering
+      \includegraphics[width=\textwidth]{figures/synth_bas_weights_diffus__snr=20__w1=3__angle=30.eps}
+    \end{subfigure}
+      ~
+      \begin{subfigure}{0.3\textwidth}
+        \centering
+        \includegraphics[width=\textwidth]{figures/synth_bas_weights_diffus__snr=20__w1=3__angle=60.eps}
+      \end{subfigure}
+      ~
+      \begin{subfigure}{0.3\textwidth}
+        \centering
+        \includegraphics[width=\textwidth]{figures/synth_bas_weights_diffus__snr=20__w1=3__angle=90.eps}
+      \end{subfigure}
+  \end{subfigure}
+  \begin{subfigure}{0.8\paperwidth}
+      \begin{subfigure}{0.3\textwidth}
+        \centering
+        \includegraphics[width=\textwidth]{figures/synth_bas_weights_diffus__snr=20__w1=4__angle=30.eps}
+      \end{subfigure}
+      ~
+      \begin{subfigure}{0.3\textwidth}
+        \centering
+        \includegraphics[width=\textwidth]{figures/synth_bas_weights_diffus__snr=20__w1=4__angle=60.eps}
+      \end{subfigure}
+      ~
+      \begin{subfigure}{0.3\textwidth}
+        \centering
+        \includegraphics[width=\textwidth]{figures/synth_bas_weights_diffus__snr=20__w1=4__angle=90.eps}
+      \end{subfigure}
+  \end{subfigure}
+\end{adjustwidth}
+  \caption{Estimation results with both weight and diffusivity estimation. From top to bottom: synthesized weights are (0.2, 0.2, 0.6), (0.3, 0.3, 0.4), (0.4, 0.4, 0.2) respectively. From left to right: separation angles are 30, 60 and 90 degrees, respectively. Simulated SNR is 20.}
+\end{figure}
 
 \subsection{Phantom data}
 
-\begin{enumerate}
-  \item Estimating diffusivities with fixed equal weights. Figure \ref{figPhantomDiffus}.
+This section presents estimation results of the MICCAI Fiber Cup phantom data. For each voxel estimation is performed 20 times with random fiber direction initialization. In figures below the plotted fiber directions at each voxel are chosen randomly from the 20 estimation results. Statistics of the likelihood value at termination are shown below the fiber directions.
 
-    \begin{figure}[H]
-      \caption{\label{figPhantomDiffus}Estimation results of MICCAI phantom data with diffusivity estimation}
-      \centering
-      \includegraphics[width=0.8\textwidth]{figures/phantom_diffus.eps}
-      \includegraphics[width=\textwidth]{figures/phantom_diffus_like.eps}
-    \end{figure}
+\subsubsection{Multiplicative Ball-And-Sticks Model}
 
-  \item Estimating weights with diffusivities fixed at $(2.5\times 10^{-3}, 1.2\times 10^{-3}, 1.2\times 10^{-3})$. Figure \ref{figPhantomWeights}.
+\begin{figure}[H]
+  \caption{Estimation results of MICCAI phantom data with diffusivity estimation. Equal weights are assumed for each fiber compartment.}
+  \centering
+  \includegraphics[width=0.8\textwidth]{figures/phantom_modbas_diffus_dir.eps}
+  \includegraphics[width=\textwidth]{figures/phantom_modbas_diffus_like.eps}
+\end{figure}
 
-    \begin{figure}[H]
-      \caption{\label{figPhantomWeights}Estimation results of MICCAI phantom data with weight estimation}
-      \centering
-      \includegraphics[width=0.8\textwidth]{figures/phantom_weights.eps}
-      \includegraphics[width=\textwidth]{figures/phantom_weights_like.eps}
-    \end{figure}
-\end{enumerate}
+\begin{figure}[H]
+  \caption{Estimation results of MICCAI phantom data with weight and ball-diffusivity estimation. Stick diffusivities are fixed at $2.5\times 10^{-3}$.}
+  \centering
+  \includegraphics[width=0.8\textwidth]{figures/phantom_modbas_weights_dir.eps}
+  \includegraphics[width=\textwidth]{figures/phantom_modbas_weights_like.eps}
+\end{figure}
+
+\begin{figure}[H]
+  \caption{Estimation results of MICCAI phantom data with both diffusivity and weight estimation.}
+  \centering
+  \includegraphics[width=0.8\textwidth]{figures/phantom_modbas_weights_diffus_dir.eps}
+  \includegraphics[width=\textwidth]{figures/phantom_modbas_weights_diffus_like.eps}
+\end{figure}
+
+\subsubsection{Ball-And-Sticks Model}
+
+\begin{figure}[H]
+  \caption{Estimation results of MICCAI phantom data with diffusivity estimation. Equal weights are assumed for each fiber compartment.}
+  \centering
+  \includegraphics[width=0.8\textwidth]{figures/phantom_bas_diffus_dir.eps}
+  \includegraphics[width=\textwidth]{figures/phantom_bas_diffus_like.eps}
+\end{figure}
+
+\begin{figure}[H]
+  \caption{Estimation results of MICCAI phantom data with weight and ball-diffusivity estimation. Stick diffusivities are fixed at $2.5\times 10^{-3}$.}
+  \centering
+  \includegraphics[width=0.8\textwidth]{figures/phantom_bas_weights_dir.eps}
+  \includegraphics[width=\textwidth]{figures/phantom_bas_weights_like.eps}
+\end{figure}
+
+\begin{figure}[H]
+  \caption{Estimation results of MICCAI phantom data with both diffusivity and weight estimation.}
+  \centering
+  \includegraphics[width=0.8\textwidth]{figures/phantom_bas_weights_diffus_dir.eps}
+  \includegraphics[width=\textwidth]{figures/phantom_bas_weights_diffus_like.eps}
+\end{figure}
+
+
+
+\subsection{Brain data}
+
+This section presents estimation results of the selected ROI in brain data with b-value 2000 and SNR 9.74. For each voxel estimation is performed 20 times with random fiber direction initialization. In figures below the plotted fiber directions at each voxel are chosen randomly from the 20 estimation results. Statistics of the likelihood value at termination are shown below the fiber directions.
+
+\subsubsection{Multiplicative Ball-And-Sticks Model}
+
+\begin{figure}[H]
+  \caption{Estimation results of brain data with diffusivity estimation. Equal weights are assumed for each fiber compartment.}
+  \centering
+  \includegraphics[width=0.8\textwidth]{figures/brain_modbas_diffus_dir.eps}
+  \includegraphics[width=\textwidth]{figures/brain_modbas_diffus_like.eps}
+\end{figure}
+
+\begin{figure}[H]
+  \caption{Estimation results of brain data with weight and ball-diffusivity estimation. Stick diffusivities are fixed at $2.5\times 10^{-3}$.}
+  \centering
+  \includegraphics[width=0.8\textwidth]{figures/brain_modbas_weights_dir.eps}
+  \includegraphics[width=\textwidth]{figures/brain_modbas_weights_like.eps}
+\end{figure}
+
+\begin{figure}[H]
+  \caption{Estimation results of brain data with both diffusivity and weight estimation.}
+  \centering
+  \includegraphics[width=0.8\textwidth]{figures/brain_modbas_weights_diffus_dir.eps}
+  \includegraphics[width=\textwidth]{figures/brain_modbas_weights_diffus_like.eps}
+\end{figure}
+
+\subsubsection{Ball-And-Sticks Model}
+
+\begin{figure}[H]
+  \caption{Estimation results of brain data with diffusivity estimation. Equal weights are assumed for each fiber compartment.}
+  \centering
+  \includegraphics[width=0.8\textwidth]{figures/brain_bas_diffus_dir.eps}
+  \includegraphics[width=\textwidth]{figures/brain_bas_diffus_like.eps}
+\end{figure}
+
+\begin{figure}[H]
+  \caption{Estimation results of brain data with weight and ball-diffusivity estimation. Stick diffusivities are fixed at $2.5\times 10^{-3}$.}
+  \centering
+  \includegraphics[width=0.8\textwidth]{figures/brain_bas_weights_dir.eps}
+  \includegraphics[width=\textwidth]{figures/brain_bas_weights_like.eps}
+\end{figure}
+
+\begin{figure}[H]
+  \caption{Estimation results of brain data with both diffusivity and weight estimation.}
+  \centering
+  \includegraphics[width=0.8\textwidth]{figures/brain_bas_weights_diffus_dir.eps}
+  \includegraphics[width=\textwidth]{figures/brain_bas_weights_diffus_like.eps}
+\end{figure}
 
 %\section{Conclusion}
 %Write your conclusion here.

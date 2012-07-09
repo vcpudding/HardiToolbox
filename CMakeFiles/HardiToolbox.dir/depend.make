@@ -277,6 +277,7 @@ CMakeFiles/HardiToolbox.dir/HardiToolbox.cpp.o: /home/collab/xhzhu/Libraries/arm
 CMakeFiles/HardiToolbox.dir/HardiToolbox.cpp.o: HardiToolbox.cpp
 CMakeFiles/HardiToolbox.dir/HardiToolbox.cpp.o: HardiToolbox.h
 CMakeFiles/HardiToolbox.dir/HardiToolbox.cpp.o: besselFunction.h
+CMakeFiles/HardiToolbox.dir/HardiToolbox.cpp.o: utils.h
 
 CMakeFiles/HardiToolbox.dir/main.cpp.o: /home/collab/xhzhu/Libraries/ITK_bin/Modules/Core/Common/itkConfigure.h
 CMakeFiles/HardiToolbox.dir/main.cpp.o: /home/collab/xhzhu/Libraries/ITK_bin/Modules/IO/ImageBase/itkIOConfigure.h
@@ -1323,6 +1324,7 @@ CMakeFiles/HardiToolbox.dir/testProc.cpp.o: /home/collab/xhzhu/Libraries/arma-bi
 CMakeFiles/HardiToolbox.dir/testProc.cpp.o: /home/collab/xhzhu/Libraries/arma-bin/usr/local/include/armadillo_bits/wall_clock_bones.hpp
 CMakeFiles/HardiToolbox.dir/testProc.cpp.o: /home/collab/xhzhu/Libraries/arma-bin/usr/local/include/armadillo_bits/wall_clock_meat.hpp
 CMakeFiles/HardiToolbox.dir/testProc.cpp.o: HardiToolbox.h
+CMakeFiles/HardiToolbox.dir/testProc.cpp.o: erf.h
 CMakeFiles/HardiToolbox.dir/testProc.cpp.o: testProc.cpp
 CMakeFiles/HardiToolbox.dir/testProc.cpp.o: testProc.h
 CMakeFiles/HardiToolbox.dir/testProc.cpp.o: utils.h

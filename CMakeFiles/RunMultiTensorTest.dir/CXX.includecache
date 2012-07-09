@@ -1172,15 +1172,3 @@ iostream
 cmath
 -
 
-/home/collab/xhzhu/Study/HardiToolbox/testMultiTensor.cpp
-iostream
--
-armadillo
--
-string
--
-math.h
--
-HardiToolbox.h
-/home/collab/xhzhu/Study/HardiToolbox/HardiToolbox.h
-

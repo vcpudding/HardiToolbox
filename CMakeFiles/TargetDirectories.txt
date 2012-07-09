@@ -1,2 +1,5 @@
 /home/collab/xhzhu/Study/HardiToolbox/CMakeFiles/HardiToolbox.dir
 /home/collab/xhzhu/Study/HardiToolbox/CMakeFiles/RunMultiTensorTest.dir
+/home/collab/xhzhu/Study/HardiToolbox/CMakeFiles/TestBrainData.dir
+/home/collab/xhzhu/Study/HardiToolbox/CMakeFiles/TestPhantomData.dir
+/home/collab/xhzhu/Study/HardiToolbox/CMakeFiles/TestWeightEst.dir
